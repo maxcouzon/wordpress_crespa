@@ -1,0 +1,21 @@
+    @import 'base/variables';
+    @import 'layout/footer';
+    @import 'layout/header';
+    @import 'pages/page-home';
+    @import 'pages/page-artistes';
+    @import 'pages/page-oeuvres';
+    @import 'pages/page-contact';
+    @import 'pages/page-formations';
+    @import 'pages/page-404';
+    @import 'composant/button';
+    @import 'composant/artiste';
+    body {
+        background-color: $background;
+    }
+    
+    h1 {
+        color: $background;
+        font-size: 2em;
+    }
+    
+    // @import 'pages/page-formations';

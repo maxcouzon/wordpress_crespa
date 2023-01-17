@@ -1,0 +1,49 @@
+footer {
+    background-color: $footer;
+    height: 45vh;
+}
+
+.rs {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding-right: 8.5vw;
+}
+
+.rs img {
+    width: 24px;
+    height: 24px;
+}
+
+.info_footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100vw;
+    align-items: center;
+    padding-top: 7vh;
+}
+
+.adress article {
+    text-align: right;
+}
+
+.copyright {
+    font-size: 1em;
+    color: rgba($color: #121212, $alpha: 0.8);
+}
+
+.ligne {
+    position: relative;
+    border-bottom: 1px solid #121212;
+    width: 80vw;
+    text-align: center;
+    left: 10vw;
+}
+
+.end_footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 5vh;
+}

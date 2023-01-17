@@ -1,0 +1,13 @@
+    // tous les articles
+    .all {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 80vw;
+        gap: 12.5%;
+        margin-top: 15vh;
+        margin-bottom: 15vh;
+        margin-left: 10vw;
+    }
+    
+    // chaque article

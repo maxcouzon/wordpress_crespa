@@ -1,0 +1,28 @@
+    @charset "UTF-8";
+    /*
+Theme Name: immobilier
+Theme URI: https://www.url.com/
+Author: max
+Author URI: https://www.zeecom.fr//
+Description: Site immobilier
+Version: 1.0*/
+    
+   
+element.style {
+}
+.acf-headerbar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 32px;
+    z-index: 700;
+    box-sizing: border-box;
+    min-height: 2px;
+    margin-left: 10px;
+    padding-top: 8px;
+    padding-right: 32px;
+    padding-bottom: 8px;
+    padding-left: 32px;
+    background-color: #fff;
+    box-shadow: 0px 1px 2px rgb(16 24 40 / 10%);
+}

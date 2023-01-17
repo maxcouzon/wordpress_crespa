@@ -1,0 +1,40 @@
+  .all_oeuvre {
+      display: flex;
+      flex-wrap: wrap;
+      width: 80vw;
+      margin-bottom: 15vh;
+      justify-content: space-between;
+      margin-left: 10vw;
+  }
+  
+  .one_oeuvre {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      width: 30vw;
+      .image {
+          height: 60vh;
+          width: 100%;
+          max-height: 100%;
+          max-height: auto;
+          max-width: 100%;
+          margin-bottom: 2.5vh;
+      }
+      div.after {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          margin-bottom: 7.5vh;
+          div:nth-child(1) {
+              background-color: $background;
+              margin-top: 0px;
+          }
+      }
+  }
+  
+  .courte_description {
+      width: 80%;
+      word-wrap: break-word;
+  }
