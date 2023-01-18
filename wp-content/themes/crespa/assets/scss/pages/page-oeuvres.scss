@@ -2,7 +2,6 @@
       display: flex;
       flex-wrap: wrap;
       width: 80vw;
-      margin-bottom: 15vh;
       justify-content: space-between;
       margin-left: 10vw;
   }
@@ -13,6 +12,8 @@
       align-items: center;
       display: flex;
       width: 30vw;
+      margin-top: 5vh;
+      margin-bottom: 5vh;
       .image {
           height: 60vh;
           width: 100%;

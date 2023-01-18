@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/css" href="../wp-content/themes/crespa/assets/images/logo.svg" />
   <?php wp_head(); ?>
-  <title>Cre'spa</title>
+  <title>Cre'espa</title>
 </head>
 
 <body>

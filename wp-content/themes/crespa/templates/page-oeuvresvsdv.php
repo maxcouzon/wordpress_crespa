@@ -20,17 +20,14 @@ get_header();
 <!-- toutes les oeuvres du site -->
 <?php
 // The Query
-$args = array(
-    'post_type' => 'oeuvre',
-    'posts_per_page' => -1
-);
+
 $art = new WP_Query($args);
 ?>
 
-<?php if ($art->have_posts()) : ?>
+<?php if (have_posts()) : ?>
     <div class="all_oeuvre">
-        <?php while ($art->have_posts()) : ?>
-            <?php $art->the_post();
+        <?php while (have_posts()) : ?>
+            <?php the_post();
             $image = get_field('img'); ?>
 
             <div class="one_oeuvre">
@@ -48,6 +45,7 @@ background-repeat: no-repeat;background-position: 50% 100%;">
             </div>
         <?php endwhile; ?>
     </div>
+<?php the_posts_pagination();?>
 <?php else : ?>
     <p>Aucune oeuvre trouvée.</p>
 <?php endif; ?>

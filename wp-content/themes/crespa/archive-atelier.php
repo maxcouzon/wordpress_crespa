@@ -1,33 +1,25 @@
+
 <?php
-// template Name: formations
+
 //header
 get_header();
 
 ?>
-<h1><?php echo (get_the_title()); ?></h1>
-<?php
+<div class="blue_barre">
+<div class="search_barre">
+<h1><?php post_type_archive_title(); ?></h1>
+</div>
+</div>
 
-// The Query
-$args = array(
-    'post_type' => 'formation',
-    'posts_per_page' => -1
-);
-$work = new WP_Query($args);
-//var_dump($work);
-?>
-<?php
-
-?>
 <!-- The Loop -->
-<? if ($work->have_posts()) : ?>
+<? if (have_posts()) : ?>
 
-    <?php while ($work->have_posts()) : ?>
-        <?php $work->the_post();
-        $image = get_field('img');
-        var_dump($image);
+    <?php while (have_posts()) : ?>
+        <?php the_post();
+        $image1 = get_field('img1');
         ?>
         <div class="conteneur">
-            <div class="image" style="background-image: url(<?php echo $image['url'] ?>);background-repeat: no-repeat;">
+            <div class="image" style="background-image: url(<?php echo $image1['url'] ?>);background-repeat: no-repeat;background-size:cover;">
                 <div class="filtre_noir">
                     <div class="titre">
                         <?php the_field('title') ?>
@@ -49,6 +41,7 @@ $work = new WP_Query($args);
 
 
     <?php endwhile ?>
+<?php the_posts_pagination(); ?>
     </div>
 <?php else : ?>
     <p>Aucune oeuvre trouvée.</p>

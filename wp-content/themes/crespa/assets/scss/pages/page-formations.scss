@@ -2,8 +2,10 @@
     display: flex;
     justify-content: space-between;
     width: 80vw;
-    height: 60vh;
+    height: 50vh;
     margin-left: 10vw;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
     flex-direction: row-reverse;
 }
 
@@ -11,17 +13,18 @@
     display: flex;
     justify-content: space-between;
     width: 80vw;
-    height: 60vh;
+    height: 50vh;
     margin-left: 10vw;
+    margin-bottom: 5vh;
+    margin-top: 5vh;
     flex-direction: row;
 }
 
 div.filtre_noir {
     width: 35vw;
-    height: 50%;
+    height: 50vh;
     background-color: rgba($color: #000000, $alpha: 0.4);
     position: absolute;
-    z-index: 46;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -31,7 +34,7 @@ div.filtre_noir {
 
 div.image {
     width: 35vw;
-    height: 50%;
+    height: 100%;
     display: flex;
     color: aliceblue;
 }
@@ -41,8 +44,8 @@ div.image {
 }
 
 .text {
-    margin-bottom: 15vh;
     width: 35vw;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

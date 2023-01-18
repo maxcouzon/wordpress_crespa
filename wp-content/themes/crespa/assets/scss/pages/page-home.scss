@@ -5,12 +5,28 @@ html {
 
 // page d'accueil
 .welcome {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    background-color: rgba($color: #000000, $alpha: .7);
+    img {
+        height: auto;
+    }
+    .filtre_noire {
+        position: absolute;
+        top: 0;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #000000, $alpha: .7);
+    }
     overflow-y: hidden;
     .souris {
         padding-top: 2.5vw;
+    }
+}
+
+.asso {
+    span {
+        color: $red!important;
     }
 }
 
@@ -32,6 +48,14 @@ html {
     width: 50vw;
     height: 50vh;
     text-align: center;
+}
+
+div.filtre_noir_page_accueil {
+    width: 37.5vw;
+    height: 15vh;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    position: absolute;
+    z-index: 46;
 }
 
 // actu 
@@ -69,11 +93,6 @@ div.wrapper {
     z-index: 49;
 }
 
-.artistes {
-    width: 100%;
-    margin-left: 0%;
-}
-
 
 /* set `div` `opacity:0`  */
 
@@ -90,7 +109,7 @@ div>div:target {
 // fin 
 // partie présentation de l'asso
 div.asso {
-    height: 90vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     gap: 50px;
@@ -122,19 +141,85 @@ div.asso {
 // fin 
 // taille des section 
 section {
-    display: flex;
-    flex-direction: row;
     width: 80vw;
     justify-content: space-between;
     margin-left: 10vw;
 }
 
-// h2 {
-//     font-family: 'Courier New', Courier, monospace;
-//     font-size: 2em;
-//     color: $bleu;
-//     margin-bottom: 6%;
-// }
+section.oeuvres,
+.ateliers,
+.histoire,
+.formations,
+.artistes,
+.entreprise,
+.carrousel {
+    padding-top: 2.5vh;
+    padding-bottom: 2.5vh;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenu .all {
+    gap: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80vw;
+    margin: 0px;
+}
+
+.one_page_accueil {
+    height: 50vh;
+    width: 19%;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: $footer;
+    align-items: center;
+    display: flex;
+    .photo_artiste {
+        margin-top: 10%;
+        border-radius: 50%;
+        width: 60%;
+        height: 36%;
+        position: relative;
+        z-index: 21;
+    }
+    // contenu de chaque article 
+    .name {
+        font-size: 2em;
+    }
+    .courte_description {
+        width: 80%;
+        word-wrap: break-word;
+    }
+    .artistes {
+        height: 100%;
+    }
+    .background_image {
+        position: absolute;
+        width: 22.5%;
+        height: 22.5%;
+        margin-bottom: 10%;
+        z-index: 20;
+    }
+}
+
+.contenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+h2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2em;
+    color: $bleu;
+    margin-bottom: 6vh;
+    margin-left: 10vw;
+}
+
 // actualité 
 div.slider {
     position: relative;
@@ -143,10 +228,9 @@ div.slider {
     margin: 0 auto;
     display: flex;
     flex-direction: row-reverse;
-    margin-left: 10vw;
 }
 
-.border:hover {
+.sliderDate.show {
     background-color: $footer;
     border-left: solid 10px $red;
 }
@@ -219,7 +303,9 @@ a {
 // fleche du bas entre chaque partie 
 .suivant {
     display: flex;
+    align-items: flex-end;
     justify-content: center;
+    padding: 5vh;
 }
 
 // partie histoire 
@@ -235,4 +321,128 @@ a {
 .story {
     width: 37.5vw;
     line-height: 27px;
+    display: flex;
+    flex-direction: column;
+}
+
+.all_artistes {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    width: 80vw;
+    gap: 12.5%;
+}
+
+.button_accueil_actu {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.button_accueil_artistes {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+}
+
+.wrapper .item {
+    margin: 10px;
+    position: absolute;
+    z-index: 99;
+}
+
+.all_oeuvre_page_accueil {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.one_oeuvre_page_accueil {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 27%;
+    .image {
+        height: 40vh;
+        width: 100%;
+        max-height: 100%;
+        max-height: auto;
+        max-width: 100%;
+        margin-bottom: 2.5vh;
+    }
+    div.after {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 7.5vh;
+        div:nth-child(1) {
+            background-color: $background;
+            margin-top: 0px;
+        }
+    }
+}
+
+.button_accueil_oeuvre {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.button_accueil_atelier {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 100%;
+}
+
+.button_accueil_formation {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    height: 100%;
+}
+
+.button_accueil_entreprise {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 100%;
+}
+
+.image_page_accueil {
+    width: 37.5vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.text_page_accueil_entreprise {
+    position: absolute;
+    z-index: 50;
+    color: antiquewhite;
+    margin-left: 20px;
+    margin-top: 10px;
+    font-size: 2em;
+}
+
+.partie_entreprise {
+    display: flex;
+    width: 80vw;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+
+section.mail {
+    display: flex;
+    flex-direction: row!important;
 }

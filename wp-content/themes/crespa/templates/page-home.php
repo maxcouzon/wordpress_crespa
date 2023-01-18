@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,8 +13,11 @@
 </head>
 
 <body>
-    <div class="welcome">
-        <img src="<?php $image = get_field('welcome_img'); echo($image['sizes']['medium_large']) ?>" alt="<?php echo ($image['alt']); ?>" />
+    <div class="welcome"> <img src="<?php $image = get_field('background_img');
+
+                                    echo ($image['sizes']['medium_large']) ?>" />
+        <div class="filtre_noire"></div>
+
     </div>
     <div class="presentation">
 
@@ -21,7 +25,7 @@
             <img src="../wp-content/themes/crespa/assets/images/logo_white.svg" alt="logo">
         </div>
         <div>
-            <?php the_field('subtitle') ?>
+            <?php the_field('slogan') ?>
         </div>
         <div>
             <a href="#nav"><img class="souris" src="../wp-content/themes/crespa/assets/images/souris.svg" alt="souris incitation a cliquer"></a>
@@ -29,52 +33,50 @@
 
     </div>
     <!-- header fixe -->
-    <header>
-        <nav id="nav">
-            <input type="checkbox" id="menu" name="menu" class="m-menu__checkbox" />
-            <label class="m-menu__toggle" for="menu">
-                <div class="header">
-                    <svg width="40" height="33" viewBox="0 0 40 33" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
-                        <rect width="40" height="5" fill="#F40044" />
-                        <rect y="14" width="40" height="5" fill="#F40044" />
-                        <rect y="28" width="40" height="5" fill="#F40044" />
-                    </svg>
-                    <img src="../wp-content/themes/crespa/assets/images/logo_complet.svg" alt="logo" class="logo" />
-                    <button onclick="window.location.href = '../acceuil/contact/'" ; class="contact">Nous contactez</button>
-                </div>
-            </label>
-            <label class="m-menu__overlay" for="menu"></label>
+     <header>
+    <nav>
+      <input type="checkbox" id="menu" name="menu" class="m-menu__checkbox" />
+      <label class="m-menu__toggle" for="menu">
+        <div class="header">
+          <svg width="40" height="33" viewBox="0 0 40 33" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
+            <rect width="40" height="5" fill="#F40044" />
+            <rect y="14" width="40" height="5" fill="#F40044" />
+            <rect y="28" width="40" height="5" fill="#F40044" />
+          </svg>
+          <img src="../wp-content/themes/crespa/assets/images/logo_complet.svg" alt="logo" class="logo" />
+          <button onclick="window.location.href = '../acceuil/contact/'" ; class="contact">Nous contactez</button>
+        </div>
+      </label>
+      <label class="m-menu__overlay" for="menu"></label>
 
-            <div class="m-menu">
-                <div class="m-menu__header">
-                    <label class="m-menu__toggl" for="menu">
-                        <svg width="30" height="30" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="40.2514" height="5.03142" transform="matrix(0.707174 -0.707039 0.707174 0.707039 0.541016 29.2573)" fill="#F40044" />
-                            <rect width="40.2514" height="5.03142" transform="matrix(0.707174 0.707039 -0.707174 0.707039 4.09863 0.204224)" fill="#F40044" />
-                        </svg>
-
-
-                    </label>
-                </div>
-                <!-- menu burger -->
-                <ul>
-
-                    <li><a href="../artistes">Les artistes</a></li>
-                    <li><a href="../oeuvres">La galerie</a></li>
-                    <li><a href="../ateliers">Les ateliers</a></li>
-                    <li><a href="../formations">Les formations</a></li>
-                    <li><a href="../entreprise">Les services & modalités d'achat</a></li>
-                    <li><a href="../contact">Nous contacter</a></li>
-                    <img src="../wp-content/themes/crespa/assets/images/logo_simple_white.svg" alt="" class="logo_nav" />
-                </ul>
-            </div>
-
-        </nav>
-    </header>
+      <div class="m-menu">
+        <div class="m-menu__header">
+          <label class="m-menu__toggl" for="menu">
+            <svg width="30" height="30" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="40.2514" height="5.03142" transform="matrix(0.707174 -0.707039 0.707174 0.707039 0.541016 29.2573)" fill="#F40044" />
+              <rect width="40.2514" height="5.03142" transform="matrix(0.707174 0.707039 -0.707174 0.707039 4.09863 0.204224)" fill="#F40044" />
+            </svg>
+          </label>
+        </div>
+        <?php wp_nav_menu(array('menu' => 'menu_princ')); ?>
+        <img src="../wp-content/themes/crespa/assets/images/logo_simple_white.svg" alt="" class="logo_nav" />
+        <!-- <ul>
+          <li><a href="../acceuil/artistes/">Les artistes</a></li>
+          <li><a href="../wordpress_crespa/accueil/oeuvres/">La galerie</a></li>
+          <li><a href="../acceuil/ateliers/">Les ateliers</a></li>
+          <li><a href="../acceuil/formations/">Les formations</a></li>
+          <li><a href="../acceuil/entreprise/">Les services & modalités d'achat</a></li>
+          <li><a href="../acceuil/contact/">Nous contacter</a></li>
+          <li><a href="../acceuil/">Nous contacter</a></li>
+          <img src="../wp-content/themes/crespa/assets/images/logo_simple_white.svg" alt="" class="logo_nav" />
+        </ul> -->
+      </div>
+    </nav>
+  </header>
     <!-- deuxieme page présentation + réseaux  -->
     <div class="asso">
         <article>
-            <p> <?php the_field('intro'); ?></p>
+            <p> <?php the_field('storytelling'); ?></p>
         </article>
         <div>
             <!-- réseaux sociaux  -->
@@ -89,7 +91,7 @@
                     <img src="../wp-content/themes/crespa/assets/images/red_facebook.svg" alt="facebook" />
                 </a>
             </div>
-            <div>
+            <div class="suivant">
                 <a href="#actu">
                     <img src="../wp-content/themes/crespa/assets/images/arrow_bottom.svg" alt="flèche du bas" />
                 </a>
@@ -98,235 +100,301 @@
     </div>
     <h2 id="actu">Actualités</h2>
 
-<!-- ancre -->
-    <div class="ancre">
-        <a href="#">
-            <img src="../wp-content/themes/crespa/assets/images/ancre.svg" alt="">
-        </a>
-    </div>
-<!-- slider Actualités -->
+    <!-- ancre -->
 
-    <div class="slider">
-        <!-- conteneur ou est affiche les infos -->
-        <div class="wrapper">
-            <div id="un">article_1</article>
+    <!-- slider Actualités -->
+    <section class="carrousel">
+        <div class="slider">
+            <!-- conteneur ou est affiche les infos -->
+            <div class="wrapper">
+
+                <div class=" margin item min-with-400 slide sliderDate-1 un"><?php the_field('article_1') ?></div>
+                <div class=" margin item min-with-400 hide-on-load slide sliderDate-2 deux"><?php the_field('article_2') ?></div>
+                <div class=" margin item min-with-400 hide-on-load slide sliderDate-3 trois"><?php the_field('article_3') ?></div>
+                <div class=" margin item min-with-400 hide-on-load slide sliderDate-4 quatre"><?php the_field('article_4') ?></div>
+                <div class="button_accueil_actu">
+                    <a class="button">Voir plus</a>
+                </div>
             </div>
-            <div id="deux">article_2</div>
-            <div id="trois">article_3</div>
-            <div id="quatre">article_4</div>
-        </div>
-<!-- partie ou tu selection les articles -->
-        <nav class="enter">
-            <a href="#un" class="border">
-                <span class="thumbs">
-                    <div class="articles">
-                        <article class="date">
-                            date
-                        </article>
-                        <article class="nom_article">
-                            titre de l'article
-                        </article>
-                    </div>
-                </span>
-            </a>
-            <a href="#deux" class="border">
-                <span class="thumbs">
-                    <div class="articles">
-                        <article class="date">
-                            date
-                        </article>
-                        <article class="nom_article">
-                            titre de l'article
-                        </article>
-                    </div>
-                </span>
-            </a>
-            <a href="#trois" class="border">
-                <span class="thumbs">
-                    <div class="articles">
-                        <article class="date">
-                            date
-                        </article>
-                        <article class="nom_article">
-                            titre de l'article
-                        </article>
-                    </div>
-                </span>
-            </a>
-            <a href="#quatre" class="border">
-                <span class="thumbs">
-                    <div class="articles">
-                        <article class="date">
-                            date
-                        </article>
-                        <article class="nom_article">
-                            titre de l'article
-                        </article>
-                    </div>
-                </span>
-            </a>
-        </nav>
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript"></script>
+            <script>
+                jQuery(document).ready(function() {
+                    jQuery('.hide-on-load').hide();
 
-    </div>
+                    jQuery('.sliderDate').on('click', function() {
+                        $(".enter span").even().removeClass("show");
+                        $(".show").removeClass("show");
+                        jQuery('.slide').hide();
+                        var linkimg = jQuery(this).data('date');
+                        console.log(linkimg);
+
+                        jQuery(`.sliderDate-${linkimg}`).show();
+                        jQuery(`.active-${linkimg}`).addClass("show");
+                    });
+                });
+            </script>
+            <!-- partie ou tu selection les articles -->
+            <nav class="enter">
+                <span class="sliderDate border show active-1" data-date="1">
+                    <span class="thumbs">
+                        <span class="articles">
+                            <article class="date">
+                                <?php the_field('date_1') ?>
+                            </article>
+                            <article class="nom_article">
+                                <?php the_field('title_1') ?>
+                            </article>
+                        </span>
+                    </span>
+                </span>
+                <span class="sliderDate border active-2" data-date="2">
+                    <span class="thumbs">
+                        <div class="articles">
+                            <article class="date">
+                                <?php the_field('date_2') ?>
+                            </article>
+                            <article class="nom_article">
+                                <?php the_field('title_2') ?>
+                            </article>
+                        </div>
+                    </span>
+                </span>
+                <span class="sliderDate border active-3" data-date="3">
+                    <span class="thumbs">
+                        <div class="articles">
+                            <article class="date">
+                                <?php the_field('date_3') ?>
+                            </article>
+                            <article class="nom_article">
+                                <?php the_field('title_3') ?>
+                            </article>
+                        </div>
+                    </span>
+                </span>
+                <span class="sliderDate border active-4" data-date="4">
+                    <span class="thumbs">
+                        <div class="articles">
+                            <article class="date">
+                                <?php the_field('date_4') ?>
+                            </article>
+                            <article class="nom_article">
+                                <?php the_field('title_4') ?>
+                            </article>
+                        </div>
+                    </span>
+                </span>
+            </nav>
+        </div>
+
+        <div class="suivant">
+            <a href="#actu">
+                <img src="../wp-content/themes/crespa/assets/images/arrow_bottom.svg" alt="flèche du bas" />
+            </a>
+        </div>
+    </section>
+
     <!-- fleche bleu entre les parties -->
-    <div class="suivant">
-        <a href="#actu">
-            <img src="../wp-content/themes/crespa/assets/images/arrow_bottom.svg" alt="flèche du bas" />
-        </a>
-    </div>
+
     <!-- boutton voir plus -->
-    <div> 
-        <button onclick="window.location.href = '../acceuil/contact/'" ; class="plus">voir plus</button>
-    </div>
+
     <h2 id="artistes">Artistes</h2>
     <!-- les artistes -->
     <section class="artistes">
         <!-- tous les artistes -->
-        
+        <div class="contenu"> <?php
 
+                                // The Query
+                                $args = array(
+                                    'post_type' => 'artiste',
+                                    'posts_per_page' => -1
+                                );
+                                $artits = new WP_Query($args);
 
-        <?php
+                                ?>
 
-// The Query
-$args = array(
-    'post_type' => 'artiste',
-    'posts_per_page' => -1
-);
-$artits = new WP_Query($args);
-
-?>
-
-<!-- The Loop -->
-<? if ($artits->have_posts()) : ?>
-    <div class="all">
-        <? while ($artits->have_posts()) : ?>
-            <?php $artits->the_post(); 
-            $image = get_field('img_artiste');?>
-            <div class="one">
-            <img class="background_image" src="../wp-content/themes/crespa/assets/images/background_artiste<?php $min=1;$max=3; echo rand($min,$max);?>.svg" alt="" >
-                <div class="photo_artiste" style="background-image: url(<?php echo $image['url'] ?>);background-repeat: no-repeat;background-size: cover;">
+            <!-- The Loop -->
+            <? if ($artits->have_posts()) : ?>
+                <div class="all">
+                    <? while ($artits->have_posts()) : ?>
+                        <?php $artits->the_post();
+                        $image = get_field('img_artiste'); ?>
+                        <div class="one_page_accueil">
+                            <img class="background_image" src="../wp-content/themes/crespa/assets/images/background_artiste<?php $min = 1;
+                                                                                                                            $max = 3;
+                                                                                                                            echo rand($min, $max); ?>.svg" alt="">
+                            <div class="photo_artiste" style="background-image: url(<?php echo $image['url'] ?>);background-repeat: no-repeat;background-size: cover;">
+                            </div>
+                            <div class="name">
+                                <?php the_field('name') ?>
+                            </div>
+                            <div class="courte_description">
+                                <?php the_field('text') ?>
+                            </div>
+                        </div>
+                    <?php endwhile ?>
                 </div>
-                <div class="name">
-                    <?php the_field('name') ?>
-                </div>
-                <div class="courte_description">
-                    <?php the_field('text') ?>
-                </div>
-            </div>
-        <?php endwhile ?>
-    </div>
-<?php else : ?>
-    <p>Aucune oeuvre trouvée.</p>
-<?php endif ?>
+            <?php else : ?>
+                <p>Aucune oeuvre trouvée.</p>
+            <?php endif ?>
             <!-- boutton voir plus  -->
-            <button onclick="window.location.href = '../accueil/contact/'" ; class="plus">voir plus</button>
+        </div>
+        <div class="button_accueil_artistes">
+            <a class="button">Voir plus</a>
+        </div>
+        <div class="suivant">
+            <a href="#actu">
+                <img src="../wp-content/themes/crespa/assets/images/arrow_bottom.svg" alt="flèche du bas" />
+            </a>
+        </div>
+
     </section>
     <!-- boutton entre les parties -->
-    <div class="suivant">
-        <a href="#actu">
-            <img src="../wp-content/themes/crespa/assets/images/arrow_bottom.svg" alt="flèche du bas" />
-        </a>
-    </div>
+
     <h2 id="galerie">Galerie</h2>
     <section class="oeuvres">
         <!-- tous les articles  -->
-        <div class="all_oeuvre">
-            <!-- chaque article -->
-            <div class="one_oeuvre">
-                <div>
-                    image
-                </div>
-                <div>
-                    name
-                </div>
-                <div>
-                    texte
-                </div>
+
+        <?php
+        // The Query
+        $args = array(
+            'post_type' => 'oeuvre',
+            'posts_per_page' => 3
+        );
+        $art = new WP_Query($args);
+        ?>
+
+        <?php if ($art->have_posts()) : ?>
+            <div class="all_oeuvre_page_accueil">
+                <?php while ($art->have_posts()) : ?>
+                    <?php $art->the_post();
+                    $image = get_field('img');
+                    // var_dump($art)
+                    ?>
+
+
+                    <div class="one_oeuvre_page_accueil ">
+                        <div class="image" style="background-image:url(<?php echo $image['url'] ?>);background-size:contain;
+background-repeat: no-repeat;background-position: 50% 100%;">
+                        </div>
+                        <div class="after">
+                            <div>
+                                <?php the_field('small_text'); ?>
+                            </div>
+
+                        </div>
+                    </div>
+                <?php endwhile; ?>
             </div>
-            <div class="one_oeuvre">
-                <div>
-                    image
-                </div>
-                <div>
-                    name
-                </div>
-                <div>
-                    texte
-                </div>
-            </div>
-            <!-- boutton plus -->
-            <button onclick="window.location.href = '../acceuil/contact/'" ; class="plus_oeuvres">voir plus</button>
+        <?php else : ?>
+            <p>Aucune oeuvre trouvée.</p>
+        <?php endif; ?>
+        <div class="button_accueil_oeuvre">
+            <a class="button">Voir plus</a>
+        </div>
+        <div class="suivant">
+            <a href="#actu">
+                <img src="../wp-content/themes/crespa/assets/images/arrow_bottom.svg" alt="flèche du bas" />
+            </a>
+        </div>
     </section>
-    <div class="suivant">
-        <!-- boutton entre les parties -->
-        <a href="#actu">
-            <img src="../wp-content/themes/crespa/assets/images/arrow_bottom.svg" alt="flèche du bas" />
-        </a>
-    </div>
 
 
 
-    <h2>L'Histoire de delphine</h2>
-    <section>
-        <div class="story">
-            <div>
-                <?php the_field('story'); ?>
+
+    <h2><?php the_field('title_atelier') ?></h2>
+    <section class="ateliers">
+        <div class="contenu">
+            <div class="story">
+                <div>
+                    <?php the_field('text_atelier'); ?>
+                </div>
+                <div class="button_accueil_atelier">
+                    <a class="button">Voir plus</a>
+                </div>
             </div>
-            <div>
-                <button onclick="window.location.href = '../contact/'" ; class="plus">Voir plus</button>
+            <div class="video">
+                <?php
+                echo do_shortcode('[smartslider3 slider="3"]');
+                ?>
             </div>
         </div>
-        <div class="video">
-            <?php
-            echo do_shortcode('[smartslider3 slider="3"]');
-            ?>
+        <div class="suivant">
+            <a onclick="">
+                <img src="../wp-content/themes/crespa/assets/images/arrow_bottom.svg" alt="flèche du bas" />
+            </a>
         </div>
     </section>
-    <h2>L'Histoire de delphine</h2>
-    <section class="atelier">
-        <div class="video">
-            <?php
-            echo do_shortcode('[smartslider3 slider="4"]');
-            ?>
-        </div>
-        <div class="story">
-            <div>
-                <?php the_field('story'); ?>
+    <h2><?php the_field('title_formation')?></h2>
+    <section class="formations">
+        <div class="contenu">
+            <div class="video">
+                <?php
+                echo do_shortcode('[smartslider3 slider="4"]');
+                ?>
             </div>
-            <div>
-                <button onclick="window.location.href = '../contact/'" ; class="plus">Voir plus</button>
+            <div class="story">
+                <div>
+                    <?php the_field('text_formation'); ?>
+                </div>
+                <div class="button_accueil_formation">
+                    <a class="button">Voir plus</a>
+                </div>
             </div>
         </div>
 
-    </section>
-    <h2>L'Histoire de delphine</h2>
-    <section class="formation">
-        <div class="story">
-            <div>
-                <?php the_field('story'); ?>
-            </div>
-            <div>
-                <button onclick="window.location.href = '../contact/'" ; class="plus">Voir plus</button>
-            </div>
-        </div>
-        <div class="video">
-            <iframe <?php the_field('lien'); ?>></iframe>
+        <div class="suivant">
+            <a onclick="">
+                <img src="../wp-content/themes/crespa/assets/images/arrow_bottom.svg" alt="flèche du bas" />
+            </a>
         </div>
     </section>
-    <h2>L'Histoire de delphine</h2>
+    <h2><?php the_field('title_entreprise')?></h2>
     <section class="entreprise">
-        <div class="video">
-            <iframe <?php the_field('lien'); ?>></iframe>
-        </div>
-        <div class="story">
-            <div>
-                <?php the_field('story'); ?>
+        <div class="partie_entreprise">
+            <div class="image_page_accueil" style="background-image: url(<?php $entreprise= get_field('img_entreprise'); echo $entreprise['url'] ?>);background-repeat: no-repeat;background-size:cover;">
+                <div class="filtre_noir_page_accueil">
+                    <div class="text_page_accueil_entreprise">
+                        <?php the_field('subtitle_entreprise') ?>
+                    </div>
+                </div>
             </div>
-            <div>
-                <button onclick="window.location.href = '../contact/'" ; class="plus">Voir plus</button>
+            <div class="story">
+                <article>
+                    <?php the_field('text_entreprise'); ?>
+                </article>
+                <div class="button_accueil_entreprise">
+                    <a class="button">Voir plus</a>
+                </div>
             </div>
         </div>
 
+        <div class="suivant">
+            <a onclick="">
+                <img src="../wp-content/themes/crespa/assets/images/arrow_bottom.svg" alt="flèche du bas" />
+            </a>
+        </div>
+    </section>
+    <h2><?php the_field('title_histoire')?></h2>
+    <section class="histoire">
+        <div class="contenu">
+            <div class="video">
+
+<iframe <?php the_field('yt_video'); ?>></iframe>
+                
+            </div>
+            <div class="story">
+                <div>
+                    <?php the_field('text_histoire'); ?>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="suivant">
+            <a onclick="">
+                <img src="../wp-content/themes/crespa/assets/images/arrow_bottom.svg" alt="flèche du bas" />
+            </a>
+        </div>
     </section>
     <section class="mail">
 

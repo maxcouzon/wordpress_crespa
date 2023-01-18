@@ -479,13 +479,27 @@ html {
 }
 
 .welcome {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.7);
   overflow-y: hidden;
+}
+.welcome img {
+  height: auto;
+}
+.welcome .filtre_noire {
+  position: absolute;
+  top: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 .welcome .souris {
   padding-top: 2.5vw;
+}
+
+.asso span {
+  color: #e51449 !important;
 }
 
 .presentation {
@@ -506,6 +520,14 @@ html {
   width: 50vw;
   height: 50vh;
   text-align: center;
+}
+
+div.filtre_noir_page_accueil {
+  width: 37.5vw;
+  height: 15vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  z-index: 46;
 }
 
 .logo_nav {
@@ -538,11 +560,6 @@ div.wrapper {
   z-index: 49;
 }
 
-.artistes {
-  width: 100%;
-  margin-left: 0%;
-}
-
 /* set `div` `opacity:0`  */
 /* 
      display `:target` `div` on click of `a`,
@@ -553,7 +570,7 @@ div > div:target {
 }
 
 div.asso {
-  height: 90vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -583,10 +600,81 @@ div.asso article p {
 }
 
 section {
-  display: flex;
-  flex-direction: row;
   width: 80vw;
   justify-content: space-between;
+  margin-left: 10vw;
+}
+
+section.oeuvres,
+.ateliers,
+.histoire,
+.formations,
+.artistes,
+.entreprise,
+.carrousel {
+  padding-top: 2.5vh;
+  padding-bottom: 2.5vh;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.contenu .all {
+  gap: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80vw;
+  margin: 0px;
+}
+
+.one_page_accueil {
+  height: 50vh;
+  width: 19%;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #F4E7D7;
+  align-items: center;
+  display: flex;
+}
+.one_page_accueil .photo_artiste {
+  margin-top: 10%;
+  border-radius: 50%;
+  width: 60%;
+  height: 36%;
+  position: relative;
+  z-index: 21;
+}
+.one_page_accueil .name {
+  font-size: 2em;
+}
+.one_page_accueil .courte_description {
+  width: 80%;
+  word-wrap: break-word;
+}
+.one_page_accueil .artistes {
+  height: 100%;
+}
+.one_page_accueil .background_image {
+  position: absolute;
+  width: 22.5%;
+  height: 22.5%;
+  margin-bottom: 10%;
+  z-index: 20;
+}
+
+.contenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+h2 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 2em;
+  color: #0C53C4;
+  margin-bottom: 6vh;
   margin-left: 10vw;
 }
 
@@ -597,10 +685,9 @@ div.slider {
   margin: 0 auto;
   display: flex;
   flex-direction: row-reverse;
-  margin-left: 10vw;
 }
 
-.border:hover {
+.sliderDate.show {
   background-color: #F4E7D7;
   border-left: solid 10px #e51449;
 }
@@ -665,7 +752,9 @@ a {
 
 .suivant {
   display: flex;
+  align-items: flex-end;
   justify-content: center;
+  padding: 5vh;
 }
 
 .video iframe {
@@ -680,6 +769,130 @@ a {
 .story {
   width: 37.5vw;
   line-height: 27px;
+  display: flex;
+  flex-direction: column;
+}
+
+.all_artistes {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  width: 80vw;
+  gap: 12.5%;
+}
+
+.button_accueil_actu {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.button_accueil_artistes {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+}
+
+.wrapper .item {
+  margin: 10px;
+  position: absolute;
+  z-index: 99;
+}
+
+.all_oeuvre_page_accueil {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.one_oeuvre_page_accueil {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 27%;
+}
+.one_oeuvre_page_accueil .image {
+  height: 40vh;
+  width: 100%;
+  max-height: 100%;
+  max-height: auto;
+  max-width: 100%;
+  margin-bottom: 2.5vh;
+}
+.one_oeuvre_page_accueil div.after {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 7.5vh;
+}
+.one_oeuvre_page_accueil div.after div:nth-child(1) {
+  background-color: #FCF1E3;
+  margin-top: 0px;
+}
+
+.button_accueil_oeuvre {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.button_accueil_atelier {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 100%;
+}
+
+.button_accueil_formation {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+  height: 100%;
+}
+
+.button_accueil_entreprise {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 100%;
+}
+
+.image_page_accueil {
+  width: 37.5vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.text_page_accueil_entreprise {
+  position: absolute;
+  z-index: 50;
+  color: antiquewhite;
+  margin-left: 20px;
+  margin-top: 10px;
+  font-size: 2em;
+}
+
+.partie_entreprise {
+  display: flex;
+  width: 80vw;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+section.mail {
+  display: flex;
+  flex-direction: row !important;
 }
 
 .all {
@@ -688,8 +901,6 @@ a {
   flex-direction: row;
   width: 80vw;
   gap: 12.5%;
-  margin-top: 15vh;
-  margin-bottom: 15vh;
   margin-left: 10vw;
 }
 
@@ -697,7 +908,6 @@ a {
   display: flex;
   flex-wrap: wrap;
   width: 80vw;
-  margin-bottom: 15vh;
   justify-content: space-between;
   margin-left: 10vw;
 }
@@ -708,6 +918,8 @@ a {
   align-items: center;
   display: flex;
   width: 30vw;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
 }
 .one_oeuvre .image {
   height: 60vh;
@@ -736,6 +948,8 @@ a {
 
 .mail {
   gap: 10vw;
+  display: flex;
+  flex-direction: row;
 }
 
 .form {
@@ -789,8 +1003,10 @@ a {
   display: flex;
   justify-content: space-between;
   width: 80vw;
-  height: 60vh;
+  height: 50vh;
   margin-left: 10vw;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
   flex-direction: row-reverse;
 }
 
@@ -798,17 +1014,18 @@ a {
   display: flex;
   justify-content: space-between;
   width: 80vw;
-  height: 60vh;
+  height: 50vh;
   margin-left: 10vw;
+  margin-bottom: 5vh;
+  margin-top: 5vh;
   flex-direction: row;
 }
 
 div.filtre_noir {
   width: 35vw;
-  height: 50%;
+  height: 50vh;
   background-color: rgba(0, 0, 0, 0.4);
   position: absolute;
-  z-index: 46;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
@@ -818,7 +1035,7 @@ div.filtre_noir {
 
 div.image {
   width: 35vw;
-  height: 50%;
+  height: 100%;
   display: flex;
   color: aliceblue;
 }
@@ -828,8 +1045,8 @@ div.image {
 }
 
 .text {
-  margin-bottom: 15vh;
   width: 35vw;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -864,7 +1081,8 @@ section.erreur {
   background-color: #F4E7D7;
   align-items: center;
   display: flex;
-  margin-bottom: 15vh;
+  margin-bottom: 5vh;
+  margin-top: 5vh;
   background-image: url("../wp-content/themes/crespa/assets/images/background_artiste.svg");
 }
 .one .photo_artiste {
@@ -890,6 +1108,40 @@ section.erreur {
   height: 30%;
   margin-bottom: 12%;
   z-index: 20;
+}
+
+.navigation,
+.pagination {
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  align-items: center;
+}
+.navigation .nav-links,
+.pagination .nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: flex-end;
+  background-color: #FCF1E3;
+}
+.navigation .nav-links .next,
+.pagination .nav-links .next {
+  display: none;
+}
+.navigation .nav-links .prev,
+.pagination .nav-links .prev {
+  display: none;
+}
+.navigation .nav-links .current,
+.pagination .nav-links .current {
+  font-size: 1.5em;
+  display: block;
+  color: #e51449;
+}
+.navigation .nav-links a,
+.pagination .nav-links a {
+  color: #e51449;
+  text-decoration: none;
 }
 
 body {
