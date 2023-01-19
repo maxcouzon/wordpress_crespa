@@ -29,9 +29,82 @@
     }
     .background_image {
         position: absolute;
-        width: 30%;
-        height: 30%;
-        margin-bottom: 12%;
+        width: 25%;
+        height: 25%;
+        margin-bottom: 15%;
         z-index: 20;
     }
 }
+
+// tous les articles
+.all {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 80vw;
+    gap: 12.5%;
+    margin-left: 10vw;
+}
+
+.contenu_single {
+    .autre_oeuvre {
+        display: flex;
+    }
+    .one_oeuvre {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        width: 20vw;
+        height: 40vh;
+        margin-top: 2.5vh;
+        margin-bottom: 2.5vh;
+        .image_other {
+            height: 100%;
+            width: 100%;
+            max-height: 100%;
+            max-height: auto;
+            max-width: 100%;
+            margin-bottom: 2.5vh;
+        }
+    }
+    width: 80vw;
+    margin-left: 10vw;
+    display: flex;
+    flex-direction: column;
+    h2 {
+        margin-left: 0px;
+    }
+    .artiste {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        .one {
+            height: 70vh;
+            width: 100%;
+            flex-direction: column;
+            justify-content: space-around;
+            background-color: $background;
+            align-items: center;
+            display: flex;
+            margin-bottom: 2.5vh;
+            margin-top: 2.5vh;
+            .background_image {
+                position: absolute;
+                width: 35%;
+                height: 35%;
+                z-index: 20;
+                margin-top: -50px;
+            }
+            .photo_artiste {
+                border-radius: 50%;
+                width: 20%;
+                height: 43%;
+                position: relative;
+                z-index: 21;
+            }
+        }
+    }
+}
+
+// chaque article

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/css" href="../wp-content/themes/crespa/assets/images/logo.svg" />
+    <link rel="icon" type="image/css" href="<?php echo (get_template_directory_uri()); ?>/assets/images/logo_fav.svg" />
     <?php
     // template Name: Accueil
     wp_head(); ?>
@@ -13,8 +13,8 @@
 </head>
 
 <body>
-    <div class="welcome"> <img src="<?php $image = get_field('background_img');
 
+    <div class="welcome"> <img src="<?php $image = get_field('background_img');
                                     echo ($image['sizes']['medium_large']) ?>" />
         <div class="filtre_noire"></div>
 
@@ -22,45 +22,53 @@
     <div class="presentation">
 
         <div class="welcome_logo">
-            <img src="../wp-content/themes/crespa/assets/images/logo_white.svg" alt="logo">
+            <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/logo_white.svg" alt="logo">
         </div>
         <div>
             <?php the_field('slogan') ?>
         </div>
         <div>
-            <a href="#nav"><img class="souris" src="../wp-content/themes/crespa/assets/images/souris.svg" alt="souris incitation a cliquer"></a>
+            <a onclick=" $(window).scrollTop(700);">" ><img class="souris" src="<?php echo (get_template_directory_uri()); ?>/assets/images/souris.svg" alt="souris incitation a cliquer"></a>
         </div>
 
     </div>
     <!-- header fixe -->
-     <header>
-    <nav>
-      <input type="checkbox" id="menu" name="menu" class="m-menu__checkbox" />
-      <label class="m-menu__toggle" for="menu">
-        <div class="header">
-          <svg width="40" height="33" viewBox="0 0 40 33" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
-            <rect width="40" height="5" fill="#F40044" />
-            <rect y="14" width="40" height="5" fill="#F40044" />
-            <rect y="28" width="40" height="5" fill="#F40044" />
-          </svg>
-          <img src="../wp-content/themes/crespa/assets/images/logo_complet.svg" alt="logo" class="logo" />
-          <button onclick="window.location.href = '../acceuil/contact/'" ; class="contact">Nous contactez</button>
-        </div>
-      </label>
-      <label class="m-menu__overlay" for="menu"></label>
+    <header>
+        <nav>
+            <input type="checkbox" id="menu" name="menu" class="m-menu__checkbox" />
+            <label class="m-menu__toggle" for="menu">
 
-      <div class="m-menu">
-        <div class="m-menu__header">
-          <label class="m-menu__toggl" for="menu">
-            <svg width="30" height="30" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="40.2514" height="5.03142" transform="matrix(0.707174 -0.707039 0.707174 0.707039 0.541016 29.2573)" fill="#F40044" />
-              <rect width="40.2514" height="5.03142" transform="matrix(0.707174 0.707039 -0.707174 0.707039 4.09863 0.204224)" fill="#F40044" />
-            </svg>
-          </label>
-        </div>
-        <?php wp_nav_menu(array('menu' => 'menu_princ')); ?>
-        <img src="../wp-content/themes/crespa/assets/images/logo_simple_white.svg" alt="" class="logo_nav" />
-        <!-- <ul>
+                <div class="header">
+                    <svg width="40" height="33" viewBox="0 0 40 33" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
+                        <rect width="40" height="5" fill="#F40044" />
+                        <rect y="14" width="40" height="5" fill="#F40044" />
+                        <rect y="28" width="40" height="5" fill="#F40044" />
+                    </svg>
+                    <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/logo.svg" alt="logo" class="logo" />
+
+                </div>
+            </label>
+            <div class="contactez-nous">
+                <a class="button" href="../wordpress_crespa/contact/">
+                    <p>Contactez-nous</p>
+                </a>
+            </div>
+
+
+            <label class="m-menu__overlay" for="menu"></label>
+
+            <div class="m-menu">
+                <div class="m-menu__header">
+                    <label class="m-menu__toggl" for="menu">
+                        <svg width="30" height="30" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="40.2514" height="5.03142" transform="matrix(0.707174 -0.707039 0.707174 0.707039 0.541016 29.2573)" fill="#F40044" />
+                            <rect width="40.2514" height="5.03142" transform="matrix(0.707174 0.707039 -0.707174 0.707039 4.09863 0.204224)" fill="#F40044" />
+                        </svg>
+                    </label>
+                </div>
+                <?php wp_nav_menu(array('menu' => 'menu_princ')); ?>
+                <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/logo_simple_white.svg" alt="" class="logo_nav" />
+                <!-- <ul>
           <li><a href="../acceuil/artistes/">Les artistes</a></li>
           <li><a href="../wordpress_crespa/accueil/oeuvres/">La galerie</a></li>
           <li><a href="../acceuil/ateliers/">Les ateliers</a></li>
@@ -68,11 +76,11 @@
           <li><a href="../acceuil/entreprise/">Les services & modalités d'achat</a></li>
           <li><a href="../acceuil/contact/">Nous contacter</a></li>
           <li><a href="../acceuil/">Nous contacter</a></li>
-          <img src="../wp-content/themes/crespa/assets/images/logo_simple_white.svg" alt="" class="logo_nav" />
+          <img src="/assets/images/logo_simple_white.svg" alt="" class="logo_nav" />
         </ul> -->
-      </div>
-    </nav>
-  </header>
+            </div>
+        </nav>
+    </header>
     <!-- deuxieme page présentation + réseaux  -->
     <div class="asso">
         <article>
@@ -82,20 +90,23 @@
             <!-- réseaux sociaux  -->
             <div class="reseaux">
                 <a href="">
-                    <img src="../wp-content/themes/crespa/assets/images/red_insta.svg" alt="instagram" />
+
+                    <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/red_insta.svg" alt="instagram" />
                 </a>
                 <a href="">
-                    <img src="../wp-content/themes/crespa/assets/images/red_linkedin.svg" alt="linkedin" />
+                    <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/red_linkedin.svg" alt="linkedin" />
                 </a>
                 <a href="">
-                    <img src="../wp-content/themes/crespa/assets/images/red_facebook.svg" alt="facebook" />
+                    <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/red_facebook.svg" alt="facebook" />
                 </a>
             </div>
             <div class="suivant">
-                <a href="#actu">
-                    <img src="../wp-content/themes/crespa/assets/images/arrow_bottom.svg" alt="flèche du bas" />
-                </a>
-            </div>
+            <a onclick="
+      $(window).scrollTop(1310);">
+                
+                <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/arrow_bottom.svg" alt="flèche du bas" />
+            </a>
+        </div>
         </div>
     </div>
     <h2 id="actu">Actualités</h2>
@@ -109,12 +120,22 @@
             <div class="wrapper">
 
                 <div class=" margin item min-with-400 slide sliderDate-1 un"><?php the_field('article_1') ?></div>
-                <div class=" margin item min-with-400 hide-on-load slide sliderDate-2 deux"><?php the_field('article_2') ?></div>
-                <div class=" margin item min-with-400 hide-on-load slide sliderDate-3 trois"><?php the_field('article_3') ?></div>
-                <div class=" margin item min-with-400 hide-on-load slide sliderDate-4 quatre"><?php the_field('article_4') ?></div>
-                <div class="button_accueil_actu">
-                    <a class="button">Voir plus</a>
+                <div class="button_accueil_actu  margin item min-with-400 slide sliderDate-1 un">
+                    <a href="http://localhost/wordpress_crespa/<?php the_field("href_1") ?>" class="button">Voir plus</a>
                 </div>
+                <div class=" margin item min-with-400 hide-on-load slide sliderDate-2 deux"><?php the_field('article_2') ?></div>
+                <div class="button_accueil_actu  margin item min-with-400 hide-on-load slide sliderDate-2 un">
+                    <a href="/<?php the_field("href_2") ?>" class="button">Voir plus</a>
+                </div>
+                <div class=" margin item min-with-400 hide-on-load slide sliderDate-3 trois"><?php the_field('article_3') ?></div>
+                <div class="button_accueil_actu  margin item min-with-400 hide-on-load slide sliderDate-3 un">
+                    <a href="/<?php the_field("href_3") ?>" class="button">Voir plus</a>
+                </div>
+                <div class=" margin item min-with-400 hide-on-load slide sliderDate-4 quatre"><?php the_field('article_4') ?></div>
+                <div class="button_accueil_actu  margin item min-with-400 hide-on-load slide sliderDate-4 un">
+                    <a href="/<?php the_field("href_4") ?>" class="button">Voir plus</a>
+                </div>
+
             </div>
             <script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript"></script>
             <script>
@@ -187,8 +208,10 @@
         </div>
 
         <div class="suivant">
-            <a href="#actu">
-                <img src="../wp-content/themes/crespa/assets/images/arrow_bottom.svg" alt="flèche du bas" />
+            <a onclick="
+      $(window).scrollTop(1923);">
+                
+                <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/arrow_bottom.svg" alt="flèche du bas" />
             </a>
         </div>
     </section>
@@ -219,16 +242,16 @@
                         <?php $artits->the_post();
                         $image = get_field('img_artiste'); ?>
                         <div class="one_page_accueil">
-                            <img class="background_image" src="../wp-content/themes/crespa/assets/images/background_artiste<?php $min = 1;
-                                                                                                                            $max = 3;
-                                                                                                                            echo rand($min, $max); ?>.svg" alt="">
+                            <img class="background_image" src="<?php echo (get_template_directory_uri()); ?>/assets/images/background_artiste<?php $min = 1;
+                                                                                                                                                $max = 3;
+                                                                                                                                                echo rand($min, $max); ?>.svg" alt="">
                             <div class="photo_artiste" style="background-image: url(<?php echo $image['url'] ?>);background-repeat: no-repeat;background-size: cover;">
                             </div>
                             <div class="name">
-                                <?php the_field('name') ?>
+                                <?php echo (get_the_title()); ?>
                             </div>
                             <div class="courte_description">
-                                <?php the_field('text') ?>
+                                <?php the_field('small_text') ?>
                             </div>
                         </div>
                     <?php endwhile ?>
@@ -239,11 +262,13 @@
             <!-- boutton voir plus  -->
         </div>
         <div class="button_accueil_artistes">
-            <a class="button">Voir plus</a>
+            <a href="../wordpress_crespa/artiste/" class="button">Voir plus</a>
         </div>
-        <div class="suivant">
-            <a href="#actu">
-                <img src="../wp-content/themes/crespa/assets/images/arrow_bottom.svg" alt="flèche du bas" />
+      <div class="suivant">
+            <a onclick="
+      $(window).scrollTop(2535);">
+                
+                <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/arrow_bottom.svg" alt="flèche du bas" />
             </a>
         </div>
 
@@ -270,8 +295,6 @@
                     $image = get_field('img');
                     // var_dump($art)
                     ?>
-
-
                     <div class="one_oeuvre_page_accueil ">
                         <div class="image" style="background-image:url(<?php echo $image['url'] ?>);background-size:contain;
 background-repeat: no-repeat;background-position: 50% 100%;">
@@ -280,7 +303,6 @@ background-repeat: no-repeat;background-position: 50% 100%;">
                             <div>
                                 <?php the_field('small_text'); ?>
                             </div>
-
                         </div>
                     </div>
                 <?php endwhile; ?>
@@ -288,12 +310,15 @@ background-repeat: no-repeat;background-position: 50% 100%;">
         <?php else : ?>
             <p>Aucune oeuvre trouvée.</p>
         <?php endif; ?>
+        <?php wp_reset_postdata(); ?>
         <div class="button_accueil_oeuvre">
-            <a class="button">Voir plus</a>
+            <a href="../wordpress_crespa/oeuvre" class="button">Voir plus</a>
         </div>
         <div class="suivant">
-            <a href="#actu">
-                <img src="../wp-content/themes/crespa/assets/images/arrow_bottom.svg" alt="flèche du bas" />
+            <a onclick="
+      $(window).scrollTop(3150);">
+                
+                <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/arrow_bottom.svg" alt="flèche du bas" />
             </a>
         </div>
     </section>
@@ -306,10 +331,10 @@ background-repeat: no-repeat;background-position: 50% 100%;">
         <div class="contenu">
             <div class="story">
                 <div>
-                    <?php the_field('text_atelier'); ?>
+                    <?php echo (get_field('text_atelier')); ?>
                 </div>
                 <div class="button_accueil_atelier">
-                    <a class="button">Voir plus</a>
+                    <a href="../wordpress_crespa/atelier" class="button">Voir plus</a>
                 </div>
             </div>
             <div class="video">
@@ -319,12 +344,14 @@ background-repeat: no-repeat;background-position: 50% 100%;">
             </div>
         </div>
         <div class="suivant">
-            <a onclick="">
-                <img src="../wp-content/themes/crespa/assets/images/arrow_bottom.svg" alt="flèche du bas" />
+            <a onclick="
+      $(window).scrollTop(3760);">
+                
+                <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/arrow_bottom.svg" alt="flèche du bas" />
             </a>
         </div>
     </section>
-    <h2><?php the_field('title_formation')?></h2>
+    <h2><?php the_field('title_formation') ?></h2>
     <section class="formations">
         <div class="contenu">
             <div class="video">
@@ -337,24 +364,27 @@ background-repeat: no-repeat;background-position: 50% 100%;">
                     <?php the_field('text_formation'); ?>
                 </div>
                 <div class="button_accueil_formation">
-                    <a class="button">Voir plus</a>
+                    <a href="../wordpress_crespa/formation" class="button">Voir plus</a>
                 </div>
             </div>
         </div>
 
         <div class="suivant">
-            <a onclick="">
-                <img src="../wp-content/themes/crespa/assets/images/arrow_bottom.svg" alt="flèche du bas" />
+            <a onclick="
+      $(window).scrollTop(4365);">
+                
+                <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/arrow_bottom.svg" alt="flèche du bas" />
             </a>
         </div>
     </section>
-    <h2><?php the_field('title_entreprise')?></h2>
+    <h2><?php the_field('title_entreprise'); ?></h2>
     <section class="entreprise">
         <div class="partie_entreprise">
-            <div class="image_page_accueil" style="background-image: url(<?php $entreprise= get_field('img_entreprise'); echo $entreprise['url'] ?>);background-repeat: no-repeat;background-size:cover;">
+            <div class="image_page_accueil" style="background-image: url(<?php $entreprise = get_field('img_entreprise');
+                                                                            echo $entreprise['url'] ?>);background-repeat: no-repeat;background-size:cover;">
                 <div class="filtre_noir_page_accueil">
                     <div class="text_page_accueil_entreprise">
-                        <?php the_field('subtitle_entreprise') ?>
+                        <?php the_field('subtitle_entreprise'); ?>
                     </div>
                 </div>
             </div>
@@ -363,24 +393,26 @@ background-repeat: no-repeat;background-position: 50% 100%;">
                     <?php the_field('text_entreprise'); ?>
                 </article>
                 <div class="button_accueil_entreprise">
-                    <a class="button">Voir plus</a>
+                    <a href="../wordpress_crespa/services/" class="button">Voir plus</a>
                 </div>
             </div>
         </div>
 
         <div class="suivant">
-            <a onclick="">
-                <img src="../wp-content/themes/crespa/assets/images/arrow_bottom.svg" alt="flèche du bas" />
+            <a onclick="
+      $(window).scrollTop(5025);">
+
+                <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/arrow_bottom.svg" alt="flèche du bas" />
             </a>
         </div>
     </section>
-    <h2><?php the_field('title_histoire')?></h2>
+    <h2><?php the_field('title_histoire') ?></h2>
     <section class="histoire">
-        <div class="contenu">
+        <div class="contenu_histoire">
             <div class="video">
 
-<iframe <?php the_field('yt_video'); ?>></iframe>
-                
+                <iframe <?php the_field('yt_video'); ?>></iframe>
+
             </div>
             <div class="story">
                 <div>
@@ -391,11 +423,15 @@ background-repeat: no-repeat;background-position: 50% 100%;">
 
         </div>
         <div class="suivant">
-            <a onclick="">
-                <img src="../wp-content/themes/crespa/assets/images/arrow_bottom.svg" alt="flèche du bas" />
+            <a onclick="
+      $(window).scrollTop(5600);">
+                
+                <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/arrow_bottom.svg" alt="flèche du bas" />
             </a>
+        
         </div>
     </section>
+<h2>Contactez-nous</h2>
     <section class="mail">
 
         <form action="" method="post" class="form">
@@ -413,9 +449,20 @@ background-repeat: no-repeat;background-position: 50% 100%;">
                 <input type="email" id="mail" name="user_mail">
             </div>
             <div>
+                <label for="msg">Objet</label>
+                <textarea id="msg" name="user_message"></textarea>
+            </div>
+            <div>
                 <label for="msg">Message</label>
                 <textarea id="msg" name="user_message"></textarea>
             </div>
+            <?php
+            if (isset($_POST['message'])) {
+                $retour = mail('destinataire@free.fr', 'Envoi depuis la page Contact', $_POST['message'], 'From: webmaster@monsite.fr' . "\r\n" . 'Reply-to: ' . $_POST['email']);
+                if ($retour)
+                    echo '<p>Votre message a bien été envoyé.</p>';
+            }
+            ?>
             <div>
                 <button onclick="window.location.href = '../contact/'" ; class="send">envoyer</button>
             </div>

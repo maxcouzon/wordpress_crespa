@@ -25,17 +25,21 @@ get_header();
             <?php the_post();
             $image = get_field('img_artiste'); ?>
             <div class="one">
-                <img class="background_image" src="../wp-content/themes/crespa/assets/images/background_artiste<?php $min = 1;
+                <img class="background_image" src="<?php echo(get_template_directory_uri());?>/assets/images/background_artiste<?php $min = 1;
                                                                                                                 $max = 3;
                                                                                                                 echo rand($min, $max); ?>.svg" alt="">
                 <div class="photo_artiste" style="background-image: url(<?php echo $image['url'] ?>);background-repeat: no-repeat;background-size: cover;">
                 </div>
                 <div class="name">
-                    <?php the_field('name') ?>
+                   <?php echo(get_the_title()); ?>
                 </div>
                 <div class="courte_description">
-                    <?php the_field('text') ?>
+                    <?php the_field('small_text') ?>
                 </div>
+ <div>
+                        <a class="button" href="<?php echo (get_permalink($post->ID)); ?>">Voir plus</a>
+                    </div>
+
             </div>
         <?php endwhile ?>
         

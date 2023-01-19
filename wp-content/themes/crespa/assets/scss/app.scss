@@ -10,13 +10,14 @@
     @import 'composant/button';
     @import 'composant/artiste';
     @import 'composant/nav';
+    @import 'pages/page-services';
     body {
         background-color: $background;
     }
     
     h1 {
         color: $background;
-        font-size: 2em;
+        font-size: 1.5em;
     }
     
     // @import 'pages/page-formations';

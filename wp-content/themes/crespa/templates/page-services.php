@@ -2,14 +2,7 @@
     // template Name: services
     //header
     get_header();
-    $services = get_pages(array(
-        'sort_order' => 'ASC',
-        'sort_column' => 'menu_order',
-        'post_status' => 'publish',
-        'parent' => $post->ID,
-        'meta_key' => '_wp_page_template',
-        'meta_value' => 'templates/page-artiste.php'
-    ));
+
     ?>
     <!-- barre bleu en dessous du menu -->
     <div class="blue_barre">
@@ -20,52 +13,75 @@
             </h1>
         </div>
     </div>
-<!-- partie article de la page -->
-    <article>
-        <h2>
-            Acheter une oeuvre
-        </h2>
-        <div>
-            <div class="welcome_logo">
-                <img src="../wp-content/themes/crespa/assets/images/logo_white.svg" alt="logo">
+    <!-- partie article de la page -->
+
+    
+    <section class="entreprise">
+<h2><?php the_field('title_achat') ?></h2>
+        <div class="partie_entreprise">
+            <div class="image_page_accueil" style="background-image: url(<?php $achat = get_field('img_achat');
+                                                                            echo $achat['url'] ?>);background-repeat: no-repeat;background-size:cover;">
+                <div class="filtre_noir_page_accueil">
+                    <div class="text_page_accueil_entreprise">
+                        <?php the_field('subtitle_achat'); ?>
+                    </div>
+                </div>
             </div>
-            <div>
-                <?php the_field('texte_1') ?>
-            </div>
-        </div>
-    </article>
-    <article>
-        <h2>
-            Louer une oeuvre
-        </h2>
-        <div>
-            <div>
-                <?php the_field('texte_2') ?>
-            </div>
-            <div class="welcome_logo">
-                <img src="../wp-content/themes/crespa/assets/images/logo_white.svg" alt="logo">
+            <div class="story">
+                <article class="service">
+                    <?php the_field('text_achat'); ?>
+                </article>
             </div>
         </div>
-    </article>
-    <article>
-        <h2>
-            Vos événements chez nous !
-        </h2>
-        <div>
-            <div class="welcome_logo">
-                <img src="../wp-content/themes/crespa/assets/images/logo_white.svg" alt="logo">
+    </section>
+        
+        <section class="entreprise">
+<h2><?php the_field('title_location') ?></h2>
+            <div class="partie_entreprise">
+                <div class="story">
+                    <article class="service">
+                        <?php the_field('text_location'); ?>
+                    </article>
+
+                </div>
+                <div class="image_page_accueil" style="background-image: url(<?php $location = get_field('img_location');
+                                                                                echo $location['url'] ?>);background-repeat: no-repeat;background-size:cover;">
+                    <div class="filtre_noir_page_accueil">
+                        <div class="text_page_accueil_entreprise">
+                            <?php the_field('subtitle_location'); ?>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+        </section>
+        
+        <section class="entreprise">
+<h2><?php the_field('title_event') ?></h2>
+            <div class="partie_entreprise">
+                <div class="image_page_accueil" style="background-image: url(<?php $event = get_field('img_event');
+                                                                                echo $event['url'] ?>);background-repeat: no-repeat;background-size:cover;">
+                </div>
+                <div class="story">
+                    <article class="service">
+                        <?php the_field('text_event'); ?>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <section class="entreprise">
+<h2>
+            <?php the_field('title_pro') ?>
+        </h2>
             <div>
-                <?php the_field('texte_3') ?>
+
+                <article class="service">
+                    <?php the_field('text_pro') ?>
+                </article>
             </div>
-        </div>
-    </article>
-    <article>
-        <h2>
-            <?php the_field('texte_4') ?>
-        </h2>
-    </article>
-    <?php
-    //footer
-    get_footer();
-    ?>
+        </section>
+        <?php
+        //footer
+        get_footer();
+        ?>

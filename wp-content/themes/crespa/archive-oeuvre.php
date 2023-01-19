@@ -14,7 +14,7 @@ get_header();
  <input id="searchbar" onkeyup="artiste()" type="text" name="s" placeholder="chercher .." class="search" />
             <img src="" alt="rechercher"></form>
            
-            <img src="../wp-content/themes/crespa/templates/assets/images/setting.svg" alt="paramètre">
+            <img src="<?php echo(get_template_directory_uri());?>/assets/images/setting.svg" alt="paramètre">
         </div>
     </div>
 </div>

@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/css" href="../wp-content/themes/crespa/assets/images/logo.svg" />
+  <link rel="icon" type="image/css" href="<?php echo (get_template_directory_uri()); ?>/assets/images/logo_fav.svg" />
   <?php wp_head(); ?>
   <title>Cre'espa</title>
 </head>
@@ -23,10 +23,13 @@
             <rect y="14" width="40" height="5" fill="#F40044" />
             <rect y="28" width="40" height="5" fill="#F40044" />
           </svg>
-          <img src="../wp-content/themes/crespa/assets/images/logo_complet.svg" alt="logo" class="logo" />
-          <button onclick="window.location.href = '../acceuil/contact/'" ; class="contact">Nous contactez</button>
+          <img src="<?php echo(get_template_directory_uri());?>/assets/images/logo_complet.svg" alt="logo" class="logo" />
+          
         </div>
       </label>
+<div class="contactez-nous">
+                    <a href="/wordpress_crespa/contact/" class="button">Contactez-nous</a>
+                </div>
       <label class="m-menu__overlay" for="menu"></label>
 
       <div class="m-menu">
@@ -39,7 +42,7 @@
           </label>
         </div>
         <?php wp_nav_menu(array('menu' => 'menu_princ')); ?>
-        <img src="../wp-content/themes/crespa/assets/images/logo_simple_white.svg" alt="" class="logo_nav" />
+        <img src="<?php echo(get_template_directory_uri());?>/assets/images/logo_simple_white.svg" alt="" class="logo_nav" />
         <!-- <ul>
           <li><a href="../acceuil/artistes/">Les artistes</a></li>
           <li><a href="../wordpress_crespa/accueil/oeuvres/">La galerie</a></li>
@@ -48,7 +51,7 @@
           <li><a href="../acceuil/entreprise/">Les services & modalités d'achat</a></li>
           <li><a href="../acceuil/contact/">Nous contacter</a></li>
           <li><a href="../acceuil/">Nous contacter</a></li>
-          <img src="../wp-content/themes/crespa/assets/images/logo_simple_white.svg" alt="" class="logo_nav" />
+          <img src="/assets/images/logo_simple_white.svg" alt="" class="logo_nav" />
         </ul> -->
       </div>
     </nav>
