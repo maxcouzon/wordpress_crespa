@@ -36,7 +36,7 @@ background-repeat: no-repeat;background-position: 50% 100%;">
     $args = array(
         'post_type' => 'oeuvre',
         'posts_per_page' => -1,
-        'post__not_in' => array($post->ID),
+        'post__not_in' => array($post->ID), 
         'meta_query'    => (array(
             'key'       => 'artiste',
             'value'     => '"' . $artist[0]->ID . '"',
@@ -48,7 +48,7 @@ background-repeat: no-repeat;background-position: 50% 100%;">
     ?>
 
     <?php if ($art->have_posts()) : ?>
-        <h2>Oeuvre du meme artiste</h2>
+        <h2>Oeuvres du même artiste</h2>
         <div class="autre_oeuvre">
             <?php while ($art->have_posts()) : ?>
                 <?php $art->the_post();

@@ -23,7 +23,7 @@
             <rect y="14" width="40" height="5" fill="#F40044" />
             <rect y="28" width="40" height="5" fill="#F40044" />
           </svg>
-          <img src="<?php echo(get_template_directory_uri());?>/assets/images/logo_complet.svg" alt="logo" class="logo" />
+          <img src="<?php echo(get_template_directory_uri());?>/assets/images/logo.svg" alt="logo" class="logo" />
           
         </div>
       </label>

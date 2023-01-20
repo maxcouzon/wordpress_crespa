@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "roboto";
+  src: url("Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "dmserif";
+  src: url("DMSerifDisplay-Regular.ttf");
+}
 footer {
   background-color: #F4E7D7;
   height: 45vh;
@@ -476,6 +484,7 @@ menu .ancre {
 html {
   width: 100vw;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 .welcome {
@@ -508,6 +517,9 @@ html {
   justify-content: center;
   align-items: center;
 }
+.asso article p {
+  text-align: center;
+}
 .asso span {
   color: #e51449 !important;
 }
@@ -535,7 +547,7 @@ html {
 div.filtre_noir_page_accueil {
   width: 37.5vw;
   height: 15vh;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
   position: absolute;
   z-index: 46;
 }
@@ -596,9 +608,11 @@ div.asso div {
 div.asso div .reseaux {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 div.asso div .reseaux img {
-  width: 10vw;
+  width: 5vw;
   height: 10vh;
 }
 div.asso article {
@@ -649,10 +663,10 @@ section.oeuvres,
   display: flex;
 }
 .one_page_accueil .photo_artiste {
-  margin-top: 10%;
+  margin-top: 5%;
   border-radius: 50%;
-  width: 60%;
-  height: 46%;
+  width: 45%;
+  height: 35%;
   position: relative;
   z-index: 21;
 }
@@ -662,15 +676,16 @@ section.oeuvres,
 .one_page_accueil .courte_description {
   width: 80%;
   word-wrap: break-word;
+  text-align: center;
 }
 .one_page_accueil .artistes {
   height: 100%;
 }
 .one_page_accueil .background_image {
   position: absolute;
-  width: 30%;
-  height: 30%;
-  margin-bottom: 8%;
+  width: 23%;
+  height: 23%;
+  margin-bottom: 10%;
   z-index: 20;
 }
 
@@ -682,7 +697,6 @@ section.oeuvres,
 
 h2 {
   font-family: "Courier New", Courier, monospace;
-  font-size: 2em;
   color: #0C53C4;
   margin-bottom: 6vh;
   margin-left: 10vw;
@@ -741,8 +755,8 @@ div.slider {
 }
 
 .date {
-  color: #000000;
-  font-size: 2em;
+  color: #0C53C4;
+  font-size: 1.5em;
 }
 
 .nom_article {
@@ -931,6 +945,32 @@ section.mail {
 
 .video iframe {
   width: 37.5vw;
+}
+
+.onclick {
+  transition: ease-in 1s;
+}
+
+.animation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.animation div {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.animation div img.fleche {
+  animation: downArrow 0.7s ease-out infinite;
+}
+@keyframes downArrow {
+  from {
+    padding-top: 0px;
+  }
+  to {
+    padding-top: 100px;
+  }
 }
 
 .all_oeuvre {
@@ -1343,11 +1383,18 @@ section.entreprise article.service {
 
 body {
   background-color: #FCF1E3;
+  font-family: "roboto";
 }
 
 h1 {
   color: #FCF1E3;
   font-size: 1.5em;
+  font-family: "roboto";
+}
+
+h2 {
+  font-family: "dmserif";
+  font-size: 3em;
 }
 
 /*# sourceMappingURL=app.css.map */

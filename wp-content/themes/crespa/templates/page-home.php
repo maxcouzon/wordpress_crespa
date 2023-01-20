@@ -27,8 +27,11 @@
         <div>
             <?php the_field('slogan') ?>
         </div>
-        <div>
-            <a onclick=" $(window).scrollTop(700);">" ><img class="souris" src="<?php echo (get_template_directory_uri()); ?>/assets/images/souris.svg" alt="souris incitation a cliquer"></a>
+        <div class="animation">
+            <a class="onclick" onclick=" $(window).scrollTop(700);">
+<div><img class="souris" src="<?php echo (get_template_directory_uri()); ?>/assets/images/bloque.svg" alt="souris incitation a cliquer"></div>
+<div><img class="souris" src="<?php echo (get_template_directory_uri()); ?>/assets/images/fleche.svg" alt="souris incitation a cliquer"></div>
+</a>
         </div>
 
     </div>
@@ -101,7 +104,7 @@
                 </a>
             </div>
             <div class="suivant">
-            <a onclick="
+            <a class="onclick" onclick="
       $(window).scrollTop(1310);">
                 
                 <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/arrow_bottom.svg" alt="flèche du bas" />
@@ -208,7 +211,7 @@
         </div>
 
         <div class="suivant">
-            <a onclick="
+            <a class="onclick" onclick="
       $(window).scrollTop(1923);">
                 
                 <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/arrow_bottom.svg" alt="flèche du bas" />
@@ -265,7 +268,7 @@
             <a href="../wordpress_crespa/artiste/" class="button">Voir plus</a>
         </div>
       <div class="suivant">
-            <a onclick="
+            <a class="onclick" onclick="
       $(window).scrollTop(2535);">
                 
                 <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/arrow_bottom.svg" alt="flèche du bas" />
@@ -315,7 +318,7 @@ background-repeat: no-repeat;background-position: 50% 100%;">
             <a href="../wordpress_crespa/oeuvre" class="button">Voir plus</a>
         </div>
         <div class="suivant">
-            <a onclick="
+            <a class="onclick" onclick="
       $(window).scrollTop(3150);">
                 
                 <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/arrow_bottom.svg" alt="flèche du bas" />
@@ -344,7 +347,7 @@ background-repeat: no-repeat;background-position: 50% 100%;">
             </div>
         </div>
         <div class="suivant">
-            <a onclick="
+            <a class="onclick" onclick="
       $(window).scrollTop(3760);">
                 
                 <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/arrow_bottom.svg" alt="flèche du bas" />
@@ -370,7 +373,7 @@ background-repeat: no-repeat;background-position: 50% 100%;">
         </div>
 
         <div class="suivant">
-            <a onclick="
+            <a class="onclick" onclick="
       $(window).scrollTop(4365);">
                 
                 <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/arrow_bottom.svg" alt="flèche du bas" />
@@ -399,7 +402,7 @@ background-repeat: no-repeat;background-position: 50% 100%;">
         </div>
 
         <div class="suivant">
-            <a onclick="
+            <a class="onclick" onclick="
       $(window).scrollTop(5025);">
 
                 <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/arrow_bottom.svg" alt="flèche du bas" />
@@ -423,7 +426,7 @@ background-repeat: no-repeat;background-position: 50% 100%;">
 
         </div>
         <div class="suivant">
-            <a onclick="
+            <a class="onclick" onclick="
       $(window).scrollTop(5600);">
                 
                 <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/arrow_bottom.svg" alt="flèche du bas" />
