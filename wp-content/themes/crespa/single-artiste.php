@@ -27,7 +27,7 @@ $image = get_field('img_artiste'); ?>
     </div>
 
         <?php
-        $artist = get_field('artiste');
+        
 
         // The Query
         $args = array(
@@ -42,6 +42,7 @@ $image = get_field('img_artiste'); ?>
                 )
             )
         );
+$artist = get_field('artiste');
         $art = new WP_Query($args);
         ?>
 

@@ -1,40 +1,29 @@
-   @font-face {
-       font-family: "roboto";
-       src: url("Roboto-Regular.ttf");
-   }
-   
-   @font-face {
-       font-family: "dmserif";
-       src: url("DMSerifDisplay-Regular.ttf");
-   }
-   
-   @import 'base/variables';
-   @import 'layout/footer';
-   @import 'layout/header';
-   @import 'pages/page-home';
-   @import 'pages/page-artistes';
-   @import 'pages/page-oeuvres';
-   @import 'pages/page-contact';
-   @import 'pages/page-formations';
-   @import 'pages/page-404';
-   @import 'composant/button';
-   @import 'composant/artiste';
-   @import 'composant/nav';
-   @import 'pages/page-services';
-   body {
-       background-color: $background;
-       font-family: "roboto";
-   }
-   
-   h1 {
-       color: $background;
-       font-size: 1.5em;
-       font-family: "roboto";
-   }
-   
-   h2 {
-       font-family: "dmserif";
-       font-size: 3em;
-   }
-   
-   // @import 'pages/page-formations';
+@import 'base/variables';
+@import 'layout/footer';
+@import 'layout/header';
+@import 'pages/page-home';
+@import 'pages/page-artistes';
+@import 'pages/page-oeuvres';
+@import 'pages/page-contact';
+@import 'pages/page-formations';
+@import 'pages/page-404';
+@import 'composant/button';
+@import 'composant/artiste';
+@import 'composant/nav';
+@import 'pages/page-services';
+* {
+    font-family: 'Roboto';
+    font-weight: 400;
+}
+
+h1 {
+    color: $background;
+    font-size: 1.5em;
+}
+
+h2 {
+    font-family: 'DM Serif Display';
+    font-size: 3em;
+}
+
+// @import 'pages/page-formations';

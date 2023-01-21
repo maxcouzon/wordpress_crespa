@@ -4,35 +4,36 @@
     flex-direction: row;
 }
 
-.form {
+form {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 5vh;
 }
 
-.form div {
+form div {
     display: flex;
     flex-direction: column;
     gap: 2.5vh;
 }
 
-.form input {
+form input {
     border: solid 0px;
     border-bottom: solid 2px $bleu;
-    width: 100%;
-    background-color: $background;
+    width: 30vw;
+    background-color: transparent;
 }
 
 .form input:focus {
-    background-color: $background;
+    background-color: transparent;
+    border: 0px;
 }
 
-.form textarea {
+form textarea {
     border: solid 0px;
     border-bottom: solid 2px $bleu;
     width: 100%;
-    background-color: $background;
+    background-color: transparent;
 }
 
 .maps {
@@ -40,7 +41,7 @@
     height: 40vh;
 }
 
-.send {
+#wpforms-submit-244 {
     border-radius: 55px;
     background-color: $red;
     width: 40%;

@@ -34,7 +34,7 @@
           width: 100%;
           margin-bottom: 7.5vh;
           div:nth-child(1) {
-              background-color: $background;
+              background-color: transparent;
               margin-top: 0px;
           }
       }
@@ -69,9 +69,6 @@
       display: flex;
       flex-direction: column;
       h2 {
-          font-family: 'Courier New', Courier, monospace;
-          font-size: 2em;
-          color: $bleu;
           margin-bottom: 0px!important;
           margin-left: 0px!important;
       }
@@ -117,4 +114,16 @@
   
    :hover.button_oeuvre {
       text-decoration: underline;
+  }
+  
+  .titre_price .titre {
+       :nth-child(1) {
+          color: $red;
+          font-size: 1.5em;
+          font-family: 'DM Serif Display';
+          padding-bottom: 10px;
+      }
+       :nth-child(2) {
+          color: $bleu;
+      }
   }

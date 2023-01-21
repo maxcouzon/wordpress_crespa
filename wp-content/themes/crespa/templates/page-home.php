@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/css" href="<?php echo (get_template_directory_uri()); ?>/assets/images/logo_fav.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <?php
     // template Name: Accueil
     wp_head(); ?>
@@ -52,7 +55,7 @@
                 </div>
             </label>
             <div class="contactez-nous">
-                <a class="button" href="../wordpress_crespa/contact/">
+                <a class="button" href="<?php the_permalink('contact')?>">
                     <p>Contactez-nous</p>
                 </a>
             </div>
@@ -73,7 +76,7 @@
                 <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/logo_simple_white.svg" alt="" class="logo_nav" />
                 <!-- <ul>
           <li><a href="../acceuil/artistes/">Les artistes</a></li>
-          <li><a href="../wordpress_crespa/accueil/oeuvres/">La galerie</a></li>
+          <li><a href="../accueil/oeuvres/">La galerie</a></li>
           <li><a href="../acceuil/ateliers/">Les ateliers</a></li>
           <li><a href="../acceuil/formations/">Les formations</a></li>
           <li><a href="../acceuil/entreprise/">Les services & modalités d'achat</a></li>
@@ -85,6 +88,18 @@
         </nav>
     </header>
     <!-- deuxieme page présentation + réseaux  -->
+<div>
+<img class="point_rouge" src="<?php echo(get_template_directory_uri()); ?>/assets/images/point_rouge.svg" alt="">
+<img class="point_jaune" src="<?php echo(get_template_directory_uri()); ?>/assets/images/point_jaune.svg" alt="">
+<img class="point_bleu" src="<?php echo(get_template_directory_uri()); ?>/assets/images/point_bleu.svg" alt="">
+<img class="tache_jaune" src="<?php echo(get_template_directory_uri()); ?>/assets/images/tache_jaune.svg" alt="">
+<img class="tache_rouge" src="<?php echo(get_template_directory_uri()); ?>/assets/images/tache_rouge.svg" alt="">
+<img class="tache_bleu" src="<?php echo(get_template_directory_uri()); ?>/assets/images/tache_bleu.svg" alt="">
+<img class="tache_rouge_jaune" src="<?php echo(get_template_directory_uri()); ?>/assets/images/tache_rouge_jaune.svg" alt="">
+<img class="point_rouge-2" src="<?php echo(get_template_directory_uri()); ?>/assets/images/point_rouge.svg" alt="">
+<img class="point_jaune-2" src="<?php echo(get_template_directory_uri()); ?>/assets/images/point_jaune.svg" alt="">
+<img class="tache_rouge-2" src="<?php echo(get_template_directory_uri()); ?>/assets/images/tache_rouge.svg" alt="">
+</div>
     <div class="asso">
         <article>
             <p> <?php the_field('storytelling'); ?></p>
@@ -124,19 +139,19 @@
 
                 <div class=" margin item min-with-400 slide sliderDate-1 un"><?php the_field('article_1') ?></div>
                 <div class="button_accueil_actu  margin item min-with-400 slide sliderDate-1 un">
-                    <a href="http://localhost/wordpress_crespa/<?php the_field("href_1") ?>" class="button">Voir plus</a>
+                    <a href="/<?php the_field("href_1") ?>" class="button">Voir</a>
                 </div>
                 <div class=" margin item min-with-400 hide-on-load slide sliderDate-2 deux"><?php the_field('article_2') ?></div>
                 <div class="button_accueil_actu  margin item min-with-400 hide-on-load slide sliderDate-2 un">
-                    <a href="/<?php the_field("href_2") ?>" class="button">Voir plus</a>
+                    <a href="/<?php the_field("href_2") ?>" class="button">Voir</a>
                 </div>
                 <div class=" margin item min-with-400 hide-on-load slide sliderDate-3 trois"><?php the_field('article_3') ?></div>
                 <div class="button_accueil_actu  margin item min-with-400 hide-on-load slide sliderDate-3 un">
-                    <a href="/<?php the_field("href_3") ?>" class="button">Voir plus</a>
+                    <a href="/<?php the_field("href_3") ?>" class="button">Voir</a>
                 </div>
                 <div class=" margin item min-with-400 hide-on-load slide sliderDate-4 quatre"><?php the_field('article_4') ?></div>
                 <div class="button_accueil_actu  margin item min-with-400 hide-on-load slide sliderDate-4 un">
-                    <a href="/<?php the_field("href_4") ?>" class="button">Voir plus</a>
+                    <a href="/<?php the_field("href_4") ?>" class="button">Voir</a>
                 </div>
 
             </div>
@@ -265,7 +280,7 @@
             <!-- boutton voir plus  -->
         </div>
         <div class="button_accueil_artistes">
-            <a href="../wordpress_crespa/artiste/" class="button">Voir plus</a>
+            <a href="/artiste/" class="button">Voir plus</a>
         </div>
       <div class="suivant">
             <a class="onclick" onclick="
@@ -315,7 +330,7 @@ background-repeat: no-repeat;background-position: 50% 100%;">
         <?php endif; ?>
         <?php wp_reset_postdata(); ?>
         <div class="button_accueil_oeuvre">
-            <a href="../wordpress_crespa/oeuvre" class="button">Voir plus</a>
+            <a href="/oeuvre/" class="button">Voir plus</a>
         </div>
         <div class="suivant">
             <a class="onclick" onclick="
@@ -337,7 +352,7 @@ background-repeat: no-repeat;background-position: 50% 100%;">
                     <?php echo (get_field('text_atelier')); ?>
                 </div>
                 <div class="button_accueil_atelier">
-                    <a href="../wordpress_crespa/atelier" class="button">Voir plus</a>
+                    <a href="/atelier/" class="button">Voir plus</a>
                 </div>
             </div>
             <div class="video">
@@ -367,7 +382,7 @@ background-repeat: no-repeat;background-position: 50% 100%;">
                     <?php the_field('text_formation'); ?>
                 </div>
                 <div class="button_accueil_formation">
-                    <a href="../wordpress_crespa/formation" class="button">Voir plus</a>
+                    <a href="/formation/" class="button">Voir plus</a>
                 </div>
             </div>
         </div>
@@ -396,7 +411,7 @@ background-repeat: no-repeat;background-position: 50% 100%;">
                     <?php the_field('text_entreprise'); ?>
                 </article>
                 <div class="button_accueil_entreprise">
-                    <a href="../wordpress_crespa/services/" class="button">Voir plus</a>
+                    <a href="/services/" class="button">Voir plus</a>
                 </div>
             </div>
         </div>
@@ -436,44 +451,11 @@ background-repeat: no-repeat;background-position: 50% 100%;">
     </section>
 <h2>Contactez-nous</h2>
     <section class="mail">
-
-        <form action="" method="post" class="form">
-
-            <div>
-                <label for="firstname">Nom</label>
-                <input type="text" id="name" name="user_name">
-            </div>
-            <div>
-                <label for="name">prénom</label>
-                <input type="text" id="name" name="user_name">
-            </div>
-            <div>
-                <label for="mail">e-mail</label>
-                <input type="email" id="mail" name="user_mail">
-            </div>
-            <div>
-                <label for="msg">Objet</label>
-                <textarea id="msg" name="user_message"></textarea>
-            </div>
-            <div>
-                <label for="msg">Message</label>
-                <textarea id="msg" name="user_message"></textarea>
-            </div>
-            <?php
-            if (isset($_POST['message'])) {
-                $retour = mail('destinataire@free.fr', 'Envoi depuis la page Contact', $_POST['message'], 'From: webmaster@monsite.fr' . "\r\n" . 'Reply-to: ' . $_POST['email']);
-                if ($retour)
-                    echo '<p>Votre message a bien été envoyé.</p>';
-            }
-            ?>
-            <div>
-                <button onclick="window.location.href = '../contact/'" ; class="send">envoyer</button>
-            </div>
-            <article>
-                En envoyant je sais pas quoi
-            </article>
-        </form>
-
+<form>
+<?php
+                echo do_shortcode('[wpforms id="244" title="false"]');
+                ?></form>
+        
         <div>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.1392009935175!2d4.895699815420589!3d45.527404279101745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4df2247e88dcf%3A0xa78db9478c3d63ba!2s93%20Rue%20Lafayette%2C%2038200%20Vienne%2C%20France!5e0!3m2!1sfr!2sus!4v1673705030709!5m2!1sfr!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="maps"></iframe>
             <div>

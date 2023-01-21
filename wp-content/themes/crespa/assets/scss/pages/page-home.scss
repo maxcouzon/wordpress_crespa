@@ -56,6 +56,10 @@ html {
     left: 25vw;
     gap: 20px;
     overflow-y: hidden;
+     :nth-child(2) {
+        color: $background;
+        font-size: 1.25em;
+    }
 }
 
 .welcome_logo {
@@ -103,8 +107,8 @@ div.wrapper {
     width: 35vw;
     border-left: solid 10px $red;
     border-top: solid 10px $red;
-    background-color: $background;
     z-index: 49;
+    background-color: transparent;
 }
 
 
@@ -198,13 +202,13 @@ section.oeuvres,
         margin-top: 5%;
         border-radius: 50%;
         width: 45%;
-        height: 35%;
+        height: 40%;
         position: relative;
         z-index: 21;
     }
     // contenu de chaque article 
     .name {
-        font-size: 2em;
+        font-size: 1.25em;
     }
     .courte_description {
         width: 80%;
@@ -230,7 +234,6 @@ section.oeuvres,
 }
 
 h2 {
-    font-family: 'Courier New', Courier, monospace;
     color: $bleu;
     margin-bottom: 6vh;
     margin-left: 10vw;
@@ -257,7 +260,7 @@ div.slider {
 
 .border {
     width: 100%;
-    border-left: solid 10px $background;
+    border-left: solid 10px transparent;
 }
 
 .articles {
@@ -288,7 +291,7 @@ div.slider {
     width: 45vw;
     padding: 0px;
     height: 100%;
-    background-color: $background;
+    background-color: transparent;
 }
 
 .date {
@@ -415,7 +418,6 @@ a {
         width: 100%;
         margin-bottom: 7.5vh;
         div:nth-child(1) {
-            background-color: $background;
             margin-top: 0px;
         }
     }
@@ -501,18 +503,98 @@ section.mail {
         align-content: center;
         justify-content: center;
         img.fleche {
-            animation: downArrow 0.7s ease-out infinite;
+            animation: downArrow 0.7s infinite;
         }
         @keyframes downArrow {
-            from {
-                padding-top: 0px;
-            }
-            to {
-                padding-top: 100px;
+            50% {
+                transform: translateY(50px);
             }
         }
     }
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+div {
+    .point_rouge {
+        position: absolute;
+        z-index: -1;
+        top: 1700px;
+        left: 95vw;
+        width: 120px;
+        height: 300px;
+    }
+    .point_jaune {
+        position: absolute;
+        z-index: -1;
+        top: 2100px;
+        left: 25vw;
+        width: 150px;
+        height: 150px;
+    }
+    .point_bleu {
+        position: absolute;
+        z-index: -1;
+        top: 2100px;
+        left: 65vw;
+        width: 150px;
+        height: 150px;
+    }
+    .tache_jaune {
+        position: absolute;
+        z-index: -1;
+        left: 85vw;
+        top: 500;
+        width: 308px;
+        height: 180px;
+    }
+    .tache_rouge {
+        position: absolute;
+        z-index: -1;
+        top: 1000px;
+        left: 10px;
+        width: 180px;
+        height: 180px;
+    }
+    .tache_bleu {
+        position: absolute;
+        left: 90vw;
+        top: 3600px;
+        z-index: -1;
+        width: 300px;
+        height: 180px;
+    }
+    .tache_rouge_jaune {
+        position: absolute;
+        z-index: -1;
+        top: 2500px;
+        left: -17vw;
+        width: 388px;
+        height: 340px;
+    }
+    .point_rouge-2 {
+        position: absolute;
+        z-index: -1;
+        top: 4000px;
+        left: 95vw;
+        width: 120px;
+        height: 300px;
+    }
+    .point_jaune-2 {
+        position: absolute;
+        z-index: -1;
+        top: 4500px;
+        left: 5vw;
+        width: 150px;
+        height: 150px;
+    }
+    .tache_rouge-2 {
+        position: absolute;
+        z-index: -1;
+        top: 5000px;
+        left: 95vw;
+        width: 300px;
+        height: 180px;
+    }
 }

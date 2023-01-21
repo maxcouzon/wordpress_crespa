@@ -2,8 +2,9 @@
 //header
 get_header();
 ?>
-<?php $image = get_field('img');?>
-<?php $artist = get_field('artiste'); ?>
+<?php $image = get_field('img');
+$artist = get_field('artiste'); ?>
+
 
 
 <diV class="contenu_oeuvre">
@@ -14,7 +15,10 @@ get_header();
                 <div class="titre">
                     <div><?php echo (get_the_title()) ?></div>
                     <div>
-                        <?php var_dump($artist["post_title"]) ?>
+                        <?php setup_postdata($post); 
+$frite=wp_list_pluck($artist ,'post_name');
+var_dump($frite);
+ wp_reset_postdata();?> 
                     </div>
                 </div>
                 <div class="price">
@@ -25,29 +29,29 @@ get_header();
 background-repeat: no-repeat;background-position: 50% 100%;">
             </div>
         </div>
-        <div class="description"> <?php the_field('text') ?>
+        <div class="description"> <?php $tigre=get_field( 'field_name' , $artist->ID);echo($tigre) ?>
 
         </div>
     </div>
     <?php
 
-
+$artist = get_field('artiste'); 
     // The Query
     $args = array(
         'post_type' => 'oeuvre',
         'posts_per_page' => -1,
         'post__not_in' => array($post->ID), 
-        'meta_query'    => (array(
+        'meta_query'    => (array(array(
             'key'       => 'artiste',
             'value'     => '"' . $artist[0]->ID . '"',
             'compare'   => 'LIKE'
         )
-        )
+        ))
     );
-    $art = new WP_Query($args);
-    ?>
 
-    <?php if ($art->have_posts()) : ?>
+ 
+    $art = new WP_Query($args);
+ if ($art->have_posts()) : ?>
         <h2>Oeuvres du même artiste</h2>
         <div class="autre_oeuvre">
             <?php while ($art->have_posts()) : ?>
