@@ -89,16 +89,16 @@
     </header>
     <!-- deuxieme page présentation + réseaux  -->
 <div>
-<img class="point_rouge" src="<?php echo(get_template_directory_uri()); ?>/assets/images/point_rouge.svg" alt="">
-<img class="point_jaune" src="<?php echo(get_template_directory_uri()); ?>/assets/images/point_jaune.svg" alt="">
-<img class="point_bleu" src="<?php echo(get_template_directory_uri()); ?>/assets/images/point_bleu.svg" alt="">
-<img class="tache_jaune" src="<?php echo(get_template_directory_uri()); ?>/assets/images/tache_jaune.svg" alt="">
-<img class="tache_rouge" src="<?php echo(get_template_directory_uri()); ?>/assets/images/tache_rouge.svg" alt="">
-<img class="tache_bleu" src="<?php echo(get_template_directory_uri()); ?>/assets/images/tache_bleu.svg" alt="">
-<img class="tache_rouge_jaune" src="<?php echo(get_template_directory_uri()); ?>/assets/images/tache_rouge_jaune.svg" alt="">
-<img class="point_rouge-2" src="<?php echo(get_template_directory_uri()); ?>/assets/images/point_rouge.svg" alt="">
-<img class="point_jaune-2" src="<?php echo(get_template_directory_uri()); ?>/assets/images/point_jaune.svg" alt="">
-<img class="tache_rouge-2" src="<?php echo(get_template_directory_uri()); ?>/assets/images/tache_rouge.svg" alt="">
+<img class="point_rouge" src="<?php echo(get_template_directory_uri()); ?>/assets/images/point_rouge.svg" alt="" />
+<img class="point_jaune" src="<?php echo(get_template_directory_uri()); ?>/assets/images/point_jaune.svg" alt="" />
+<img class="point_bleu" src="<?php echo(get_template_directory_uri()); ?>/assets/images/point_bleu.svg" alt="" />
+<img class="tache_jaune" src="<?php echo(get_template_directory_uri()); ?>/assets/images/tache_jaune.svg" alt="" />
+<img class="tache_rouge" src="<?php echo(get_template_directory_uri()); ?>/assets/images/tache_rouge.svg" alt="" />
+<img class="tache_bleu" src="<?php echo(get_template_directory_uri()); ?>/assets/images/tache_bleu.svg" alt="" />
+<img class="tache_rouge_jaune" src="<?php echo(get_template_directory_uri()); ?>/assets/images/tache_rouge_jaune.svg" alt="" />
+<img class="point_rouge-2" src="<?php echo(get_template_directory_uri()); ?>/assets/images/point_rouge.svg" alt="" />
+<img class="point_jaune-2" src="<?php echo(get_template_directory_uri()); ?>/assets/images/point_jaune.svg" alt="" />
+<img class="tache_rouge-2" src="<?php echo(get_template_directory_uri()); ?>/assets/images/tache_rouge.svg" alt="" />
 </div>
     <div class="asso">
         <article>

@@ -1003,8 +1003,8 @@ div .tache_rouge {
   position: absolute;
   z-index: -1;
   top: 1000px;
-  left: 10px;
-  width: 180px;
+  left: -10px;
+  width: 260px;
   height: 180px;
 }
 div .tache_bleu {
@@ -1137,10 +1137,11 @@ div.contenu_oeuvre .oeuvre .gauche {
 }
 div.contenu_oeuvre .oeuvre .gauche .titre_price {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  gap: 25vw;
 }
 div.contenu_oeuvre .oeuvre .gauche .titre_price .titre {
-  margin-top: 0;
+  margin-top: 0px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1164,6 +1165,10 @@ div.contenu_oeuvre .oeuvre .description {
 
 :hover.button_oeuvre {
   text-decoration: underline;
+}
+
+.price {
+  font-size: 1.25em;
 }
 
 .titre_price .titre :nth-child(1) {

@@ -84,9 +84,10 @@
               width: 50vw;
               .titre_price {
                   display: flex;
-                  justify-content: space-between;
+                  justify-content: space-around;
+                  gap: 25vw;
                   .titre {
-                      margin-top: 0;
+                      margin-top: 0px;
                       display: flex;
                       flex-direction: column;
                       justify-content: space-between;
@@ -114,6 +115,10 @@
   
    :hover.button_oeuvre {
       text-decoration: underline;
+  }
+  
+  .price {
+      font-size: 1.25em;
   }
   
   .titre_price .titre {

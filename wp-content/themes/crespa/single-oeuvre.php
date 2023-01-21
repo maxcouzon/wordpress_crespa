@@ -13,11 +13,13 @@ $artist = get_field('artiste'); ?>
             <div class="titre_price">
 
                 <div class="titre">
-                    <div><?php echo (get_the_title()) ?></div>
+                    <div><?php echo (get_the_title()); ?></div>
                     <div>
                         <?php setup_postdata($post); 
-$frite=wp_list_pluck($artist ,'post_name');
-var_dump($frite);
+var_dump($artist);
+$frite=wp_list_pluck($artist ,'post_title');
+
+echo($frite[0]);
  wp_reset_postdata();?> 
                     </div>
                 </div>
