@@ -33,9 +33,10 @@ background-repeat: no-repeat;background-position: 50% 100%;">
                     <div class="titre_oeuvre">
                         <?php echo (get_the_title()); ?>
                     </div>
-                    <div>
-                        <a class="button" href="<?php echo (get_permalink($post->ID)); ?>">Voir plus</a>
-                    </div>
+                    <div class="button_accueil_artistes">
+                            <a href= "/<?php $post_slug = $post->post_name; echo($post_slug)?>/" class="button_oeuvre">Voir</a>
+
+                        </div>
                 </div>
             </div>
         <?php endwhile; ?>

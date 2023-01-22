@@ -5,13 +5,7 @@
 get_header();
 
 ?>
-<div>
 
-<img class="point_jaune_autre" src="<?php echo(get_template_directory_uri()); ?>/assets/images/point_jaune.svg" alt="" />
-<img class="tache_rouge_jaune_autre" src="<?php echo(get_template_directory_uri()); ?>/assets/images/point_bleu.svg" alt="" />
-
-<img class="tache_rouge_service" src="<?php echo(get_template_directory_uri()); ?>/assets/images/tache_rouge.svg" alt="" />
-</div>
 <div class="blue_barre">
 <div class="search_barre">
 <h1><?php post_type_archive_title(); ?></h1>
@@ -31,7 +25,7 @@ get_header();
                     <div class="titre">
                         <?php the_field('title') ?>
                     </div>
-                    <div>
+                    <div class="description">
                         <?php the_field('theme') ?>
                     </div>
                 </div>

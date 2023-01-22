@@ -103,7 +103,7 @@
  }
  
  body {
-     line-height: 1;
+     line-height: 23px;
  }
  
  ol,
@@ -304,18 +304,19 @@
  
  li {
      color: #fff;
-     border-bottom: 3px solid $bleu;
+     border-bottom: 5px solid $bleu;
      width: 70%;
      margin-left: 15%;
+     transition: all 0.2s ease-in;
  }
  
  li:hover {
+     transition: all 0.2s ease-out;
      border-bottom: 5px solid $red;
  }
  
  .logo_header {
      width: 164px;
-     height: 164px;
  }
  
  .header {
@@ -434,9 +435,9 @@
  div.header_2 {
      align-items: center;
      margin-top: 0px;
-     width: 45vw;
+     width: 46vw;
      display: flex;
      flex-direction: row;
-     margin-left: 45vw;
+     margin-left: 44vw;
      justify-content: space-between;
  }

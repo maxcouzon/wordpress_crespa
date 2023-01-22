@@ -57,13 +57,16 @@
 .contenu_single {
     .autre_oeuvre {
         display: flex;
+        flex-wrap: wrap;
+        gap: 6.5vw;
+        flex: 2 1 auto;
     }
     .one_oeuvre {
         flex-direction: column;
         justify-content: center;
         align-items: center;
         display: flex;
-        width: 20vw;
+        width: 18%;
         height: 40vh;
         margin-top: 2.5vh;
         margin-bottom: 2.5vh;
@@ -106,7 +109,7 @@
             }
             .photo_artiste {
                 border-radius: 50%;
-                width: 20%;
+                width: 18%;
                 height: 43%;
                 position: relative;
                 z-index: 21;

@@ -36,7 +36,7 @@ $image = get_field('img_artiste'); ?>
         // The Query
         $args = array(
             'post_type' => 'oeuvre',
-            'posts_per_page' => -1,
+            'posts_per_page' => 8,
             'post__not_in' => array($post->ID),
             'meta_query'    => array(
                 array(
@@ -67,9 +67,10 @@ $artist = get_field('artiste');
 <div class="titre_oeuvre">
                            <?php echo (get_the_title()); ?>
                         </div>
- <div>
-                        <a class="button_art" href="<?php echo (get_permalink($post->ID)); ?>">Voir</a>
-                    </div>
+<div class="button_accueil_artistes">
+                            <a href= "/<?php $post_slug = $post->post_name; echo($post_slug)?>/" class="button_oeuvre">Voir</a>
+
+                        </div>
                     </div>
                 </div>
             <?php endwhile; ?>

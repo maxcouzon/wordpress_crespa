@@ -24,7 +24,7 @@ echo($frite[0]);
                 </div>
                 <div class="price">
                     <?php $prix = get_field('price');
-                    echo ($prix); ?>€</div>
+                    echo ($prix); ?></div>
             </div>
             <div class="image_oeuvre_simple" style="background-image:url(<?php echo $image['url'] ?>);background-size:contain;
 background-repeat: no-repeat;background-position: 50% 100%;">
@@ -41,7 +41,7 @@ $artist = get_field('artiste');
     // The Query
     $args = array(
         'post_type' => 'oeuvre',
-        'posts_per_page' => -1,
+        'posts_per_page' => 8,
         'post__not_in' => array($post->ID), 
         'meta_query'    => (array(array(
             'key'       => 'artiste',

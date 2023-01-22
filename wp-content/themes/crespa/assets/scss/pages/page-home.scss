@@ -264,12 +264,12 @@ div.slider {
 .articles {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    margin-left: 100px;
     align-items: center;
     gap: 20%;
     height: 50px !important;
     z-index: 49;
-    width: 100%;
+    font-family: "DM serif display";
 }
 
 
@@ -344,7 +344,6 @@ a {
 
 .story {
     width: 37.5vw;
-    line-height: 27px;
     display: flex;
     flex-direction: column;
 }
@@ -453,13 +452,23 @@ a {
 .text_page_accueil_entreprise {
     position: absolute;
     z-index: -100;
-    color: $background;
+    color: #FCF1E3;
     margin-left: 20px;
     margin-top: 10px;
     font-size: 2em;
+    line-height: 30px;
+}
+
+section.entreprise {
+    height: auto!important;
+}
+
+article.service {
+    margin-top: 50px;
 }
 
 .partie_entreprise {
+    margin-top: 50px;
     display: flex;
     width: 80vw;
     justify-content: space-between;
@@ -665,11 +674,21 @@ div.after {
     width: 100%;
     margin-bottom: 7.5vh;
     .titre_oeuvre {
-        color: $red;
+        color: $bleu;
         font-size: 1.25em;
         font-family: 'DM serif display';
     }
     div:nth-child(1) {
         margin-top: 0px;
+    }
+}
+
+.coordonnees {
+    margin-top: 20px;
+    gap: 20px;
+    .coordonnee {
+        align-items: center;
+        display: flex;
+        gap: 20px;
     }
 }

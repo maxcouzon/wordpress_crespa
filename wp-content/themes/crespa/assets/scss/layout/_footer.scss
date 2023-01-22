@@ -7,7 +7,7 @@ footer {
     display: flex;
     justify-content: space-between;
     gap: 20px;
-    padding-right: 8.5vw;
+    padding-right: 1.5vw;
 }
 
 .rs img {
@@ -18,8 +18,9 @@ footer {
 .info_footer {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    width: 100vw;
+    margin-left: 10vw;
+    justify-content: space-between;
+    width: 80vw;
     align-items: center;
     padding-top: 7vh;
 }

@@ -185,9 +185,6 @@
                     <span class="thumbs">
                         <span class="articles">
                             <article class="date">
-                                <?php the_field('date_1') ?>
-                            </article>
-                            <article class="nom_article">
                                 <?php the_field('title_1') ?>
                             </article>
                         </span>
@@ -197,9 +194,6 @@
                     <span class="thumbs">
                         <div class="articles">
                             <article class="date">
-                                <?php the_field('date_2') ?>
-                            </article>
-                            <article class="nom_article">
                                 <?php the_field('title_2') ?>
                             </article>
                         </div>
@@ -209,11 +203,9 @@
                     <span class="thumbs">
                         <div class="articles">
                             <article class="date">
-                                <?php the_field('date_3') ?>
+                                                               <?php the_field('title_3') ?>
                             </article>
-                            <article class="nom_article">
-                                <?php the_field('title_3') ?>
-                            </article>
+                          
                         </div>
                     </span>
                 </span>
@@ -221,9 +213,6 @@
                     <span class="thumbs">
                         <div class="articles">
                             <article class="date">
-                                <?php the_field('date_4') ?>
-                            </article>
-                            <article class="nom_article">
                                 <?php the_field('title_4') ?>
                             </article>
                         </div>
@@ -266,6 +255,7 @@
                     <? while ($artits->have_posts()) : ?>
                         <?php $artits->the_post();
                         $image = get_field('img_artiste'); ?>
+
                         <div class="one_page_accueil">
                             <img class="background_image" src="<?php echo (get_template_directory_uri()); ?>/assets/images/background_artiste<?php $min = 1;
                                                                                                                                                 $max = 3;
@@ -276,13 +266,17 @@
                                 <?php echo (get_the_title()); ?>
                             </div>
                             <div class="courte_description">
-                                <?php the_field('small_text') ?>
+                               
+<div class="button_accueil_artistes">
+                            <a href= "/<?php $post_slug = $post->post_name; echo($post_slug)?>/" class="button_oeuvre">Voir</a>
+
+                        </div>
                             </div>
                         </div>
                     <?php endwhile ?>
                 </div>
             <?php else : ?>
-                <p>Aucune oeuvre trouvée.</p>
+
             <?php endif ?>
             <!-- boutton voir plus  -->
         </div>
@@ -328,6 +322,10 @@ background-repeat: no-repeat;background-position: 50% 100%;">
                             <div class="titre_oeuvre">
                                 <?php echo (get_the_title()); ?>
                             </div>
+<div class="button_accueil_artistes">
+                            <a href= "/<?php $post_slug = $post->post_name; echo($post_slug)?>/" class="button_oeuvre">Voir</a>
+
+                        </div>
                         </div>
                     </div>
                 <?php endwhile; ?>
@@ -465,18 +463,18 @@ background-repeat: no-repeat;background-position: 50% 100%;">
 
         <div>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.1392009935175!2d4.895699815420589!3d45.527404279101745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4df2247e88dcf%3A0xa78db9478c3d63ba!2s93%20Rue%20Lafayette%2C%2038200%20Vienne%2C%20France!5e0!3m2!1sfr!2sus!4v1673705030709!5m2!1sfr!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="maps"></iframe>
-            <div>
-                <div>
-                    <img src="" alt="adresse de la galerie">
-                    <p></p>
+            <div class=" coordonnees">
+                <div class="coordonnee">
+                    <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/maps.svg" alt="adresse de la galerie">
+                    <p><?php the_field('adress'); ?></p>
                 </div>
-                <div>
-                    <img src="" alt="numéro de téléphone">
-                    <p></p>
+                <div class="coordonnees">
+                    <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/tel.svg" alt="numéro de téléphone">
+                    <p><?php the_field('num'); ?></p>
                 </div>
-                <div>
-                    <img src="" alt="horaires">
-                    <p></p>
+                <div class="coordonnees">
+                    <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/horaire.svg" alt="horaires">
+                    <p><?php the_field('horaire'); ?></p>
                 </div>
             </div>
         </div>

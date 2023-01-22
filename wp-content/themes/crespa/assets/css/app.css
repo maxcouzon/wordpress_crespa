@@ -7,7 +7,7 @@ footer {
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  padding-right: 8.5vw;
+  padding-right: 1.5vw;
 }
 
 .rs img {
@@ -18,8 +18,9 @@ footer {
 .info_footer {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  width: 100vw;
+  margin-left: 10vw;
+  justify-content: space-between;
+  width: 80vw;
   align-items: center;
   padding-top: 7vh;
 }
@@ -153,7 +154,7 @@ section {
 }
 
 body {
-  line-height: 1;
+  line-height: 23px;
 }
 
 ol,
@@ -354,18 +355,19 @@ svg {
 
 li {
   color: #fff;
-  border-bottom: 3px solid #0C53C4;
+  border-bottom: 5px solid #0C53C4;
   width: 70%;
   margin-left: 15%;
+  transition: all 0.2s ease-in;
 }
 
 li:hover {
+  transition: all 0.2s ease-out;
   border-bottom: 5px solid #e51449;
 }
 
 .logo_header {
   width: 164px;
-  height: 164px;
 }
 
 .header {
@@ -482,10 +484,10 @@ menu .ancre {
 div.header_2 {
   align-items: center;
   margin-top: 0px;
-  width: 45vw;
+  width: 46vw;
   display: flex;
   flex-direction: row;
-  margin-left: 45vw;
+  margin-left: 44vw;
   justify-content: space-between;
 }
 
@@ -737,12 +739,12 @@ div.slider {
 .articles {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  margin-left: 100px;
   align-items: center;
   gap: 20%;
   height: 50px !important;
   z-index: 49;
-  width: 100%;
+  font-family: "DM serif display";
 }
 
 /* `.thumbs` `span` elements */
@@ -808,7 +810,6 @@ a {
 
 .story {
   width: 37.5vw;
-  line-height: 27px;
   display: flex;
   flex-direction: column;
 }
@@ -921,9 +922,19 @@ a {
   margin-left: 20px;
   margin-top: 10px;
   font-size: 2em;
+  line-height: 30px;
+}
+
+section.entreprise {
+  height: auto !important;
+}
+
+article.service {
+  margin-top: 50px;
 }
 
 .partie_entreprise {
+  margin-top: 50px;
   display: flex;
   width: 80vw;
   justify-content: space-between;
@@ -1128,12 +1139,22 @@ div.after {
   margin-bottom: 7.5vh;
 }
 div.after .titre_oeuvre {
-  color: #e51449;
+  color: #0C53C4;
   font-size: 1.25em;
   font-family: "DM serif display";
 }
 div.after div:nth-child(1) {
   margin-top: 0px;
+}
+
+.coordonnees {
+  margin-top: 20px;
+  gap: 20px;
+}
+.coordonnees .coordonnee {
+  align-items: center;
+  display: flex;
+  gap: 20px;
 }
 
 .all_oeuvre {
@@ -1145,6 +1166,7 @@ div.after div:nth-child(1) {
 }
 
 .autre_oeuvre {
+  margin-top: 50px;
   display: flex;
   gap: 2.5vw;
 }
@@ -1347,6 +1369,10 @@ form textarea {
   border: 0px;
 }
 
+h2.contact_form {
+  margin-top: 5vh;
+}
+
 .conteneur:nth-child(2n+1) {
   display: flex;
   justify-content: space-between;
@@ -1527,13 +1553,16 @@ section.erreur {
 }
 .contenu_single .autre_oeuvre {
   display: flex;
+  flex-wrap: wrap;
+  gap: 6.5vw;
+  flex: 2 1 auto;
 }
 .contenu_single .one_oeuvre {
   flex-direction: column;
   justify-content: center;
   align-items: center;
   display: flex;
-  width: 20vw;
+  width: 18%;
   height: 40vh;
   margin-top: 2.5vh;
   margin-bottom: 2.5vh;
@@ -1574,7 +1603,7 @@ section.erreur {
 }
 .contenu_single .artiste .one .photo_artiste {
   border-radius: 50%;
-  width: 20%;
+  width: 18%;
   height: 43%;
   position: relative;
   z-index: 21;
@@ -1638,6 +1667,7 @@ section.entreprise article.service {
 * {
   font-family: "Roboto";
   font-weight: 400;
+  line-height: 1.25em;
 }
 
 h1 {
@@ -1649,6 +1679,10 @@ h1 {
 h2 {
   font-family: "DM Serif Display";
   font-size: 3em;
+}
+
+input:focus {
+  border: none;
 }
 
 /*# sourceMappingURL=app.css.map */

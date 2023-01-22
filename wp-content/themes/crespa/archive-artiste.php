@@ -31,9 +31,10 @@ get_header();
                 <div class="courte_description">
                     <?php the_field('small_text') ?>
                 </div>
- <div>
-                        <a class="button" href="<?php echo (get_permalink($post->ID)); ?>">Voir plus</a>
-                    </div>
+<div class="button_accueil_artistes">
+                            <a href= "/<?php $post_slug = $post->post_name; echo($post_slug)?>/" class="button_oeuvre">Voir</a>
+
+                        </div>
 
             </div>
         <?php endwhile ?>
