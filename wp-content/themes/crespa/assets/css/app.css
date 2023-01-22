@@ -1152,6 +1152,7 @@ div.after div:nth-child(1) {
   gap: 20px;
 }
 .coordonnees .coordonnee {
+  margin-top: 20px;
   align-items: center;
   display: flex;
   gap: 20px;

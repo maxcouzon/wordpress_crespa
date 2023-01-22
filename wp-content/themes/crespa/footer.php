@@ -1,13 +1,13 @@
 <footer>
     <div class="info_footer">
         <div class="rs">
-            <a href="">
+            <a target="_blank" href="<?php the_field('insta','option'); ?>">
                 <img src="<?php echo(get_template_directory_uri());?>/assets/images/insta.svg" alt="instagram"/>
             </a>
-            <a href="">
+            <a target="_blank"href="<?php the_field('facebook','option'); ?>">
                 <img src="<?php echo(get_template_directory_uri());?>/assets/images/linkedin.svg" alt="linkedin"/>
             </a>
-            <a href="">
+            <a target="_blank" href="<?php the_field('linkedin','option'); ?>">
                 <img src="<?php echo(get_template_directory_uri());?>/assets/images/facebook.svg" alt="facebook"/>
             </a>
         </div>
@@ -20,7 +20,7 @@
             </article>
             <br>
             <article>
-            06 51 60 58 51
+            <?php the_field('num','option'); ?>
             </article>
         </div>
     </div>
@@ -30,7 +30,8 @@
 
         </div>
         <div>
-    <p class="copyright">@ 2023-2028 Lucas Beauchef | Bastien | Max Couzon.Tous droits réservés</p>
+<a href="/legal/"><p class="copyright" >Mentions légales</p></a>
+    
         </div>
     </div>
 </footer>

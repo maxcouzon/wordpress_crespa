@@ -114,27 +114,27 @@
         <div>
             <!-- réseaux sociaux  -->
             <div class="reseaux">
-                <a href="">
+                <a target="_blank" href="<?php the_field('insta','option'); ?>">
 
                     <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/red_insta.svg" alt="instagram" />
                 </a>
-                <a href="">
+                <a target="_blank" href="<?php the_field('facebook','option'); ?>">
                     <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/red_linkedin.svg" alt="linkedin" />
                 </a>
-                <a href="">
+                <a target="_blank" href="<?php the_field('linkedin','option'); ?>">
                     <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/red_facebook.svg" alt="facebook" />
                 </a>
             </div>
             <div class="suivant">
-                <a class="onclick" onclick="
-      $(window).scrollTop(1310);">
+                <a id="actu" class="onclick" href="
+      #actu">
 
                     <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/arrow_bottom.svg" alt="flèche du bas" />
                 </a>
             </div>
         </div>
     </div>
-    <h2 id="actu">Actualités</h2>
+    <h2 >Actualités</h2>
 
     <!-- ancre -->
 
@@ -162,23 +162,7 @@
                 </div>
 
             </div>
-            <script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript"></script>
-            <script>
-                jQuery(document).ready(function() {
-                    jQuery('.hide-on-load').hide();
-
-                    jQuery('.sliderDate').on('click', function() {
-                        $(".enter span").even().removeClass("show");
-                        $(".show").removeClass("show");
-                        jQuery('.slide').hide();
-                        var linkimg = jQuery(this).data('date');
-                        console.log(linkimg);
-
-                        jQuery(`.sliderDate-${linkimg}`).show();
-                        jQuery(`.active-${linkimg}`).addClass("show");
-                    });
-                });
-            </script>
+           
             <!-- partie ou tu selection les articles -->
             <nav class="enter">
                 <span class="sliderDate border show active-1" data-date="1">
@@ -222,8 +206,8 @@
         </div>
 
         <div class="suivant">
-            <a class="onclick" onclick="
-      $(window).scrollTop(1923);">
+            <a id="artistes" class="onclick" href="
+      #artistes">
 
                 <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/arrow_bottom.svg" alt="flèche du bas" />
             </a>
@@ -234,7 +218,7 @@
 
     <!-- boutton voir plus -->
 
-    <h2 id="artistes">Artistes</h2>
+    <h2 >Artistes</h2>
     <!-- les artistes -->
     <section class="artistes">
         <!-- tous les artistes -->
@@ -284,8 +268,8 @@
             <a href="/artiste/" class="button">Voir plus</a>
         </div>
         <div class="suivant">
-            <a class="onclick" onclick="
-      $(window).scrollTop(2535);">
+            <a  id="galerie"class="onclick" href="
+      #galerie">
 
                 <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/arrow_bottom.svg" alt="flèche du bas" />
             </a>
@@ -294,7 +278,7 @@
     </section>
     <!-- boutton entre les parties -->
 
-    <h2 id="galerie">Galerie</h2>
+    <h2 >Galerie</h2>
     <section class="oeuvres">
         <!-- tous les articles  -->
 
@@ -338,8 +322,8 @@ background-repeat: no-repeat;background-position: 50% 100%;">
             <a href="/oeuvre/" class="button">Voir plus</a>
         </div>
         <div class="suivant">
-            <a class="onclick" onclick="
-      $(window).scrollTop(3150);">
+            <a id="atelier" class="onclick" href="
+      #atelier">
 
                 <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/arrow_bottom.svg" alt="flèche du bas" />
             </a>
@@ -349,7 +333,7 @@ background-repeat: no-repeat;background-position: 50% 100%;">
 
 
 
-    <h2><?php the_field('title_atelier') ?></h2>
+    <h2 ><?php the_field('title_atelier') ?></h2>
     <section class="ateliers">
         <div class="contenu">
             <div class="story">
@@ -367,14 +351,14 @@ background-repeat: no-repeat;background-position: 50% 100%;">
             </div>
         </div>
         <div class="suivant">
-            <a class="onclick" onclick="
-      $(window).scrollTop(3760);">
+            <a id="formation" class="onclick" href="
+      #formation">
 
                 <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/arrow_bottom.svg" alt="flèche du bas" />
             </a>
         </div>
     </section>
-    <h2><?php the_field('title_formation') ?></h2>
+    <h2 ><?php the_field('title_formation') ?></h2>
     <section class="formations">
         <div class="contenu">
             <div class="video">
@@ -393,14 +377,14 @@ background-repeat: no-repeat;background-position: 50% 100%;">
         </div>
 
         <div class="suivant">
-            <a class="onclick" onclick="
-      $(window).scrollTop(4365);">
+            <a id="entreprise" class="onclick" href="
+      #entreprise">
 
                 <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/arrow_bottom.svg" alt="flèche du bas" />
             </a>
         </div>
     </section>
-    <h2><?php the_field('title_entreprise'); ?></h2>
+    <h2 ><?php the_field('title_entreprise'); ?></h2>
     <section class="entreprise">
         <div class="partie_entreprise">
             <div class="image_page_accueil" style="background-image: url(<?php $entreprise = get_field('img_entreprise');
@@ -422,14 +406,14 @@ background-repeat: no-repeat;background-position: 50% 100%;">
         </div>
 
         <div class="suivant">
-            <a class="onclick" onclick="
-      $(window).scrollTop(5025);">
+            <a id="histoire" class="onclick" href="
+      #histoire">
 
                 <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/arrow_bottom.svg" alt="flèche du bas" />
             </a>
         </div>
     </section>
-    <h2><?php the_field('title_histoire') ?></h2>
+    <h2 ><?php the_field('title_histoire') ?></h2>
     <section class="histoire">
         <div class="contenu_histoire">
             <div class="video">
@@ -446,15 +430,15 @@ background-repeat: no-repeat;background-position: 50% 100%;">
 
         </div>
         <div class="suivant">
-            <a class="onclick" onclick="
-      $(window).scrollTop(5600);">
+            <a id="contact"class="onclick" href="
+      #contact">
 
                 <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/arrow_bottom.svg" alt="flèche du bas" />
             </a>
 
         </div>
     </section>
-    <h2>Contactez-nous</h2>
+    <h2 >Contactez-nous</h2>
     <section class="mail">
         <form>
             <?php
@@ -468,11 +452,11 @@ background-repeat: no-repeat;background-position: 50% 100%;">
                     <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/maps.svg" alt="adresse de la galerie">
                     <p><?php the_field('adress'); ?></p>
                 </div>
-                <div class="coordonnees">
+                <div class="coordonnee">
                     <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/tel.svg" alt="numéro de téléphone">
                     <p><?php the_field('num'); ?></p>
                 </div>
-                <div class="coordonnees">
+                <div class="coordonnee">
                     <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/horaire.svg" alt="horaires">
                     <p><?php the_field('horaire'); ?></p>
                 </div>
@@ -480,7 +464,23 @@ background-repeat: no-repeat;background-position: 50% 100%;">
         </div>
 
     </section>
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript"></script>
+            <script>
+                jQuery(document).ready(function() {
+                    jQuery('.hide-on-load').hide();
 
+                    jQuery('.sliderDate').on('click', function() {
+                        $(".enter span").even().removeClass("show");
+                        $(".show").removeClass("show");
+                        jQuery('.slide').hide();
+                        var linkimg = jQuery(this).data('date');
+                        console.log(linkimg);
+
+                        jQuery(`.sliderDate-${linkimg}`).show();
+                        jQuery(`.active-${linkimg}`).addClass("show");
+                    });
+                });
+            </script>
     <?php
     //footer
     get_footer();

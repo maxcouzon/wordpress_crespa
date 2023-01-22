@@ -18,11 +18,11 @@ get_header();
                     <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/maps.svg" alt="adresse de la galerie">
                     <p><?php the_field('adress'); ?></p>
                 </div>
-                <div class="coordonnees">
+                <div class="coordonnee">
                     <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/tel.svg" alt="numéro de téléphone">
                     <p><?php the_field('num'); ?></p>
                 </div>
-                <div class="coordonnees">
+                <div class="coordonnee">
                     <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/horaire.svg" alt="horaires">
                     <p><?php the_field('horaire'); ?></p>
                 </div>
