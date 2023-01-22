@@ -9,19 +9,14 @@ get_header();
         <h1>
             <?php post_type_archive_title(); ?>
         </h1>
-        <div>
-<form action="" method="get">
- <input id="searchbar" onkeyup="artiste()" type="text" name="s" placeholder="chercher .." class="search" />
-            <img src="" alt="rechercher"></form>
-           
-            <img src="<?php echo(get_template_directory_uri());?>/assets/images/setting.svg" alt="paramètre">
-        </div>
+        <?php echo do_shortcode('[ivory-search id="301" title="Custom Search Form"]') ?>
+
     </div>
 </div>
 <!-- toutes les oeuvres du site -->
 
 
-<?php 
+<?php
 // echo(wp_count_posts('oeuvre'));
 
 if (have_posts()) : ?>
@@ -35,8 +30,8 @@ if (have_posts()) : ?>
 background-repeat: no-repeat;background-position: 50% 100%;">
                 </div>
                 <div class="after">
-                    <div>
-                        <?php the_field('small_text'); ?>
+                    <div class="titre_oeuvre">
+                        <?php echo (get_the_title()); ?>
                     </div>
                     <div>
                         <a class="button" href="<?php echo (get_permalink($post->ID)); ?>">Voir plus</a>
@@ -44,10 +39,10 @@ background-repeat: no-repeat;background-position: 50% 100%;">
                 </div>
             </div>
         <?php endwhile; ?>
-</div>
-<?php the_posts_pagination(); ?>
-    
-    
+    </div>
+    <?php the_posts_pagination(); ?>
+
+
 <?php else : ?>
     <p>Aucune oeuvre trouvée.</p>
 <?php endif; ?>

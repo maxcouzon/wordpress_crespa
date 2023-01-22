@@ -23,7 +23,7 @@ get_header();
                     <div class="titre">
                         <?php the_field('title') ?>
                     </div>
-                    <div>
+                    <div class="description">
                         <?php the_field('theme') ?>
                     </div>
                 </div>

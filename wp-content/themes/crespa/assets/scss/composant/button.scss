@@ -12,7 +12,36 @@
      transition: all 0.2s ease-out;
  }
  
+ .button_art {
+     display: flex;
+     justify-content: center;
+     border-radius: 55px;
+     background-color: $red;
+     width: 5vw;
+     height: 4vh;
+     border: solid 0;
+     color: $background;
+     align-items: center;
+     text-decoration: none;
+     transition: all 0.2s ease-out;
+ }
+ 
+ .button_art:hover {
+     background-color: $bleu;
+     transition: all 0.2s ease-out;
+ }
+ 
  .button:hover {
      background-color: $bleu;
      transition: all 0.2s ease-out;
+ }
+ 
+ #is-search-input-301 {
+     height: 100%;
+     background: transparent;
+     color: $background;
+ }
+ 
+ .is-search-icon {
+     display: none!important;
  }

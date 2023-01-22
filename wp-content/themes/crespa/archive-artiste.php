@@ -8,15 +8,10 @@ get_header();
         <h1>
             <?php post_type_archive_title(); ?>
         </h1>
-        <form action="" method="get"><input id="searchbar" onkeyup="artiste()" type="text" name="search" placeholder="chercher .." class="search" />
-            <img src="" alt="recherche">
-        </form>
+         <?php echo do_shortcode('[ivory-search id="301" title="Custom Search Form"]')?>
     </div>
 </div>
 <!-- paragraphe d'intro de la page artiste -->
-<article>
-    <?php the_field('texzfeqfdt'); ?>
-</article>
 <!-- tous les artistes -->
 
 <?php if (have_posts()) : ?>

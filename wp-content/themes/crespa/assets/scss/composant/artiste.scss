@@ -1,4 +1,9 @@
 .one {
+     :last-child {
+        a {
+            text-decoration: show;
+        }
+    }
     height: 60vh;
     width: 25%;
     flex-direction: column;
@@ -19,10 +24,13 @@
     // contenu de chaque article 
     .name {
         font-size: 2em;
+        font-family: "DM serif display";
+        color: $red;
     }
     .courte_description {
         width: 80%;
         word-wrap: break-word;
+        text-align: center;
     }
     .artistes {
         height: 100%;
@@ -105,6 +113,14 @@
             }
         }
     }
+}
+
+.lien {
+    color: black;
+}
+
+.lien:hover {
+    text-decoration: none;
 }
 
 // chaque article

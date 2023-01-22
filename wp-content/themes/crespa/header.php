@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/css" href="<?php echo (get_template_directory_uri()); ?>/assets/images/logo_fav.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <?php wp_head(); ?>
   <title>Cre'espa</title>
 </head>
@@ -15,6 +16,7 @@
 
   <header>
     <nav>
+      <div class="return"></div>
       <input type="checkbox" id="menu" name="menu" class="m-menu__checkbox" />
       <label class="m-menu__toggle" for="menu">
         <div class="header">
@@ -23,13 +25,17 @@
             <rect y="14" width="40" height="5" fill="#F40044" />
             <rect y="28" width="40" height="5" fill="#F40044" />
           </svg>
-          <img src="<?php echo(get_template_directory_uri());?>/assets/images/logo.svg" alt="logo" class="logo" />
-          
         </div>
       </label>
-<div class="contactez-nous">
-                    <a href="/wordpress_crespa/contact/" class="button">Contactez-nous</a>
-                </div>
+      <div class="header_2">
+        <a href="https://creespa.fr" class="logo_header">
+          <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/logo.svg" alt="logo" />
+        </a>
+        <div class="contactez-nous">
+          <a href="/wordpress_crespa/contact/" class="button">Contactez-nous</a>
+        </div>
+      </div>
+
       <label class="m-menu__overlay" for="menu"></label>
 
       <div class="m-menu">
@@ -42,7 +48,7 @@
           </label>
         </div>
         <?php wp_nav_menu(array('menu' => 'menu_princ')); ?>
-        <img src="<?php echo(get_template_directory_uri());?>/assets/images/logo_simple_white.svg" alt="" class="logo_nav" />
+        <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/logo_simple_white.svg" alt="" class="logo_nav" />
         <!-- <ul>
           <li><a href="../acceuil/artistes/">Les artistes</a></li>
           <li><a href="../wordpress_crespa/accueil/oeuvres/">La galerie</a></li>
@@ -56,5 +62,3 @@
       </div>
     </nav>
   </header>
-
-  

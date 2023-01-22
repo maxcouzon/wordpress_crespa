@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/css" href="<?php echo (get_template_directory_uri()); ?>/assets/images/logo_fav.svg" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <?php
     // template Name: Accueil
     wp_head(); ?>
@@ -32,9 +32,9 @@
         </div>
         <div class="animation">
             <a class="onclick" onclick=" $(window).scrollTop(700);">
-<div><img class="souris" src="<?php echo (get_template_directory_uri()); ?>/assets/images/bloque.svg" alt="souris incitation a cliquer"></div>
-<div><img class="souris" src="<?php echo (get_template_directory_uri()); ?>/assets/images/fleche.svg" alt="souris incitation a cliquer"></div>
-</a>
+                <div><img class="souris" src="<?php echo (get_template_directory_uri()); ?>/assets/images/fleche_accueil.svg" alt="souris incitation a cliquer"></div>
+
+            </a>
         </div>
 
     </div>
@@ -50,15 +50,20 @@
                         <rect y="14" width="40" height="5" fill="#F40044" />
                         <rect y="28" width="40" height="5" fill="#F40044" />
                     </svg>
-                    <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/logo.svg" alt="logo" class="logo" />
-
                 </div>
             </label>
-            <div class="contactez-nous">
-                <a class="button" href="<?php the_permalink('contact')?>">
-                    <p>Contactez-nous</p>
+
+
+
+            <div class="header_2">
+                <a href="https://creespa.fr" class="logo_header">
+                    <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/logo.svg" alt="logo" />
                 </a>
+                <div class="contactez-nous">
+                    <a href="/wordpress_crespa/contact/" class="button">Contactez-nous</a>
+                </div>
             </div>
+
 
 
             <label class="m-menu__overlay" for="menu"></label>
@@ -88,18 +93,20 @@
         </nav>
     </header>
     <!-- deuxieme page présentation + réseaux  -->
-<div>
-<img class="point_rouge" src="<?php echo(get_template_directory_uri()); ?>/assets/images/point_rouge.svg" alt="" />
-<img class="point_jaune" src="<?php echo(get_template_directory_uri()); ?>/assets/images/point_jaune.svg" alt="" />
-<img class="point_bleu" src="<?php echo(get_template_directory_uri()); ?>/assets/images/point_bleu.svg" alt="" />
-<img class="tache_jaune" src="<?php echo(get_template_directory_uri()); ?>/assets/images/tache_jaune.svg" alt="" />
-<img class="tache_rouge" src="<?php echo(get_template_directory_uri()); ?>/assets/images/tache_rouge.svg" alt="" />
-<img class="tache_bleu" src="<?php echo(get_template_directory_uri()); ?>/assets/images/tache_bleu.svg" alt="" />
-<img class="tache_rouge_jaune" src="<?php echo(get_template_directory_uri()); ?>/assets/images/tache_rouge_jaune.svg" alt="" />
-<img class="point_rouge-2" src="<?php echo(get_template_directory_uri()); ?>/assets/images/point_rouge.svg" alt="" />
-<img class="point_jaune-2" src="<?php echo(get_template_directory_uri()); ?>/assets/images/point_jaune.svg" alt="" />
-<img class="tache_rouge-2" src="<?php echo(get_template_directory_uri()); ?>/assets/images/tache_rouge.svg" alt="" />
-</div>
+    <div>
+        <img class="point_rouge" src="<?php echo (get_template_directory_uri()); ?>/assets/images/point_rouge.svg" alt="" />
+        <img class="point_jaune" src="<?php echo (get_template_directory_uri()); ?>/assets/images/point_jaune.svg" alt="" />
+        <img class="point_bleu" src="<?php echo (get_template_directory_uri()); ?>/assets/images/point_bleu.svg" alt="" />
+        <img class="tache_jaune" src="<?php echo (get_template_directory_uri()); ?>/assets/images/tache_jaune.svg" alt="" />
+        <img class="tache_rouge" src="<?php echo (get_template_directory_uri()); ?>/assets/images/tache_rouge.svg" alt="" />
+        <img class="tache_bleu" src="<?php echo (get_template_directory_uri()); ?>/assets/images/tache_bleu.svg" alt="" />
+        <img class="tache_rouge_jaune" src="<?php echo (get_template_directory_uri()); ?>/assets/images/tache_rouge_jaune.svg" alt="" />
+        <img class="point_rouge-2" src="<?php echo (get_template_directory_uri()); ?>/assets/images/point_rouge.svg" alt="" />
+        <img class="point_jaune-2" src="<?php echo (get_template_directory_uri()); ?>/assets/images/point_jaune.svg" alt="" />
+        <img class="tache_rouge-2" src="<?php echo (get_template_directory_uri()); ?>/assets/images/tache_rouge.svg" alt="" />
+        <img class="point_bleu-2" src="<?php echo (get_template_directory_uri()); ?>/assets/images/point_bleu.svg" alt="" />
+        <img class="tache_jaune-2" src="<?php echo (get_template_directory_uri()); ?>/assets/images/tache_jaune.svg" alt="" />
+    </div>
     <div class="asso">
         <article>
             <p> <?php the_field('storytelling'); ?></p>
@@ -119,12 +126,12 @@
                 </a>
             </div>
             <div class="suivant">
-            <a class="onclick" onclick="
+                <a class="onclick" onclick="
       $(window).scrollTop(1310);">
-                
-                <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/arrow_bottom.svg" alt="flèche du bas" />
-            </a>
-        </div>
+
+                    <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/arrow_bottom.svg" alt="flèche du bas" />
+                </a>
+            </div>
         </div>
     </div>
     <h2 id="actu">Actualités</h2>
@@ -228,7 +235,7 @@
         <div class="suivant">
             <a class="onclick" onclick="
       $(window).scrollTop(1923);">
-                
+
                 <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/arrow_bottom.svg" alt="flèche du bas" />
             </a>
         </div>
@@ -282,10 +289,10 @@
         <div class="button_accueil_artistes">
             <a href="/artiste/" class="button">Voir plus</a>
         </div>
-      <div class="suivant">
+        <div class="suivant">
             <a class="onclick" onclick="
       $(window).scrollTop(2535);">
-                
+
                 <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/arrow_bottom.svg" alt="flèche du bas" />
             </a>
         </div>
@@ -318,8 +325,8 @@
 background-repeat: no-repeat;background-position: 50% 100%;">
                         </div>
                         <div class="after">
-                            <div>
-                                <?php the_field('small_text'); ?>
+                            <div class="titre_oeuvre">
+                                <?php echo (get_the_title()); ?>
                             </div>
                         </div>
                     </div>
@@ -335,7 +342,7 @@ background-repeat: no-repeat;background-position: 50% 100%;">
         <div class="suivant">
             <a class="onclick" onclick="
       $(window).scrollTop(3150);">
-                
+
                 <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/arrow_bottom.svg" alt="flèche du bas" />
             </a>
         </div>
@@ -364,7 +371,7 @@ background-repeat: no-repeat;background-position: 50% 100%;">
         <div class="suivant">
             <a class="onclick" onclick="
       $(window).scrollTop(3760);">
-                
+
                 <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/arrow_bottom.svg" alt="flèche du bas" />
             </a>
         </div>
@@ -390,7 +397,7 @@ background-repeat: no-repeat;background-position: 50% 100%;">
         <div class="suivant">
             <a class="onclick" onclick="
       $(window).scrollTop(4365);">
-                
+
                 <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/arrow_bottom.svg" alt="flèche du bas" />
             </a>
         </div>
@@ -443,19 +450,19 @@ background-repeat: no-repeat;background-position: 50% 100%;">
         <div class="suivant">
             <a class="onclick" onclick="
       $(window).scrollTop(5600);">
-                
+
                 <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/arrow_bottom.svg" alt="flèche du bas" />
             </a>
-        
+
         </div>
     </section>
-<h2>Contactez-nous</h2>
+    <h2>Contactez-nous</h2>
     <section class="mail">
-<form>
-<?php
-                echo do_shortcode('[wpforms id="244" title="false"]');
-                ?></form>
-        
+        <form>
+            <?php
+            echo do_shortcode('[wpforms id="244" title="false"]');
+            ?></form>
+
         <div>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.1392009935175!2d4.895699815420589!3d45.527404279101745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4df2247e88dcf%3A0xa78db9478c3d63ba!2s93%20Rue%20Lafayette%2C%2038200%20Vienne%2C%20France!5e0!3m2!1sfr!2sus!4v1673705030709!5m2!1sfr!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="maps"></iframe>
             <div>

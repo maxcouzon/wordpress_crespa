@@ -16,7 +16,6 @@ $artist = get_field('artiste'); ?>
                     <div><?php echo (get_the_title()); ?></div>
                     <div>
                         <?php setup_postdata($post); 
-var_dump($artist);
 $frite=wp_list_pluck($artist ,'post_title');
 
 echo($frite[0]);
@@ -31,7 +30,8 @@ echo($frite[0]);
 background-repeat: no-repeat;background-position: 50% 100%;">
             </div>
         </div>
-        <div class="description"> <?php $tigre=get_field( 'field_name' , $artist->ID);echo($tigre) ?>
+        <div class="description"> <div><?php the_field('text'); ?></div>
+<div class="taille"><?php the_field('taille'); ?></div>
 
         </div>
     </div>
@@ -58,6 +58,7 @@ $artist = get_field('artiste');
         <div class="autre_oeuvre">
             <?php while ($art->have_posts()) : ?>
                 <?php $art->the_post();
+
                 $image = get_field('img');
                 ?>
                 <div class="one_oeuvre">
@@ -65,11 +66,12 @@ $artist = get_field('artiste');
 background-repeat: no-repeat;background-position: 50% 100%;">
                     </div>
                     <div class="after">
-                        <div>
-                            <?php the_field('small_text'); ?>
+                        <div class="titre_oeuvre">
+                            <?php echo (get_the_title()); ?>
                         </div>
                         <div class="button_accueil_artistes">
-                            <a href= "<?php get_permalink($the_post)?>" class="button_oeuvre">Voir</a>
+                            <a href= "/<?php $post_slug = $post->post_name; echo($post_slug)?>/" class="button_oeuvre">Voir</a>
+
                         </div>
                     </div>
                 </div>

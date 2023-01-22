@@ -208,7 +208,9 @@ section.oeuvres,
     }
     // contenu de chaque article 
     .name {
-        font-size: 1.25em;
+        font-size: 1.5em;
+        font-family: "DM serif display";
+        color: $red;
     }
     .courte_description {
         width: 80%;
@@ -247,10 +249,6 @@ div.slider {
     margin: 0 auto;
     display: flex;
     flex-direction: row-reverse;
-}
-
-.contactez-nous {
-    margin-left: 80vw;
 }
 
 .sliderDate.show {
@@ -411,16 +409,6 @@ a {
         max-width: 100%;
         margin-bottom: 2.5vh;
     }
-    div.after {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        margin-bottom: 7.5vh;
-        div:nth-child(1) {
-            margin-top: 0px;
-        }
-    }
 }
 
 .button_accueil_oeuvre {
@@ -481,6 +469,7 @@ a {
 section.mail {
     display: flex;
     flex-direction: row!important;
+    margin-bottom: 5vh;
 }
 
 .contenu_histoire {
@@ -503,11 +492,17 @@ section.mail {
         align-content: center;
         justify-content: center;
         img.fleche {
-            animation: downArrow 0.7s infinite;
+            animation: bounce 0.7s ease infinite;
         }
-        @keyframes downArrow {
+        @keyframes bounce {
+            from {
+                top: 106px;
+            }
             50% {
-                transform: translateY(50px);
+                top: 0px;
+            }
+            to {
+                top: 106px;
             }
         }
     }
@@ -596,5 +591,85 @@ div {
         left: 95vw;
         width: 300px;
         height: 180px;
+    }
+    .point_bleu-2 {
+        position: absolute;
+        z-index: -1;
+        top: 5500px;
+        left: 2vw;
+        width: 180px;
+        height: 180px;
+    }
+    .tache_jaune-2 {
+        position: absolute;
+        z-index: -1;
+        top: 5800px;
+        left: 95vw;
+        width: 300px;
+        height: 180px;
+    }
+    .point_jaune_service {
+        position: absolute;
+        z-index: -1;
+        top: 2100px;
+        left: 1vw;
+        width: 150px;
+        height: 150px;
+    }
+    .point_bleu_service {
+        position: absolute;
+        z-index: -1;
+        top: 1100px;
+        left: 95vw;
+        width: 150px;
+        height: 150px;
+    }
+    .tache_rouge_jaune_service {
+        position: absolute;
+        z-index: -1;
+        top: 1400px;
+        left: -17vw;
+        width: 388px;
+        height: 340px;
+    }
+    .tache_rouge_service {
+        position: absolute;
+        z-index: -1;
+        top: 700px;
+        left: -5vw;
+        width: 260px;
+        height: 180px;
+    }
+    .point_jaune_autre {
+        position: absolute;
+        z-index: -1;
+        top: 200px;
+        left: 96vw;
+        width: 260px;
+        height: 180px;
+    }
+    .tache_rouge_jaune_autre {
+        position: absolute;
+        z-index: -1;
+        top: 900px;
+        left: 96vw;
+        width: 388px;
+        height: 340px;
+    }
+}
+
+div.after {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 7.5vh;
+    .titre_oeuvre {
+        color: $red;
+        font-size: 1.25em;
+        font-family: 'DM serif display';
+    }
+    div:nth-child(1) {
+        margin-top: 0px;
     }
 }

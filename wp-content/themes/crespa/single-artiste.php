@@ -20,9 +20,13 @@ $image = get_field('img_artiste'); ?>
             <div class="courte_description">
                 <?php the_field('text') ?>
             </div>
+
+
 <div>
-                <img src="<?php echo(get_template_directory_uri());?>/assets/images/web.svg"/><?php the_field('web_site') ?>
+                <a href="<?php the_field('web_site') ?>" class="lien"><?php  the_field('web_site') ?></a>
             </div>
+
+
         </div>
     </div>
 
@@ -59,14 +63,12 @@ $artist = get_field('artiste');
                     background-repeat: no-repeat;background-position: 50% 100%;">
                     </div>
                     <div class="after">
-                        <div>
-                            <?php ?>
-                        </div>
-<div>
-                            <?php the_field('small_text'); ?>
+                      
+<div class="titre_oeuvre">
+                           <?php echo (get_the_title()); ?>
                         </div>
  <div>
-                        <a class="button" href="<?php echo (get_permalink($post->ID)); ?>">Voir plus</a>
+                        <a class="button_art" href="<?php echo (get_permalink($post->ID)); ?>">Voir</a>
                     </div>
                     </div>
                 </div>

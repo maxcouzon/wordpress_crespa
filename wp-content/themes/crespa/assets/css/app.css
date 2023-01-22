@@ -363,7 +363,7 @@ li:hover {
   border-bottom: 5px solid #e51449;
 }
 
-.logo {
+.logo_header {
   width: 164px;
   height: 164px;
 }
@@ -426,6 +426,10 @@ menu .ancre {
   left: 40%;
 }
 
+.menu li {
+  margin-bottom: 10px;
+}
+
 .m-menu__toggle {
   width: 12.2vw;
   cursor: pointer;
@@ -455,7 +459,6 @@ menu .ancre {
 .search {
   border: solid 0px;
   border-bottom: solid 1px #FCF1E3;
-  background-color: #0C53C4;
 }
 
 ::placeholder {
@@ -474,6 +477,16 @@ menu .ancre {
   border: solid 0px;
   border: solid 0px;
   background-color: #0C53C4;
+}
+
+div.header_2 {
+  align-items: center;
+  margin-top: 0px;
+  width: 45vw;
+  display: flex;
+  flex-direction: row;
+  margin-left: 45vw;
+  justify-content: space-between;
 }
 
 html {
@@ -670,7 +683,9 @@ section.oeuvres,
   z-index: 21;
 }
 .one_page_accueil .name {
-  font-size: 1.25em;
+  font-size: 1.5em;
+  font-family: "DM serif display";
+  color: #e51449;
 }
 .one_page_accueil .courte_description {
   width: 80%;
@@ -707,10 +722,6 @@ div.slider {
   margin: 0 auto;
   display: flex;
   flex-direction: row-reverse;
-}
-
-.contactez-nous {
-  margin-left: 80vw;
 }
 
 .sliderDate.show {
@@ -863,16 +874,6 @@ a {
   max-width: 100%;
   margin-bottom: 2.5vh;
 }
-.one_oeuvre_page_accueil div.after {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 7.5vh;
-}
-.one_oeuvre_page_accueil div.after div:nth-child(1) {
-  margin-top: 0px;
-}
 
 .button_accueil_oeuvre {
   display: flex;
@@ -932,6 +933,7 @@ a {
 section.mail {
   display: flex;
   flex-direction: row !important;
+  margin-bottom: 5vh;
 }
 
 .contenu_histoire {
@@ -959,11 +961,17 @@ section.mail {
   justify-content: center;
 }
 .animation div img.fleche {
-  animation: downArrow 0.7s infinite;
+  animation: bounce 0.7s ease infinite;
 }
-@keyframes downArrow {
+@keyframes bounce {
+  from {
+    top: 106px;
+  }
   50% {
-    transform: translateY(50px);
+    top: 0px;
+  }
+  to {
+    top: 106px;
   }
 }
 
@@ -1046,6 +1054,86 @@ div .tache_rouge-2 {
   left: 95vw;
   width: 300px;
   height: 180px;
+}
+div .point_bleu-2 {
+  position: absolute;
+  z-index: -1;
+  top: 5500px;
+  left: 2vw;
+  width: 180px;
+  height: 180px;
+}
+div .tache_jaune-2 {
+  position: absolute;
+  z-index: -1;
+  top: 5800px;
+  left: 95vw;
+  width: 300px;
+  height: 180px;
+}
+div .point_jaune_service {
+  position: absolute;
+  z-index: -1;
+  top: 2100px;
+  left: 1vw;
+  width: 150px;
+  height: 150px;
+}
+div .point_bleu_service {
+  position: absolute;
+  z-index: -1;
+  top: 1100px;
+  left: 95vw;
+  width: 150px;
+  height: 150px;
+}
+div .tache_rouge_jaune_service {
+  position: absolute;
+  z-index: -1;
+  top: 1400px;
+  left: -17vw;
+  width: 388px;
+  height: 340px;
+}
+div .tache_rouge_service {
+  position: absolute;
+  z-index: -1;
+  top: 700px;
+  left: -5vw;
+  width: 260px;
+  height: 180px;
+}
+div .point_jaune_autre {
+  position: absolute;
+  z-index: -1;
+  top: 200px;
+  left: 96vw;
+  width: 260px;
+  height: 180px;
+}
+div .tache_rouge_jaune_autre {
+  position: absolute;
+  z-index: -1;
+  top: 900px;
+  left: 96vw;
+  width: 388px;
+  height: 340px;
+}
+
+div.after {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 7.5vh;
+}
+div.after .titre_oeuvre {
+  color: #e51449;
+  font-size: 1.25em;
+  font-family: "DM serif display";
+}
+div.after div:nth-child(1) {
+  margin-top: 0px;
 }
 
 .all_oeuvre {
@@ -1155,7 +1243,20 @@ div.contenu_oeuvre .oeuvre .gauche .image_oeuvre_simple {
 }
 div.contenu_oeuvre .oeuvre .description {
   width: 25vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 50px;
+}
+div.contenu_oeuvre .oeuvre .description div {
   word-break: break-word;
+}
+div.contenu_oeuvre .oeuvre .description .taille {
+  color: #e51449;
+  font-size: 1.25em;
+  align-items: flex-end;
+  justify-content: flex-end;
+  text-align: end;
 }
 
 .button_oeuvre {
@@ -1188,6 +1289,10 @@ div.contenu_oeuvre .oeuvre .description {
 }
 
 form {
+  display: flex;
+}
+
+.mail form {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -1235,6 +1340,13 @@ form textarea {
   margin-top: 5vh;
 }
 
+.envoyer {
+  background-color: transparent;
+}
+.envoyer img {
+  border: 0px;
+}
+
 .conteneur:nth-child(2n+1) {
   display: flex;
   justify-content: space-between;
@@ -1268,6 +1380,14 @@ div.filtre_noir {
   align-items: center;
   gap: 25%;
 }
+div.filtre_noir .titre {
+  font-size: 2em;
+  font-family: "DM serif display";
+}
+div.filtre_noir .description {
+  width: 70%;
+  text-align: center;
+}
 
 div.image {
   width: 35vw;
@@ -1287,6 +1407,9 @@ div.image {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
+}
+.text :nth-child(2) {
+  color: #e51449;
 }
 
 section.erreur {
@@ -1310,9 +1433,38 @@ section.erreur {
   transition: all 0.2s ease-out;
 }
 
+.button_art {
+  display: flex;
+  justify-content: center;
+  border-radius: 55px;
+  background-color: #e51449;
+  width: 5vw;
+  height: 4vh;
+  border: solid 0;
+  color: #FCF1E3;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.2s ease-out;
+}
+
+.button_art:hover {
+  background-color: #0C53C4;
+  transition: all 0.2s ease-out;
+}
+
 .button:hover {
   background-color: #0C53C4;
   transition: all 0.2s ease-out;
+}
+
+#is-search-input-301 {
+  height: 100%;
+  background: transparent;
+  color: #FCF1E3;
+}
+
+.is-search-icon {
+  display: none !important;
 }
 
 .one {
@@ -1327,6 +1479,9 @@ section.erreur {
   margin-top: 5vh;
   background-image: url("../wp-content/themes/crespa/assets/images/background_artiste.svg");
 }
+.one :last-child a {
+  text-decoration: show;
+}
 .one .photo_artiste {
   border-radius: 50%;
   width: 50%;
@@ -1336,10 +1491,13 @@ section.erreur {
 }
 .one .name {
   font-size: 2em;
+  font-family: "DM serif display";
+  color: #e51449;
 }
 .one .courte_description {
   width: 80%;
   word-wrap: break-word;
+  text-align: center;
 }
 .one .artistes {
   height: 100%;
@@ -1422,6 +1580,14 @@ section.erreur {
   z-index: 21;
 }
 
+.lien {
+  color: black;
+}
+
+.lien:hover {
+  text-decoration: none;
+}
+
 .navigation,
 .pagination {
   display: flex;
@@ -1476,7 +1642,8 @@ section.entreprise article.service {
 
 h1 {
   color: #FCF1E3;
-  font-size: 1.5em;
+  font-family: "DM serif display";
+  font-size: 1.25em;
 }
 
 h2 {

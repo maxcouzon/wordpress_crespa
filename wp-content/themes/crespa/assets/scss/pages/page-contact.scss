@@ -5,6 +5,10 @@
 }
 
 form {
+    display: flex;
+}
+
+.mail form {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -50,4 +54,11 @@ form textarea {
     margin-left: 30%;
     color: $background;
     margin-top: 5vh;
+}
+
+.envoyer {
+    img {
+        border: 0px;
+    }
+    background-color: transparent;
 }
