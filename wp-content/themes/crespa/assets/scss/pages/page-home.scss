@@ -37,6 +37,7 @@ html {
         align-items: center;
         p {
             text-align: center;
+            margin-top: 5vh;
         }
     }
     span {
@@ -151,6 +152,7 @@ div.asso {
     }
     article {
         width: 80vw;
+        height: 80vh;
         p {
             line-height: 35px;
             font-size: 1.25em;
@@ -178,6 +180,10 @@ section.oeuvres,
     height: 70vh;
     display: flex;
     flex-direction: column;
+}
+
+div.articles {
+    cursor: pointer;
 }
 
 .contenu .all {
@@ -237,7 +243,7 @@ section.oeuvres,
 
 h2 {
     color: $bleu;
-    margin-bottom: 6vh;
+    margin-bottom: 10vh;
     margin-left: 10vw;
 }
 
@@ -276,6 +282,7 @@ div.slider {
 /* `.thumbs` `span` elements */
 
 .thumbs {
+    cursor: pointer;
     height: 50px;
     width: 40vw;
     display: flex;
@@ -326,7 +333,7 @@ a {
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    padding: 5vh;
+    padding-bottom: 7.5vh;
     a {
         cursor: pointer;
     }
@@ -378,7 +385,6 @@ a {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    height: 100%;
 }
 
 .wrapper .item {
@@ -524,15 +530,15 @@ div {
     .point_rouge {
         position: absolute;
         z-index: -1;
-        top: 1700px;
-        left: 95vw;
-        width: 120px;
-        height: 300px;
+        top: 800px;
+        left: 0vw;
+        width: 40px;
+        height: 500px;
     }
     .point_jaune {
         position: absolute;
         z-index: -1;
-        top: 2100px;
+        top: 2600px;
         left: 25vw;
         width: 150px;
         height: 150px;
@@ -540,7 +546,7 @@ div {
     .point_bleu {
         position: absolute;
         z-index: -1;
-        top: 2100px;
+        top: 2600px;
         left: 65vw;
         width: 150px;
         height: 150px;
@@ -548,34 +554,42 @@ div {
     .tache_jaune {
         position: absolute;
         z-index: -1;
-        left: 85vw;
-        top: 500;
-        width: 308px;
-        height: 180px;
+        left: 90vw;
+        top: 1600px;
+        width: 208px;
+        height: 208px;
+    }
+    .tache_bleu_jaune {
+        position: absolute;
+        z-index: -1;
+        top: 5650px;
+        left: -5vw;
+        width: 400px;
+        height: 400px;
     }
     .tache_rouge {
         position: absolute;
         z-index: -1;
-        top: 1000px;
-        left: -10px;
+        top: 3300px;
+        left: -5vw;
         width: 260px;
         height: 180px;
     }
     .tache_bleu {
         position: absolute;
-        left: 90vw;
-        top: 3600px;
+        left: -6vw;
+        top: 1800px;
         z-index: -1;
-        width: 300px;
-        height: 180px;
+        width: 350px;
+        height: 350px;
     }
     .tache_rouge_jaune {
         position: absolute;
         z-index: -1;
-        top: 2500px;
-        left: -17vw;
-        width: 388px;
-        height: 340px;
+        top: 800px;
+        left: 80vw;
+        width: 488px;
+        height: 440px;
     }
     .point_rouge-2 {
         position: absolute;
@@ -597,15 +611,15 @@ div {
         position: absolute;
         z-index: -1;
         top: 5000px;
-        left: 95vw;
+        left: 92vw;
         width: 300px;
         height: 180px;
     }
     .point_bleu-2 {
         position: absolute;
         z-index: -1;
-        top: 5500px;
-        left: 2vw;
+        top: 5200px;
+        left: 98vw;
         width: 180px;
         height: 180px;
     }

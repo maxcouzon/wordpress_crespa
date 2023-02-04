@@ -16,11 +16,12 @@
         </div>
         <div class="adresse">
             <article>
-            <?php the_field('adress', 'option'); ?>
+            93 Rue Lafayette <br />
+38200, Vienne
             </article>
             <br>
             <article>
-            <?php the_field('num','option'); ?>
+           06 51 60 58 51
             </article>
         </div>
     </div>
@@ -29,8 +30,9 @@
         <div class="ligne">
 
         </div>
-        <div>
-<a href="/legal/"><p class="copyright" >Mentions légales</p></a>
+        <div> 
+            <article>&copy; 2023-2028 Tous droits réservés.<a href="/legal/"><p class="copyright">Mentions légales</p></a></article>
+    
     
         </div>
     </div>

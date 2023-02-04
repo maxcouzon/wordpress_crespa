@@ -6,8 +6,7 @@ footer {
 .rs {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
-    padding-right: 1.5vw;
+    width: 10vw;
 }
 
 .rs img {
@@ -23,6 +22,10 @@ footer {
     width: 80vw;
     align-items: center;
     padding-top: 7vh;
+    div.adresse {
+        text-align: end;
+        width: 10vw;
+    }
 }
 
 .adress article {
@@ -31,7 +34,7 @@ footer {
 
 .copyright {
     font-size: 1em;
-    color: rgba($color: #121212, $alpha: 0.8);
+    color: $red;
 }
 
 .ligne {

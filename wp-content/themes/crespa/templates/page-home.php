@@ -12,7 +12,7 @@
     <?php
     // template Name: Accueil
     wp_head(); ?>
-    <title>Cre'spa</title>
+    <title>Cré'espa</title>
 </head>
 
 <body>
@@ -101,6 +101,7 @@
         <img class="tache_rouge" src="<?php echo (get_template_directory_uri()); ?>/assets/images/tache_rouge.svg" alt="" />
         <img class="tache_bleu" src="<?php echo (get_template_directory_uri()); ?>/assets/images/tache_bleu.svg" alt="" />
         <img class="tache_rouge_jaune" src="<?php echo (get_template_directory_uri()); ?>/assets/images/tache_rouge_jaune.svg" alt="" />
+<img class="tache_bleu_jaune" src="<?php echo (get_template_directory_uri()); ?>/assets/images/tache_bleu_jaune.svg" alt="" />
         <img class="point_rouge-2" src="<?php echo (get_template_directory_uri()); ?>/assets/images/point_rouge.svg" alt="" />
         <img class="point_jaune-2" src="<?php echo (get_template_directory_uri()); ?>/assets/images/point_jaune.svg" alt="" />
         <img class="tache_rouge-2" src="<?php echo (get_template_directory_uri()); ?>/assets/images/tache_rouge.svg" alt="" />
@@ -126,9 +127,7 @@
                 </a>
             </div>
             <div class="suivant">
-                <a id="actu" class="onclick" href="
-      #actu">
-
+                <a id="actu" class="onclick" href="#actu">
                     <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/arrow_bottom.svg" alt="flèche du bas" />
                 </a>
             </div>
@@ -218,7 +217,7 @@
 
     <!-- boutton voir plus -->
 
-    <h2 >Artistes</h2>
+    <h2 >Les Artistes</h2>
     <!-- les artistes -->
     <section class="artistes">
         <!-- tous les artistes -->
@@ -278,7 +277,7 @@
     </section>
     <!-- boutton entre les parties -->
 
-    <h2 >Galerie</h2>
+    <h2>La Galerie</h2>
     <section class="oeuvres">
         <!-- tous les articles  -->
 

@@ -6,8 +6,7 @@ footer {
 .rs {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
-  padding-right: 1.5vw;
+  width: 10vw;
 }
 
 .rs img {
@@ -24,6 +23,10 @@ footer {
   align-items: center;
   padding-top: 7vh;
 }
+.info_footer div.adresse {
+  text-align: end;
+  width: 10vw;
+}
 
 .adress article {
   text-align: right;
@@ -31,7 +34,7 @@ footer {
 
 .copyright {
   font-size: 1em;
-  color: rgba(18, 18, 18, 0.8);
+  color: #e51449;
 }
 
 .ligne {
@@ -429,7 +432,7 @@ menu .ancre {
 }
 
 .menu li {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .m-menu__toggle {
@@ -484,11 +487,23 @@ menu .ancre {
 div.header_2 {
   align-items: center;
   margin-top: 0px;
-  width: 46vw;
+  width: 47vw;
   display: flex;
   flex-direction: row;
-  margin-left: 44vw;
+  margin-left: 43vw;
   justify-content: space-between;
+}
+
+.mention_legal {
+  display: flex;
+  padding-left: 10vw;
+  justify-content: space-around;
+  width: 80vw;
+  margin: 50px;
+}
+
+.ytp-cued-thumbnail-overlay {
+  height: 80% !important;
 }
 
 html {
@@ -529,6 +544,7 @@ html {
 }
 .asso article p {
   text-align: center;
+  margin-top: 5vh;
 }
 .asso span {
   color: #e51449 !important;
@@ -631,6 +647,7 @@ div.asso div .reseaux img {
 }
 div.asso article {
   width: 80vw;
+  height: 80vh;
 }
 div.asso article p {
   line-height: 35px;
@@ -655,6 +672,10 @@ section.oeuvres,
   height: 70vh;
   display: flex;
   flex-direction: column;
+}
+
+div.articles {
+  cursor: pointer;
 }
 
 .contenu .all {
@@ -713,7 +734,7 @@ section.oeuvres,
 
 h2 {
   color: #0C53C4;
-  margin-bottom: 6vh;
+  margin-bottom: 10vh;
   margin-left: 10vw;
 }
 
@@ -749,6 +770,7 @@ div.slider {
 
 /* `.thumbs` `span` elements */
 .thumbs {
+  cursor: pointer;
   height: 50px;
   width: 40vw;
   display: flex;
@@ -793,7 +815,7 @@ a {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  padding: 5vh;
+  padding-bottom: 7.5vh;
 }
 .suivant a {
   cursor: pointer;
@@ -844,7 +866,6 @@ a {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  height: 100%;
 }
 
 .wrapper .item {
@@ -989,15 +1010,15 @@ section.mail {
 div .point_rouge {
   position: absolute;
   z-index: -1;
-  top: 1700px;
-  left: 95vw;
-  width: 120px;
-  height: 300px;
+  top: 800px;
+  left: 0vw;
+  width: 40px;
+  height: 500px;
 }
 div .point_jaune {
   position: absolute;
   z-index: -1;
-  top: 2100px;
+  top: 2600px;
   left: 25vw;
   width: 150px;
   height: 150px;
@@ -1005,7 +1026,7 @@ div .point_jaune {
 div .point_bleu {
   position: absolute;
   z-index: -1;
-  top: 2100px;
+  top: 2600px;
   left: 65vw;
   width: 150px;
   height: 150px;
@@ -1013,34 +1034,42 @@ div .point_bleu {
 div .tache_jaune {
   position: absolute;
   z-index: -1;
-  left: 85vw;
-  top: 500;
-  width: 308px;
-  height: 180px;
+  left: 90vw;
+  top: 1600px;
+  width: 208px;
+  height: 208px;
+}
+div .tache_bleu_jaune {
+  position: absolute;
+  z-index: -1;
+  top: 5650px;
+  left: -5vw;
+  width: 400px;
+  height: 400px;
 }
 div .tache_rouge {
   position: absolute;
   z-index: -1;
-  top: 1000px;
-  left: -10px;
+  top: 3300px;
+  left: -5vw;
   width: 260px;
   height: 180px;
 }
 div .tache_bleu {
   position: absolute;
-  left: 90vw;
-  top: 3600px;
+  left: -6vw;
+  top: 1800px;
   z-index: -1;
-  width: 300px;
-  height: 180px;
+  width: 350px;
+  height: 350px;
 }
 div .tache_rouge_jaune {
   position: absolute;
   z-index: -1;
-  top: 2500px;
-  left: -17vw;
-  width: 388px;
-  height: 340px;
+  top: 800px;
+  left: 80vw;
+  width: 488px;
+  height: 440px;
 }
 div .point_rouge-2 {
   position: absolute;
@@ -1062,15 +1091,15 @@ div .tache_rouge-2 {
   position: absolute;
   z-index: -1;
   top: 5000px;
-  left: 95vw;
+  left: 92vw;
   width: 300px;
   height: 180px;
 }
 div .point_bleu-2 {
   position: absolute;
   z-index: -1;
-  top: 5500px;
-  left: 2vw;
+  top: 5200px;
+  left: 98vw;
   width: 180px;
   height: 180px;
 }
@@ -1293,6 +1322,7 @@ div.contenu_oeuvre .oeuvre .description .taille {
 
 .price {
   font-size: 1.25em;
+  color: #e51449;
 }
 
 .titre_price .titre :nth-child(1) {
@@ -1329,19 +1359,17 @@ form div {
 }
 
 form input {
+  font-size: 1.15em;
   border: solid 0px;
+  outline: none;
   border-bottom: solid 2px #0C53C4;
   width: 30vw;
   background-color: transparent;
 }
 
-.form input:focus {
-  background-color: transparent;
-  border: 0px;
-}
-
 form textarea {
   border: solid 0px;
+  outline: none;
   border-bottom: solid 2px #0C53C4;
   width: 100%;
   background-color: transparent;
@@ -1372,6 +1400,14 @@ form textarea {
 
 h2.contact_form {
   margin-top: 5vh;
+}
+
+input:active {
+  border: transparent;
+}
+
+.is-form-style.is-form-style-3 input.is-search-input {
+  border: 0 !important;
 }
 
 .conteneur:nth-child(2n+1) {

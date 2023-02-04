@@ -22,19 +22,17 @@ form div {
 }
 
 form input {
+    font-size: 1.15em;
     border: solid 0px;
+    outline: none;
     border-bottom: solid 2px $bleu;
     width: 30vw;
     background-color: transparent;
 }
 
-.form input:focus {
-    background-color: transparent;
-    border: 0px;
-}
-
 form textarea {
     border: solid 0px;
+    outline: none;
     border-bottom: solid 2px $bleu;
     width: 100%;
     background-color: transparent;
@@ -65,4 +63,12 @@ form textarea {
 
 h2.contact_form {
     margin-top: 5vh;
+}
+
+input:active {
+    border: transparent;
+}
+
+.is-form-style.is-form-style-3 input.is-search-input {
+    border: 0!important;
 }

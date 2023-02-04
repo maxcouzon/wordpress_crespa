@@ -30,22 +30,22 @@ get_header();
             <p>BEAUCHEF Lucas</p>
             <p>VADEBOIN Bastien</p>
         </article>
-<article style="margin-top: 50px;">
+        <article style="margin-top: 50px;">
             <h2>Développement</h2>
             <p>COUZON max</p>
             
         </article>
         <article style="margin-top: 50px;">
-            <h2>ADRESSE</h2>
+            <h2>ADRESSE</h2> 
             <p>93 Rue Lafayette, 38200 Vienne</p>
         </article>
     </section>
 
-    <div style="display: flex;">
-       <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/usmb.png" alt="logo"
-width="50px";
+    <div class="mention_legal"style="display: flex;">
+       <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/usmb.png" alt="logo" width="150px"
 height="50px">
-        <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/mmi.svg" alt="logo MMI">
+        <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/mmi.svg" alt="logo MMI" width="100px"
+height="50px">
     </div>
 <?php
 
