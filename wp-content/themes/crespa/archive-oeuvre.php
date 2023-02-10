@@ -23,16 +23,23 @@ if (have_posts()) : ?>
     <div class="all_oeuvre">
         <?php
         while (have_posts()) : the_post();
-            $image = get_field('img'); ?>
+            $image = get_field('img');
+$artist = get_field('artiste'); ?>
 
             <div class="one_oeuvre">
                 <div class="image" style="background-image:url(<?php echo $image['url'] ?>);background-size:contain;
 background-repeat: no-repeat;background-position: 50% 100%;">
                 </div>
                 <div class="after">
-                    <div class="titre_oeuvre">
+<div class="oeuvre_describe"><div class="titre_oeuvre">
                         <?php echo (get_the_title()); ?>
                     </div>
+<div class="archive_artiste"><?php setup_postdata($post);
+            $frite = wp_list_pluck($artist, 'post_title');
+
+echo($frite[0]);
+ wp_reset_postdata();?> </div></div>
+                    
                     <div class="button_accueil_artistes">
                             <a href= "/<?php $post_slug = $post->post_name; echo($post_slug)?>/" class="button_oeuvre">Voir</a>
 

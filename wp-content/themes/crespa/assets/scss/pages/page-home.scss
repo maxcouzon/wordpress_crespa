@@ -1,709 +1,987 @@
-html {
-    width: 100vw;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-}
-
-// page d'accueil
-.welcome {
-    width: 100vw;
-    height: 100vh;
-    img {
-        height: 100%;
+    html {
+        height: auto;
         width: 100vw;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
     }
-    .filtre_noire {
-        position: absolute;
-        top: 0;
-        order: 2;
-        z-index: 0;
+    
+    // page d'accueil
+    .welcome {
         width: 100vw;
-        height: 104.75vh;
-        background-color: rgba($color: #000000, $alpha: .7);
-    }
-    overflow-y: hidden;
-    overflow-x: hidden;
-    img .souris {
-        padding-top: 2.5vw;
-        cursor: pointer;
-    }
-}
-
-.asso {
-    article {
-        height: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        p {
-            text-align: center;
-            margin-top: 5vh;
+        height: 100vh;
+        img {
+            height: auto;
+            width: 100%;
+        }
+        .filtre_noire {
+            position: absolute;
+            top: 0;
+            order: 2;
+            z-index: 0;
+            width: 100vw;
+            height: 104.75vh;
+            background-color: rgba($color: #000000, $alpha: .75);
+        }
+        overflow-y: hidden;
+        overflow-x: hidden;
+        img .souris {
+            padding-top: 2.5vw;
+            cursor: pointer;
         }
     }
-    span {
-        color: $red!important;
-    }
-}
-
-.presentation {
-    position: absolute;
-    top: 18vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    width: 50vw;
-    height: 72.5vh;
-    left: 25vw;
-    gap: 20px;
-    overflow-y: hidden;
-     :nth-child(2) {
-        color: $background;
-        font-size: 1.25em;
-    }
-}
-
-.welcome_logo {
-    width: 50vw;
-    height: 50vh;
-    text-align: center;
-}
-
-div.filtre_noir_page_accueil {
-    width: 37.5vw;
-    height: 15vh;
-    background-color: rgba($color: #000000, $alpha: 0.6);
-    position: absolute;
-    z-index: 46;
-}
-
-// actu 
-// fin 
-// header 
-.logo_nav {
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    position: absolute;
-    top: 90vh;
-    left: 40%;
-}
-
-.m-menu__toggle {
-    position: absolute;
-    width: 12.2vw;
-    cursor: pointer;
-}
-
-
-/* set `div` container `background` to last `div' */
-
-.slider div {
-    position: relative;
-    height: 200px;
-    width: 100%;
-}
-
-div.wrapper {
-    width: 35vw;
-    border-left: solid 10px $red;
-    border-top: solid 10px $red;
-    z-index: 49;
-    background-color: transparent;
-}
-
-
-/* set `div` `opacity:0`  */
-
-
-/* 
-     display `:target` `div` on click of `a`,
-     having `div` as fragment identifier 
-  */
-
-div>div:target {
-    opacity: 1;
-}
-
-// fin 
-// partie présentation de l'asso
-div.asso {
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-    justify-content: space-around;
-    align-items: center;
-    div {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        gap: 15vh;
-        .reseaux {
-            img {
-                width: 5vw;
-                height: 10vh;
-            }
-            display :flex;
-            flex-direction:row;
-            justify-content:center;
+    
+    .asso {
+        article {
+            height: 50%;
+            display: flex;
+            justify-content: center;
             align-items: center;
+            p {
+                text-align: center;
+                margin-top: 5vh;
+            }
+        }
+        span {
+            color: $red!important;
         }
     }
-    article {
-        width: 80vw;
-        height: 80vh;
-        p {
-            line-height: 35px;
+    
+    .presentation {
+        position: absolute;
+        top: 18vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 50vw;
+        height: 72.5vh;
+        left: 25vw;
+        gap: 20px;
+        overflow-y: hidden;
+         :nth-child(2) {
+            color: $background;
             font-size: 1.25em;
         }
     }
-}
-
-// fin 
-// taille des section 
-section {
-    width: 80vw;
-    justify-content: space-between;
-    margin-left: 10vw;
-}
-
-section.oeuvres,
-.ateliers,
-.histoire,
-.formations,
-.artistes,
-.entreprise,
-.carrousel {
-    padding-top: 2.5vh;
-    padding-bottom: 2.5vh;
-    height: 70vh;
-    display: flex;
-    flex-direction: column;
-}
-
-div.articles {
-    cursor: pointer;
-}
-
-.contenu .all {
-    gap: auto;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 80vw;
-    margin: 0px;
-}
-
-.one_page_accueil {
-    height: 50vh;
-    width: 25%;
-    flex-direction: column;
-    justify-content: space-around;
-    background-color: $footer;
-    align-items: center;
-    display: flex;
-    .photo_artiste {
-        margin-top: 5%;
-        border-radius: 50%;
-        width: 45%;
-        height: 40%;
-        position: relative;
-        z-index: 21;
-    }
-    // contenu de chaque article 
-    .name {
-        font-size: 1.5em;
-        font-family: "DM serif display";
-        color: $red;
-    }
-    .courte_description {
-        width: 80%;
-        word-wrap: break-word;
+    
+    .welcome_logo {
+        width: 50vw;
+        height: 50vh;
         text-align: center;
     }
-    .artistes {
-        height: 100%;
-    }
-    .background_image {
+    
+    div.filtre_noir_page_accueil {
+        width: 37.5vw;
+        height: 15vh;
+        background-color: rgba($color: #000000, $alpha: 0.6);
         position: absolute;
-        width: 23%;
-        height: 23%;
-        margin-bottom: 10%;
-        z-index: 20;
+        z-index: 46;
     }
-}
-
-.contenu {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-h2 {
-    color: $bleu;
-    margin-bottom: 10vh;
-    margin-left: 10vw;
-}
-
-// actualité 
-div.slider {
-    position: relative;
-    display: block;
-    width: 80vw;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row-reverse;
-}
-
-.sliderDate.show {
-    background-color: $footer;
-    border-left: solid 10px $red;
-}
-
-.border {
-    width: 100%;
-    border-left: solid 10px transparent;
-}
-
-.articles {
-    display: flex;
-    flex-direction: row;
-    margin-left: 100px;
-    align-items: center;
-    gap: 20%;
-    height: 50px !important;
-    z-index: 49;
-    font-family: "DM serif display";
-}
-
-
-/* `.thumbs` `span` elements */
-
-.thumbs {
-    cursor: pointer;
-    height: 50px;
-    width: 40vw;
-    display: flex;
-    position: relative;
-    text-align: space-between;
-}
-
-.enter {
-    display: flex;
-    flex-direction: column;
-    width: 45vw;
-    padding: 0px;
-    height: 100%;
-    background-color: transparent;
-}
-
-.date {
-    color: $bleu;
-    font-size: 1.5em;
-}
-
-.nom_article {
-    font-size: 1em;
-    color: #000000;
-}
-
-
-/* set `background` of `.thumbs` `span` elements  */
-
-//fin
-// button 
-.plus_oeuvres {
-    text-align: center;
-    margin-right: 40%;
-}
-
-// tous les liens
-a {
-    margin: 0px;
-    display: inline-block;
-    position: relative;
-    color: transparent;
-    padding-top: 0px;
-}
-
-// fleche du bas entre chaque partie 
-.suivant {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    padding-bottom: 7.5vh;
-    a {
+    
+    // actu 
+    // fin 
+    // header 
+    .logo_nav {
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        position: absolute;
+        top: 90vh;
+        left: 40%;
+    }
+    
+    .m-menu__toggle {
+        position: absolute;
+        width: 12.2vw;
         cursor: pointer;
     }
-}
-
-// partie histoire 
-.video iframe {
-    width: 100%;
-    height: 100%;
-}
-
-.video {
-    width: 37.5vw;
-}
-
-.story {
-    width: 37.5vw;
-    display: flex;
-    flex-direction: column;
-}
-
-.all_artistes {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    width: 80vw;
-    gap: 12.5%;
-}
-
-a {
-    display: block;
-}
-
-.button_accueil_actu {
-    position: absolute;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    .button {
+    /* set `div` container `background` to last `div' */
+    
+    .slider div {
         position: relative;
-        margin-bottom: 10px;
-        margin-right: 10px;
-        z-index: 49;
-    }
-}
-
-.button_accueil_artistes {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.wrapper .item {
-    margin-top: 10px;
-    margin-left: 10px;
-    position: absolute;
-    z-index: 99;
-}
-
-.all_oeuvre_page_accueil {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.one_oeuvre_page_accueil {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    width: 27%;
-    .image {
-        height: 40vh;
+        height: 200px;
         width: 100%;
-        max-height: 100%;
-        max-height: auto;
-        max-width: 100%;
-        margin-bottom: 2.5vh;
     }
-}
-
-.button_accueil_oeuvre {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-direction: column;
-    height: 100%;
-}
-
-.button_accueil_atelier {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    flex-direction: column;
-    height: 100%;
-}
-
-.button_accueil_formation {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    flex-direction: column;
-    height: 100%;
-}
-
-.button_accueil_entreprise {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    flex-direction: column;
-    height: 100%;
-}
-
-.image_page_accueil {
-    width: 37.5vw;
-    height: 50vh;
-    display: flex;
-    flex-direction: column-reverse;
-}
-
-.text_page_accueil_entreprise {
-    position: absolute;
-    z-index: -100;
-    color: #FCF1E3;
-    margin-left: 20px;
-    margin-top: 10px;
-    font-size: 2em;
-    line-height: 30px;
-}
-
-section.entreprise {
-    height: auto!important;
-}
-
-article.service {
-    margin-top: 50px;
-}
-
-.partie_entreprise {
-    margin-top: 50px;
-    display: flex;
-    width: 80vw;
-    justify-content: space-between;
-    flex-direction: row-reverse;
-}
-
-section.mail {
-    display: flex;
-    flex-direction: row!important;
-    margin-bottom: 5vh;
-}
-
-.contenu_histoire {
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.video iframe {
-    width: 37.5vw;
-}
-
-.onclick {
-    transition: ease-in 1s;
-}
-
-.animation {
-    div {
+    
+    div.wrapper {
+        width: 35vw;
+        border-left: solid 10px $red;
+        border-top: solid 10px $red;
+        height: 45vh;
+        z-index: 49;
+        background-color: transparent;
+    }
+    /* set `div` `opacity:0`  */
+    /* 
+     display `:target` `div` on click of `a`,
+     having `div` as fragment identifier 
+  */
+    
+    div>div:target {
+        opacity: 1;
+    }
+    
+    // fin 
+    // partie présentation de l'asso
+    div.asso {
+        height: 80vh;
         display: flex;
-        align-content: center;
-        justify-content: center;
-        img.fleche {
-            animation: bounce 0.7s ease infinite;
+        flex-direction: column;
+        gap: 50px;
+        justify-content: space-around;
+        align-items: center;
+        div {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 15vh;
+            .reseaux {
+                img {
+                    width: 5vw;
+                    height: 10vh;
+                }
+                display :flex;
+                flex-direction:row;
+                justify-content:center;
+                align-items: center;
+            }
         }
-        @keyframes bounce {
-            from {
-                top: 106px;
-            }
-            50% {
-                top: 0px;
-            }
-            to {
-                top: 106px;
+        article {
+            width: 80vw;
+            height: 80vh;
+            p {
+                line-height: 35px;
+                font-size: 1.25em;
             }
         }
     }
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-div {
-    .point_rouge {
-        position: absolute;
-        z-index: -1;
-        top: 800px;
-        left: 0vw;
-        width: 40px;
-        height: 500px;
+    
+    // fin 
+    // taille des section 
+    section {
+        margin-left: 10vw;
+        width: 80vw;
     }
-    .point_jaune {
-        position: absolute;
-        z-index: -1;
-        top: 2600px;
-        left: 25vw;
-        width: 150px;
-        height: 150px;
+    
+    section.oeuvres,
+    .ateliers,
+    .histoire,
+    .formations,
+    .artistes,
+    .entreprise,
+    .carrousel,
+    .mail {
+        padding-top: 2.5vh;
+        padding-bottom: 2.5vh;
+        height: calc(100vh - 80px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
-    .point_bleu {
-        position: absolute;
-        z-index: -1;
-        top: 2600px;
-        left: 65vw;
-        width: 150px;
-        height: 150px;
+    
+    div.articles {
+        cursor: pointer;
     }
-    .tache_jaune {
-        position: absolute;
-        z-index: -1;
-        left: 90vw;
-        top: 1600px;
-        width: 208px;
-        height: 208px;
+    
+    .contenu .all {
+        gap: auto;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 80vw;
+        margin: 0px;
     }
-    .tache_bleu_jaune {
-        position: absolute;
-        z-index: -1;
-        top: 5650px;
-        left: -5vw;
-        width: 400px;
-        height: 400px;
-    }
-    .tache_rouge {
-        position: absolute;
-        z-index: -1;
-        top: 3300px;
-        left: -5vw;
-        width: 260px;
-        height: 180px;
-    }
-    .tache_bleu {
-        position: absolute;
-        left: -6vw;
-        top: 1800px;
-        z-index: -1;
-        width: 350px;
-        height: 350px;
-    }
-    .tache_rouge_jaune {
-        position: absolute;
-        z-index: -1;
-        top: 800px;
-        left: 80vw;
-        width: 488px;
-        height: 440px;
-    }
-    .point_rouge-2 {
-        position: absolute;
-        z-index: -1;
-        top: 4000px;
-        left: 95vw;
-        width: 120px;
-        height: 300px;
-    }
-    .point_jaune-2 {
-        position: absolute;
-        z-index: -1;
-        top: 4500px;
-        left: 5vw;
-        width: 150px;
-        height: 150px;
-    }
-    .tache_rouge-2 {
-        position: absolute;
-        z-index: -1;
-        top: 5000px;
-        left: 92vw;
-        width: 300px;
-        height: 180px;
-    }
-    .point_bleu-2 {
-        position: absolute;
-        z-index: -1;
-        top: 5200px;
-        left: 98vw;
-        width: 180px;
-        height: 180px;
-    }
-    .tache_jaune-2 {
-        position: absolute;
-        z-index: -1;
-        top: 5800px;
-        left: 95vw;
-        width: 300px;
-        height: 180px;
-    }
-    .point_jaune_service {
-        position: absolute;
-        z-index: -1;
-        top: 2100px;
-        left: 1vw;
-        width: 150px;
-        height: 150px;
-    }
-    .point_bleu_service {
-        position: absolute;
-        z-index: -1;
-        top: 1100px;
-        left: 95vw;
-        width: 150px;
-        height: 150px;
-    }
-    .tache_rouge_jaune_service {
-        position: absolute;
-        z-index: -1;
-        top: 1400px;
-        left: -17vw;
-        width: 388px;
-        height: 340px;
-    }
-    .tache_rouge_service {
-        position: absolute;
-        z-index: -1;
-        top: 700px;
-        left: -5vw;
-        width: 260px;
-        height: 180px;
-    }
-    .point_jaune_autre {
-        position: absolute;
-        z-index: -1;
-        top: 200px;
-        left: 96vw;
-        width: 260px;
-        height: 180px;
-    }
-    .tache_rouge_jaune_autre {
-        position: absolute;
-        z-index: -1;
-        top: 900px;
-        left: 96vw;
-        width: 388px;
-        height: 340px;
-    }
-}
-
-div.after {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 7.5vh;
-    .titre_oeuvre {
-        color: $bleu;
-        font-size: 1.25em;
-        font-family: 'DM serif display';
-    }
-    div:nth-child(1) {
-        margin-top: 0px;
-    }
-}
-
-.coordonnees {
-    margin-top: 20px;
-    gap: 20px;
-    .coordonnee {
-        margin-top: 20px;
+    
+    .one_page_accueil {
+        height: 50vh;
+        width: 25%;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color: $footer;
         align-items: center;
         display: flex;
-        gap: 20px;
+        .photo_artiste {
+            margin-top: 5%;
+            border-radius: 50%;
+            width: 45%;
+            height: 40%;
+            position: relative;
+            z-index: 21;
+        }
+        // contenu de chaque article 
+        .name {
+            font-size: 1.5em;
+            font-family: "DM serif display";
+            color: $red;
+        }
+        .courte_description {
+            width: 80%;
+            word-wrap: break-word;
+            text-align: center;
+        }
+        .artistes {
+            height: 100%;
+        }
+        .background_image {
+            position: absolute;
+            width: 23%;
+            height: 23%;
+            z-index: 20;
+            margin-top: -12vh;
+        }
     }
-}
+    
+    .contenu {
+        height: 40vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    // actualité 
+    div.slider {
+        position: relative;
+        display: block;
+        width: 80vw;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    
+    .sliderDate.show {
+        background-color: $footer;
+        border-left: solid 10px $red;
+    }
+    
+    .border {
+        width: 100%;
+        border-left: solid 10px transparent;
+    }
+    
+    .articles {
+        display: flex;
+        flex-direction: row;
+        margin-left: 100px;
+        align-items: center;
+        gap: 20%;
+        height: 50px !important;
+        z-index: 49;
+        font-family: "DM serif display";
+    }
+    /* `.thumbs` `span` elements */
+    
+    .thumbs {
+        cursor: pointer;
+        height: 50px;
+        width: 40vw;
+        display: flex;
+        position: relative;
+        text-align: space-between;
+    }
+    
+    .enter {
+        display: flex;
+        flex-direction: column;
+        width: 45vw;
+        padding: 0px;
+        height: 100%;
+        background-color: transparent;
+    }
+    
+    .date {
+        color: $bleu;
+        font-size: 1.5em;
+    }
+    
+    .nom_article {
+        font-size: 1em;
+        color: #000000;
+    }
+    /* set `background` of `.thumbs` `span` elements  */
+    
+    //fin
+    // button 
+    .plus_oeuvres {
+        text-align: center;
+        margin-right: 40%;
+    }
+    
+    // tous les liens
+    a {
+        margin: 0px;
+        display: inline-block;
+        position: relative;
+        color: transparent;
+        padding-top: 0px;
+    }
+    
+    // fleche du bas entre chaque partie 
+    .suivant {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding-bottom: 7.5vh;
+        a {
+            cursor: pointer;
+        }
+    }
+    
+    // partie histoire 
+    .video iframe {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .video {
+        width: 37.5vw;
+    }
+    
+    .story {
+        width: 37.5vw;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .all_artistes {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        width: 80vw;
+        gap: 12.5%;
+    }
+    
+    a {
+        display: block;
+    }
+    
+    .button_accueil_actu {
+        position: absolute;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        .button {
+            position: relative;
+            margin-bottom: 5%;
+            margin-right: 10px;
+            z-index: 49;
+        }
+    }
+    
+    .button_accueil_artistes {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+    .wrapper .item {
+        margin-top: 5%;
+        margin-left: 5%;
+        position: absolute;
+        z-index: 99;
+        width: 95%;
+        height: 95%;
+    }
+    
+    .all_oeuvre_page_accueil {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    .one_oeuvre_page_accueil {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        width: 27%;
+        .image {
+            height: 40vh;
+            width: 100%;
+            max-height: 100%;
+            max-height: auto;
+            max-width: 100%;
+            margin-bottom: 2.5vh;
+        }
+    }
+    
+    .button_accueil_oeuvre {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .button_accueil_atelier {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        flex-direction: column;
+        height: 100%;
+    }
+    
+    .button_accueil_formation {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex-direction: column;
+        height: 100%;
+    }
+    
+    .button_accueil_entreprise {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        flex-direction: column;
+        height: 100%;
+    }
+    
+    .image_page_accueil {
+        width: 37.5vw;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+    .text_page_accueil_entreprise {
+        position: absolute;
+        z-index: -100;
+        color: #FCF1E3;
+        margin-left: 20px;
+        margin-top: 10px;
+        font-size: 2em;
+        line-height: 30px;
+    }
+    
+    article.service {
+        margin-top: 50px;
+    }
+    
+    .partie_entreprise {
+        display: flex;
+        height: 40vh;
+        width: 80vw;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+    
+    .home_form {
+        display: flex;
+        flex-direction: row!important;
+        justify-content: space-between;
+        height: 80%;
+    }
+    
+    .contenu_histoire {
+        height: 40vh;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .video iframe {
+        width: 37.5vw;
+    }
+    
+    .onclick {
+        transition: ease-in 1s;
+    }
+    
+    .animation {
+        div {
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            padding-bottom: 20px;
+            img.fleche {
+                animation: bounce 0.7s ease infinite;
+            }
+            @keyframes bounce {
+                from {
+                    top: 106px;
+                }
+                50% {
+                    top: 0px;
+                }
+                to {
+                    top: 106px;
+                }
+            }
+        }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .animation .souris {
+        animation: moveImage 4s ease-in-out infinite;
+    }
+    
+    @keyframes moveImage {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(20px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+    
+    div {
+        .point_rouge {
+            position: absolute;
+            z-index: -1;
+            top: 800px;
+            left: 0vw;
+            width: 40px;
+            height: 500px;
+        }
+        .point_jaune {
+            position: absolute;
+            z-index: -1;
+            top: 2600px;
+            left: 25vw;
+            width: 150px;
+            height: 150px;
+        }
+        .point_bleu {
+            position: absolute;
+            z-index: -1;
+            top: 2600px;
+            left: 65vw;
+            width: 150px;
+            height: 150px;
+        }
+        .tache_jaune {
+            position: absolute;
+            z-index: -1;
+            left: 90vw;
+            top: 1600px;
+            width: 208px;
+            height: 208px;
+        }
+        .tache_bleu_jaune {
+            position: absolute;
+            z-index: -1;
+            top: 4600px;
+            left: -5vw;
+            width: 400px;
+            height: 400px;
+        }
+        .tache_rouge {
+            position: absolute;
+            z-index: -1;
+            top: 3300px;
+            left: -5vw;
+            width: 260px;
+            height: 180px;
+        }
+        .tache_bleu {
+            position: absolute;
+            left: -6vw;
+            top: 1800px;
+            z-index: -1;
+            width: 350px;
+            height: 350px;
+        }
+        .tache_rouge_jaune {
+            position: absolute;
+            z-index: -1;
+            top: 800px;
+            left: 80vw;
+            width: 488px;
+            height: 440px;
+        }
+        .point_rouge-2 {
+            position: absolute;
+            z-index: -1;
+            top: 4000px;
+            left: 95vw;
+            width: 120px;
+            height: 300px;
+        }
+        .point_jaune-2 {
+            position: absolute;
+            z-index: -1;
+            top: 4500px;
+            left: 5vw;
+            width: 150px;
+            height: 150px;
+        }
+        .tache_rouge-2 {
+            position: absolute;
+            z-index: -1;
+            top: 4200px;
+            left: 92vw;
+            width: 300px;
+            height: 180px;
+        }
+        .point_bleu-2 {
+            position: absolute;
+            z-index: -1;
+            top: 4800px;
+            left: 95vw;
+            width: 180px;
+            height: 180px;
+        }
+        .tache_jaune-2 {
+            position: absolute;
+            z-index: -1;
+            top: 5100px;
+            left: 95vw;
+            width: 300px;
+            height: 180px;
+        }
+        .point_jaune_service {
+            position: absolute;
+            z-index: -1;
+            top: 2100px;
+            left: 1vw;
+            width: 150px;
+            height: 150px;
+        }
+        .point_bleu_service {
+            position: absolute;
+            z-index: -1;
+            top: 1100px;
+            left: 95vw;
+            width: 150px;
+            height: 150px;
+        }
+        .tache_rouge_jaune_service {
+            position: absolute;
+            z-index: -1;
+            top: 1400px;
+            left: -17vw;
+            width: 388px;
+            height: 340px;
+        }
+        .tache_rouge_service {
+            position: absolute;
+            z-index: -1;
+            top: 700px;
+            left: -5vw;
+            width: 260px;
+            height: 180px;
+        }
+        .point_jaune_autre {
+            position: absolute;
+            z-index: -1;
+            top: 200px;
+            left: 96vw;
+            width: 260px;
+            height: 180px;
+        }
+        .tache_rouge_jaune_autre {
+            position: absolute;
+            z-index: -1;
+            top: 900px;
+            left: 96vw;
+            width: 388px;
+            height: 340px;
+        }
+    }
+    
+    div.after {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        .titre_oeuvre {
+            color: $bleu;
+            font-size: 1.25em;
+            font-family: 'DM serif display';
+        }
+        div:nth-child(1) {
+            margin-top: 0px;
+        }
+    }
+    
+    .coordonnees {
+        margin-top: 20px;
+        gap: 20px;
+        .coordonnee {
+            margin-top: 20px;
+            align-items: center;
+            display: flex;
+            gap: 20px;
+        }
+    }
+    
+    .describe :nth-child(2) {
+        color: $red;
+    }
+    
+    .archive_artiste {
+        color: $red;
+    }
+    
+    .oeuvre_describe {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    section .entreprise_last {
+        height: auto;
+        padding-bottom: 5vh;
+    }
+    
+    .entreprise_service {
+        justify-content: space-around;
+        padding-top: 2.5vh;
+        padding-bottom: 2.5vh;
+        height: calc(100vh - 80px);
+        display: flex;
+        flex-direction: column;
+    }
+    
+    video {
+        z-index: 100;
+        filter: blur(5px);
+    }
+    
+     ::-webkit-scrollbar {
+        width: 12px;
+        background-color: transparent;
+    }
+    
+     ::-webkit-scrollbar-thumb {
+        height: 20vh;
+        border-radius: 50px;
+        background-color: $red;
+    }
+    
+    .contactez-nous_tel {
+        display: none;
+        width: auto;
+    }
+    
+    .logo_header_tel {
+        display: none;
+        height: 80px;
+    }
+    
+    @media only screen and (max-width: 900px) {
+        .logo_header_tel {
+            display: block;
+            width: 164px;
+            height: 80px;
+            padding-left: -20px;
+            img {
+                width: 80px;
+            }
+        }
+        .home_form {
+            flex-direction: column-reverse!important;
+            form input {
+                padding-left: 5vw;
+                font-size: 1.15em;
+                border: solid 0px;
+                outline: none;
+                border-bottom: solid 2px #0C53C4;
+                width: 90vw!important;
+                background-color: transparent;
+            }
+        }
+        .logo_header {
+            display: none;
+        }
+        section {
+            margin-left: 5vw;
+            width: 90vw;
+            .contenu {
+                display: flex;
+                flex-direction: column;
+                gap: 20vh;
+            }
+        }
+        .presentation {
+            position: absolute;
+            top: 2.5vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 95vw;
+            height: 95vh;
+            left: 2.5vw;
+            gap: 10vh;
+            overflow-x: hidden;
+             :nth-child(2) {
+                color: $background;
+                font-size: 1.25em;
+                text-align: center;
+            }
+        }
+        section.oeuvres,
+        .ateliers,
+        .histoire,
+        .formations,
+        .artistes,
+        .entreprise,
+        .carrousel,
+        .mail {
+            padding-top: 2.5vh;
+            padding-bottom: 2.5vh;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20vh;
+        }
+        .all_oeuvre_page_accueil {
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            gap: 10vh;
+            align-items: center;
+        }
+        .contenu .all {
+            gap: auto;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 80vw;
+            align-items: center;
+            margin: 0px;
+        }
+        .one_oeuvre_page_accueil {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            width: 80vw;
+            .image {
+                height: 60vh;
+                width: 100%;
+                max-height: 100%;
+                max-height: auto;
+                max-width: 100%;
+                margin-bottom: 2.5vh;
+            }
+            .contenu_histoire,
+            .partie_entreprise {
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                gap: 10vh;
+            }
+        }
+        div.suivant {
+            display: none!important;
+        }
+        div,
+        article {
+            width: 80vw;
+        }
+        .one_page_accueil .name {
+            font-size: 1.5em;
+            text-align: center;
+            font-family: "DM serif display";
+            color: #e51449;
+        }
+        .one_page_accueil {
+            height: 40vh;
+            width: 80vw;
+            flex-direction: column;
+            justify-content: space-around;
+            background-color: #F4E7D7;
+            align-items: center;
+            display: flex;
+        }
+        .width {
+            display: none;
+            width: auto;
+        }
+        .contactez-nous_tel {
+            display: block;
+            .button {
+                display: flex;
+                justify-content: center;
+                border-radius: 0px;
+                background-color: transparent;
+                width: 10vw;
+                height: 5vh;
+                border: solid 0;
+                color: #FCF1E3;
+                align-items: center;
+                text-decoration: none;
+                transition: all 0.2s ease-out;
+            }
+        }
+        .contactez-nous {
+            display: none;
+        }
+        video {
+            height: 100vh;
+            width: auto;
+        }
+        div.asso div .reseaux img {
+            width: 8vw;
+            height: 10vh;
+        }
+        h2 {
+            text-align: center;
+        }
+        div.asso {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            justify-content: space-around;
+            align-items: center;
+            margin-left: 10vw;
+        }
+        body {
+            width: 100vw;
+        }
+        .welcome_logo {
+            img {
+                width: 70%;
+            }
+            width: 100vw;
+            height: 100vh;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+        .asso {
+            padding-top: 2.5vh;
+            padding-bottom: 5vh;
+            height: calc(90vh - 80px);
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+        }
+        .maps {
+            width: 90vw;
+            margin-left: 5vw;
+            height: auto;
+        }
+        .contenu_histoire,
+        .partie_entreprise {
+            display: flex;
+            flex-direction: column;
+        }
+        .n2-section-smartslider {
+            align-self: var(--ssselfalign);
+            display: none;
+        }
+        .video iframe {
+            width: 90vw;
+            height: auto;
+        }
+        .story div {
+            text-align: center;
+        }
+        .filtre_noir_page_accueil {
+            display: none;
+        }
+        .contenu {
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }

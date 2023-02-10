@@ -31,6 +31,9 @@
         <a href="https://creespa.fr" class="logo_header">
           <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/logo.svg" alt="logo" />
         </a>
+ <a href="https://creespa.fr" class="logo_header_tel">
+          <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/logo_tel.svg" alt="logo" />
+        </a>
         <div class="contactez-nous">
           <a href="/wordpress_crespa/contact/" class="button">Contactez-nous</a>
         </div>

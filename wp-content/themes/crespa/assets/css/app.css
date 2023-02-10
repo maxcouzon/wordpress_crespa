@@ -507,6 +507,7 @@ div.header_2 {
 }
 
 html {
+  height: auto;
   width: 100vw;
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -519,8 +520,8 @@ html {
   overflow-x: hidden;
 }
 .welcome img {
-  height: 100%;
-  width: 100vw;
+  height: auto;
+  width: 100%;
 }
 .welcome .filtre_noire {
   position: absolute;
@@ -529,7 +530,7 @@ html {
   z-index: 0;
   width: 100vw;
   height: 104.75vh;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.75);
 }
 .welcome img .souris {
   padding-top: 2.5vw;
@@ -608,15 +609,16 @@ div.wrapper {
   width: 35vw;
   border-left: solid 10px #e51449;
   border-top: solid 10px #e51449;
+  height: 45vh;
   z-index: 49;
   background-color: transparent;
 }
 
 /* set `div` `opacity:0`  */
 /* 
-     display `:target` `div` on click of `a`,
-     having `div` as fragment identifier 
-  */
+   display `:target` `div` on click of `a`,
+   having `div` as fragment identifier 
+*/
 div > div:target {
   opacity: 1;
 }
@@ -655,9 +657,8 @@ div.asso article p {
 }
 
 section {
-  width: 80vw;
-  justify-content: space-between;
   margin-left: 10vw;
+  width: 80vw;
 }
 
 section.oeuvres,
@@ -666,12 +667,14 @@ section.oeuvres,
 .formations,
 .artistes,
 .entreprise,
-.carrousel {
+.carrousel,
+.mail {
   padding-top: 2.5vh;
   padding-bottom: 2.5vh;
-  height: 70vh;
+  height: calc(100vh - 80px);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 div.articles {
@@ -722,20 +725,15 @@ div.articles {
   position: absolute;
   width: 23%;
   height: 23%;
-  margin-bottom: 10%;
   z-index: 20;
+  margin-top: -12vh;
 }
 
 .contenu {
+  height: 40vh;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-}
-
-h2 {
-  color: #0C53C4;
-  margin-bottom: 10vh;
-  margin-left: 10vw;
 }
 
 div.slider {
@@ -857,7 +855,7 @@ a {
 }
 .button_accueil_actu .button {
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 5%;
   margin-right: 10px;
   z-index: 49;
 }
@@ -869,10 +867,12 @@ a {
 }
 
 .wrapper .item {
-  margin-top: 10px;
-  margin-left: 10px;
+  margin-top: 5%;
+  margin-left: 5%;
   position: absolute;
   z-index: 99;
+  width: 95%;
+  height: 95%;
 }
 
 .all_oeuvre_page_accueil {
@@ -902,7 +902,6 @@ a {
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
-  height: 100%;
 }
 
 .button_accueil_atelier {
@@ -931,7 +930,6 @@ a {
 
 .image_page_accueil {
   width: 37.5vw;
-  height: 50vh;
   display: flex;
   flex-direction: column-reverse;
 }
@@ -946,30 +944,27 @@ a {
   line-height: 30px;
 }
 
-section.entreprise {
-  height: auto !important;
-}
-
 article.service {
   margin-top: 50px;
 }
 
 .partie_entreprise {
-  margin-top: 50px;
   display: flex;
+  height: 40vh;
   width: 80vw;
   justify-content: space-between;
   flex-direction: row-reverse;
 }
 
-section.mail {
+.home_form {
   display: flex;
   flex-direction: row !important;
-  margin-bottom: 5vh;
+  justify-content: space-between;
+  height: 80%;
 }
 
 .contenu_histoire {
-  height: 100%;
+  height: 40vh;
   display: flex;
   justify-content: space-between;
 }
@@ -991,6 +986,7 @@ section.mail {
   display: flex;
   align-content: center;
   justify-content: center;
+  padding-bottom: 20px;
 }
 .animation div img.fleche {
   animation: bounce 0.7s ease infinite;
@@ -1007,6 +1003,21 @@ section.mail {
   }
 }
 
+.animation .souris {
+  animation: moveImage 4s ease-in-out infinite;
+}
+
+@keyframes moveImage {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 div .point_rouge {
   position: absolute;
   z-index: -1;
@@ -1042,7 +1053,7 @@ div .tache_jaune {
 div .tache_bleu_jaune {
   position: absolute;
   z-index: -1;
-  top: 5650px;
+  top: 4600px;
   left: -5vw;
   width: 400px;
   height: 400px;
@@ -1090,7 +1101,7 @@ div .point_jaune-2 {
 div .tache_rouge-2 {
   position: absolute;
   z-index: -1;
-  top: 5000px;
+  top: 4200px;
   left: 92vw;
   width: 300px;
   height: 180px;
@@ -1098,15 +1109,15 @@ div .tache_rouge-2 {
 div .point_bleu-2 {
   position: absolute;
   z-index: -1;
-  top: 5200px;
-  left: 98vw;
+  top: 4800px;
+  left: 95vw;
   width: 180px;
   height: 180px;
 }
 div .tache_jaune-2 {
   position: absolute;
   z-index: -1;
-  top: 5800px;
+  top: 5100px;
   left: 95vw;
   width: 300px;
   height: 180px;
@@ -1165,7 +1176,6 @@ div.after {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-bottom: 7.5vh;
 }
 div.after .titre_oeuvre {
   color: #0C53C4;
@@ -1187,6 +1197,282 @@ div.after div:nth-child(1) {
   gap: 20px;
 }
 
+.describe :nth-child(2) {
+  color: #e51449;
+}
+
+.archive_artiste {
+  color: #e51449;
+}
+
+.oeuvre_describe {
+  display: flex;
+  flex-direction: column;
+}
+
+section .entreprise_last {
+  height: auto;
+  padding-bottom: 5vh;
+}
+
+.entreprise_service {
+  justify-content: space-around;
+  padding-top: 2.5vh;
+  padding-bottom: 2.5vh;
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+}
+
+video {
+  z-index: 100;
+  filter: blur(5px);
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  height: 20vh;
+  border-radius: 50px;
+  background-color: #e51449;
+}
+
+.contactez-nous_tel {
+  display: none;
+  width: auto;
+}
+
+.logo_header_tel {
+  display: none;
+  height: 80px;
+}
+
+@media only screen and (max-width: 900px) {
+  .logo_header_tel {
+    display: block;
+    width: 164px;
+    height: 80px;
+    padding-left: -20px;
+  }
+  .logo_header_tel img {
+    width: 80px;
+  }
+  .home_form {
+    flex-direction: column-reverse !important;
+  }
+  .home_form form input {
+    padding-left: 5vw;
+    font-size: 1.15em;
+    border: solid 0px;
+    outline: none;
+    border-bottom: solid 2px #0C53C4;
+    width: 90vw !important;
+    background-color: transparent;
+  }
+  .logo_header {
+    display: none;
+  }
+  section {
+    margin-left: 5vw;
+    width: 90vw;
+  }
+  section .contenu {
+    display: flex;
+    flex-direction: column;
+    gap: 20vh;
+  }
+  .presentation {
+    position: absolute;
+    top: 2.5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 95vw;
+    height: 95vh;
+    left: 2.5vw;
+    gap: 10vh;
+    overflow-x: hidden;
+  }
+  .presentation :nth-child(2) {
+    color: #FCF1E3;
+    font-size: 1.25em;
+    text-align: center;
+  }
+  section.oeuvres,
+  .ateliers,
+  .histoire,
+  .formations,
+  .artistes,
+  .entreprise,
+  .carrousel,
+  .mail {
+    padding-top: 2.5vh;
+    padding-bottom: 2.5vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20vh;
+  }
+  .all_oeuvre_page_accueil {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    gap: 10vh;
+    align-items: center;
+  }
+  .contenu .all {
+    gap: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 80vw;
+    align-items: center;
+    margin: 0px;
+  }
+  .one_oeuvre_page_accueil {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 80vw;
+  }
+  .one_oeuvre_page_accueil .image {
+    height: 60vh;
+    width: 100%;
+    max-height: 100%;
+    max-height: auto;
+    max-width: 100%;
+    margin-bottom: 2.5vh;
+  }
+  .one_oeuvre_page_accueil .contenu_histoire,
+  .one_oeuvre_page_accueil .partie_entreprise {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10vh;
+  }
+  div.suivant {
+    display: none !important;
+  }
+  div,
+  article {
+    width: 80vw;
+  }
+  .one_page_accueil .name {
+    font-size: 1.5em;
+    text-align: center;
+    font-family: "DM serif display";
+    color: #e51449;
+  }
+  .one_page_accueil {
+    height: 40vh;
+    width: 80vw;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #F4E7D7;
+    align-items: center;
+    display: flex;
+  }
+  .width {
+    display: none;
+    width: auto;
+  }
+  .contactez-nous_tel {
+    display: block;
+  }
+  .contactez-nous_tel .button {
+    display: flex;
+    justify-content: center;
+    border-radius: 0px;
+    background-color: transparent;
+    width: 10vw;
+    height: 5vh;
+    border: solid 0;
+    color: #FCF1E3;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.2s ease-out;
+  }
+  .contactez-nous {
+    display: none;
+  }
+  video {
+    height: 100vh;
+    width: auto;
+  }
+  div.asso div .reseaux img {
+    width: 8vw;
+    height: 10vh;
+  }
+  h2 {
+    text-align: center;
+  }
+  div.asso {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 10vw;
+  }
+  body {
+    width: 100vw;
+  }
+  .welcome_logo {
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  .welcome_logo img {
+    width: 70%;
+  }
+  .asso {
+    padding-top: 2.5vh;
+    padding-bottom: 5vh;
+    height: calc(90vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+  .maps {
+    width: 90vw;
+    margin-left: 5vw;
+    height: auto;
+  }
+  .contenu_histoire,
+  .partie_entreprise {
+    display: flex;
+    flex-direction: column;
+  }
+  .n2-section-smartslider {
+    align-self: var(--ssselfalign);
+    display: none;
+  }
+  .video iframe {
+    width: 90vw;
+    height: auto;
+  }
+  .story div {
+    text-align: center;
+  }
+  .filtre_noir_page_accueil {
+    display: none;
+  }
+  .contenu {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 .all_oeuvre {
   display: flex;
   flex-wrap: wrap;
@@ -1196,9 +1482,12 @@ div.after div:nth-child(1) {
 }
 
 .autre_oeuvre {
-  margin-top: 50px;
+  margin-top: 15vh;
+  margin-bottom: 5VH;
   display: flex;
-  gap: 2.5vw;
+  gap: 1%;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .one_oeuvre {
@@ -1246,7 +1535,7 @@ div.contenu_oeuvre .one_oeuvre {
   justify-content: center;
   align-items: center;
   display: flex;
-  width: 18.125vw;
+  width: 20%;
   height: 40vh;
   margin-top: 2.5vh;
   margin-bottom: 2.5vh;
@@ -1267,7 +1556,7 @@ div.contenu_oeuvre .oeuvre {
   display: flex;
   justify-content: space-between;
   margin-top: 5vh;
-  margin-bottom: 5vh;
+  margin-bottom: 15vh;
 }
 div.contenu_oeuvre .oeuvre .gauche {
   display: flex;
@@ -1335,10 +1624,11 @@ div.contenu_oeuvre .oeuvre .description .taille {
   color: #0C53C4;
 }
 
-.mail {
-  gap: 10vw;
+.contenu_oeuvre .oeuvre {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 5vh;
+  margin-bottom: 10vh;
 }
 
 form {
@@ -1346,7 +1636,6 @@ form {
 }
 
 .mail form {
-  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 5vh;
@@ -1389,6 +1678,7 @@ form textarea {
   margin-left: 30%;
   color: #FCF1E3;
   margin-top: 5vh;
+  font-family: "Roboto";
 }
 
 .envoyer {
@@ -1408,6 +1698,10 @@ input:active {
 
 .is-form-style.is-form-style-3 input.is-search-input {
   border: 0 !important;
+}
+
+textarea {
+  resize: none;
 }
 
 .conteneur:nth-child(2n+1) {
@@ -1496,6 +1790,34 @@ section.erreur {
   transition: all 0.2s ease-out;
 }
 
+@media only screen and (max-width: 900px) {
+  .contactez-nous_tel a.button {
+    display: flex;
+    justify-content: center;
+    border-radius: 0px;
+    background-color: transparent;
+    width: 10vw;
+    height: 5vh;
+    border: solid 0;
+    color: #FCF1E3;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.2s ease-out;
+  }
+  a.button {
+    display: flex;
+    justify-content: center;
+    border-radius: 55px;
+    background-color: #e51449;
+    width: 30vw;
+    height: 5vh;
+    border: solid 0;
+    color: #FCF1E3;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.2s ease-out;
+  }
+}
 .button_art {
   display: flex;
   justify-content: center;
@@ -1688,19 +2010,6 @@ section.erreur {
   text-decoration: none;
 }
 
-section.entreprise {
-  margin-top: 5vh;
-  margin-bottom: 5vh;
-  justify-content: space-around;
-}
-section.entreprise h2 {
-  margin-left: 0px;
-  margin-bottom: 0px;
-}
-section.entreprise article.service {
-  word-wrap: break-word;
-}
-
 * {
   font-family: "Roboto";
   font-weight: 400;
@@ -1716,6 +2025,7 @@ h1 {
 h2 {
   font-family: "DM Serif Display";
   font-size: 3em;
+  color: #0C53C4;
 }
 
 input:focus {

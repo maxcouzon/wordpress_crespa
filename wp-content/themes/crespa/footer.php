@@ -1,13 +1,10 @@
 <footer>
     <div class="info_footer">
         <div class="rs">
-            <a target="_blank" href="<?php the_field('insta','option'); ?>">
+            <a target="_blank" href="https://www.instagram.com/artedelph2/">
                 <img src="<?php echo(get_template_directory_uri());?>/assets/images/insta.svg" alt="instagram"/>
             </a>
-            <a target="_blank"href="<?php the_field('facebook','option'); ?>">
-                <img src="<?php echo(get_template_directory_uri());?>/assets/images/linkedin.svg" alt="linkedin"/>
-            </a>
-            <a target="_blank" href="<?php the_field('linkedin','option'); ?>">
+            <a target="_blank" href="https://www.facebook.com/DelphSeDuc">
                 <img src="<?php echo(get_template_directory_uri());?>/assets/images/facebook.svg" alt="facebook"/>
             </a>
         </div>

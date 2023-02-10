@@ -16,7 +16,7 @@
     <!-- partie article de la page -->
 
     
-    <section class="entreprise">
+    <section class="entreprise_service">
 <div>
 <img class="point_rouge" src="<?php echo(get_template_directory_uri()); ?>/assets/images/point_rouge.svg" alt="" />
 <img class="point_jaune_service" src="<?php echo(get_template_directory_uri()); ?>/assets/images/point_jaune.svg" alt="" />
@@ -43,7 +43,7 @@
         </div>
     </section>
         
-        <section class="entreprise">
+        <section class="entreprise_service">
 <h2><?php the_field('title_location') ?></h2>
             <div class="partie_entreprise">
                 <div class="story">
@@ -64,7 +64,7 @@
             </div>
         </section>
         
-        <section class="entreprise">
+        <section class="entreprise_service">
 <h2><?php the_field('title_event') ?></h2>
             <div class="partie_entreprise">
                 <div class="image_page_accueil" style="background-image: url(<?php $event = get_field('img_event');
@@ -78,7 +78,7 @@
             </div>
         </section>
         
-        <section class="entreprise">
+        <section class="entreprise_last">
 <h2>
             <?php the_field('title_pro') ?>
         </h2>

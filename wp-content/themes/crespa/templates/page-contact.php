@@ -1,12 +1,14 @@
 <?php
-// template Name: contact
+// template Name: Contact
 //header
 get_header();
 ?>
 
 
-<h2 class="contact_form">Nous contactez</h2>
+
 <section class="mail">
+<h2 class="contact_form">Nous contactez</h2>
+<div class="home_form">
 <form>
 <?php
                 echo do_shortcode('[wpforms id="244" title="false"]');
@@ -28,6 +30,7 @@ get_header();
                 </div>
             </div>
         </div>
+</div>
 </section>
 <?php
 //footer

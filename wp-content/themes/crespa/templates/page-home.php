@@ -1,3 +1,6 @@
+ <?php
+    // template Name: Accueil
+    wp_head(); ?>
 <!DOCTYPE html>
 <html>
 
@@ -9,16 +12,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <?php
-    // template Name: Accueil
-    wp_head(); ?>
+   
     <title>Cré'espa</title>
 </head>
 
 <body>
 
-    <div class="welcome"> <img src="<?php $image = get_field('background_img');
-                                    echo ($image['sizes']['medium_large']) ?>" />
+    <div class="welcome"> <?php
+  $video = get_field('background_img');
+  $video_url = $video['url'];
+?>
+<video loading="lazy" controls autoplay muted width ="100%">
+  <source src="<?php echo $video_url; ?>" type="video/mp4">
+  
+</video>
         <div class="filtre_noire"></div>
 
     </div>
@@ -59,8 +66,14 @@
                 <a href="https://creespa.fr" class="logo_header">
                     <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/logo.svg" alt="logo" />
                 </a>
+ <a href="https://creespa.fr" class="logo_header_tel">
+          <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/logo_tel.svg" alt="logo" />
+        </a>
                 <div class="contactez-nous">
                     <a href="/wordpress_crespa/contact/" class="button">Contactez-nous</a>
+                </div>
+ <div class="contactez-nous_tel">
+                    <a href="/wordpress_crespa/contact/" class="button"><img src="<?php echo (get_template_directory_uri()); ?>/assets/images/phone_tel.svg" alt="logo""></a>
                 </div>
             </div>
 
@@ -79,7 +92,7 @@
                 </div>
                 <?php wp_nav_menu(array('menu' => 'menu_princ')); ?>
                 <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/logo_simple_white.svg" alt="" class="logo_nav" />
-                <!-- <ul>
+                <!-- <ul class="background_motif">
           <li><a href="../acceuil/artistes/">Les artistes</a></li>
           <li><a href="../accueil/oeuvres/">La galerie</a></li>
           <li><a href="../acceuil/ateliers/">Les ateliers</a></li>
@@ -93,7 +106,7 @@
         </nav>
     </header>
     <!-- deuxieme page présentation + réseaux  -->
-    <div>
+    <div class="width">
         <img class="point_rouge" src="<?php echo (get_template_directory_uri()); ?>/assets/images/point_rouge.svg" alt="" />
         <img class="point_jaune" src="<?php echo (get_template_directory_uri()); ?>/assets/images/point_jaune.svg" alt="" />
         <img class="point_bleu" src="<?php echo (get_template_directory_uri()); ?>/assets/images/point_bleu.svg" alt="" />
@@ -115,14 +128,14 @@
         <div>
             <!-- réseaux sociaux  -->
             <div class="reseaux">
-                <a target="_blank" href="<?php the_field('insta','option'); ?>">
+                <a target="_blank" href="https://www.instagram.com/artedelph2/">
 
                     <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/red_insta.svg" alt="instagram" />
                 </a>
-                <a target="_blank" href="<?php the_field('facebook','option'); ?>">
+                <!-- <a target="_blank" href=>
                     <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/red_linkedin.svg" alt="linkedin" />
-                </a>
-                <a target="_blank" href="<?php the_field('linkedin','option'); ?>">
+                </a> -->
+                <a target="_blank" href="https://www.facebook.com/DelphSeDuc">
                     <img src="<?php echo (get_template_directory_uri()); ?>/assets/images/red_facebook.svg" alt="facebook" />
                 </a>
             </div>
@@ -133,12 +146,13 @@
             </div>
         </div>
     </div>
-    <h2 >Actualités</h2>
+   
 
     <!-- ancre -->
 
     <!-- slider Actualités -->
     <section class="carrousel">
+ <h2 >Actualités</h2>
         <div class="slider">
             <!-- conteneur ou est affiche les infos -->
             <div class="wrapper">
@@ -217,9 +231,10 @@
 
     <!-- boutton voir plus -->
 
-    <h2 >Les Artistes</h2>
+    
     <!-- les artistes -->
     <section class="artistes">
+<h2 >Les Artistes</h2>
         <!-- tous les artistes -->
         <div class="contenu"> <?php
 
@@ -277,16 +292,18 @@
     </section>
     <!-- boutton entre les parties -->
 
-    <h2>La Galerie</h2>
+    
     <section class="oeuvres">
+<h2>La Galerie</h2>
         <!-- tous les articles  -->
-
+<div>
         <?php
         // The Query
         $args = array(
             'post_type' => 'oeuvre',
             'posts_per_page' => 3
         );
+
         $art = new WP_Query($args);
         ?>
 
@@ -302,11 +319,18 @@
 background-repeat: no-repeat;background-position: 50% 100%;">
                         </div>
                         <div class="after">
+<div class="describe">
                             <div class="titre_oeuvre">
                                 <?php echo (get_the_title()); ?>
                             </div>
-<div class="button_accueil_artistes">
-                            <a href= "/<?php $post_slug = $post->post_name; echo($post_slug)?>/" class="button_oeuvre">Voir</a>
+<div> <?php $artist = get_field('artiste');setup_postdata($post); 
+
+$frite=wp_list_pluck($artist ,'post_title');
+
+echo($frite[0]);?> </div>
+</div>
+  <div class="button_accueil_artistes">
+                            <a href= "/<?php $post_slug = $post->post_name; echo($post_slug);?>/" class="button_oeuvre">Voir</a>
 
                         </div>
                         </div>
@@ -317,9 +341,11 @@ background-repeat: no-repeat;background-position: 50% 100%;">
             <p>Aucune oeuvre trouvée.</p>
         <?php endif; ?>
         <?php wp_reset_postdata(); ?>
+</div>
         <div class="button_accueil_oeuvre">
             <a href="/oeuvre/" class="button">Voir plus</a>
         </div>
+
         <div class="suivant">
             <a id="atelier" class="onclick" href="
       #atelier">
@@ -332,8 +358,9 @@ background-repeat: no-repeat;background-position: 50% 100%;">
 
 
 
-    <h2 ><?php the_field('title_atelier') ?></h2>
+    
     <section class="ateliers">
+<h2 ><?php the_field('title_atelier') ?></h2>
         <div class="contenu">
             <div class="story">
                 <div>
@@ -357,8 +384,9 @@ background-repeat: no-repeat;background-position: 50% 100%;">
             </a>
         </div>
     </section>
-    <h2 ><?php the_field('title_formation') ?></h2>
+    
     <section class="formations">
+<h2 ><?php the_field('title_formation') ?></h2>
         <div class="contenu">
             <div class="video">
                 <?php
@@ -383,8 +411,9 @@ background-repeat: no-repeat;background-position: 50% 100%;">
             </a>
         </div>
     </section>
-    <h2 ><?php the_field('title_entreprise'); ?></h2>
+    
     <section class="entreprise">
+<h2 ><?php the_field('title_entreprise'); ?></h2>
         <div class="partie_entreprise">
             <div class="image_page_accueil" style="background-image: url(<?php $entreprise = get_field('img_entreprise');
                                                                             echo $entreprise['url'] ?>);background-repeat: no-repeat;background-size:cover;">
@@ -412,8 +441,9 @@ background-repeat: no-repeat;background-position: 50% 100%;">
             </a>
         </div>
     </section>
-    <h2 ><?php the_field('title_histoire') ?></h2>
+    
     <section class="histoire">
+<h2 ><?php the_field('title_histoire') ?></h2>
         <div class="contenu_histoire">
             <div class="video">
 
@@ -437,8 +467,10 @@ background-repeat: no-repeat;background-position: 50% 100%;">
 
         </div>
     </section>
-    <h2 >Contactez-nous</h2>
+    
     <section class="mail">
+<h2 >Contactez-nous</h2>
+<div class="home_form">
         <form>
             <?php
             echo do_shortcode('[wpforms id="244" title="false"]');
@@ -461,24 +493,26 @@ background-repeat: no-repeat;background-position: 50% 100%;">
                 </div>
             </div>
         </div>
+</div>
 
     </section>
  <script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript"></script>
             <script>
-                jQuery(document).ready(function() {
-                    jQuery('.hide-on-load').hide();
+        jQuery(document).ready(function() {
+    jQuery('.hide-on-load').hide();
 
-                    jQuery('.sliderDate').on('click', function() {
-                        $(".enter span").even().removeClass("show");
-                        $(".show").removeClass("show");
-                        jQuery('.slide').hide();
-                        var linkimg = jQuery(this).data('date');
-                        console.log(linkimg);
+    jQuery('.sliderDate').on('click', function() {
+        $(".enter span").even().removeClass("show");
+        $(".show").removeClass("show");
+        jQuery('.slide').hide();
+        var linkimg = jQuery(this).data('date');
+        console.log(linkimg);
 
-                        jQuery(`.sliderDate-${linkimg}`).show();
-                        jQuery(`.active-${linkimg}`).addClass("show");
-                    });
-                });
+        jQuery(`.sliderDate-${linkimg}`).slideDown(500);
+        jQuery(`.active-${linkimg}`).addClass("show");
+    });
+});
+
             </script>
     <?php
     //footer

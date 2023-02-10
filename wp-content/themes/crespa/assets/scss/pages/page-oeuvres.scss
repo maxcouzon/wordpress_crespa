@@ -7,9 +7,12 @@
   }
   
   .autre_oeuvre {
-      margin-top: 50px;
+      margin-top: 15vh;
+      margin-bottom: 5VH;
       display: flex;
-      gap: 2.5vw;
+      gap: 1%;
+      justify-content: space-between;
+      flex-wrap: wrap;
   }
   
   .one_oeuvre {
@@ -52,7 +55,7 @@
           justify-content: center;
           align-items: center;
           display: flex;
-          width: 18.125vw;
+          width: 20%;
           height: 40vh;
           margin-top: 2.5vh;
           margin-bottom: 2.5vh;
@@ -77,7 +80,7 @@
           display: flex;
           justify-content: space-between;
           margin-top: 5vh;
-          margin-bottom: 5vh;
+          margin-bottom: 15vh;
           .gauche {
               display: flex;
               flex-direction: column-reverse;
@@ -146,4 +149,11 @@
        :nth-child(2) {
           color: $bleu;
       }
+  }
+  
+  .contenu_oeuvre .oeuvre {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 5vh;
+      margin-bottom: 10vh;
   }
